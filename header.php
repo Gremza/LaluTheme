@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
+<head>
+<title><?php bloginfo('name'); ?> | <?php is_front_page() ? bloginfo('description') : wp_title(''); ?></title>
+
+ 
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+<link href=" <?php echo get_template_directory_uri(); ?>/css/bootstrap.css" rel="stylesheet">
+<link href=" <?php echo get_template_directory_uri(); ?>/css/woocommerce.css" rel="stylesheet">
+
+ <!-- CSS Files
+    ================================================== -->
+<link href="<?php bloginfo('stylesheet_url');?>" rel="stylesheet">
+<?php get_template_part( 'include/styles' );   ?>   
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=<?php  echo  get_theme_mod( 'gr_font_select_settings', 'arial' );  ?> " rel="stylesheet">
+
+<?php wp_head(); ?>
+</head>
+<body <?php body_class( ); ?> >
+<div id="wrapper">
+<!-- header begin -->
+
+        
+    <?php
+    
+    $header=get_theme_mod( 'gr_header_mode_settings', '1' );  
+    get_template_part( 'include/header', $header);    
+    get_template_part( 'include/styles',$header ); 
+    ?> 

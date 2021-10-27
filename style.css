@@ -1,0 +1,93 @@
+/*
+Theme Name: Lalu by Gremza
+Theme URI: http://gremza.com
+Author: Marsel Preci
+Author URI: http://gremza.com
+Description: These is not just a  wordpress theme. Is a full options, all included website.
+Version: 2.2.16
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: unversial wordpress theme, general theme
+Text Domain: gremza22
+*/
+
+@import "css/menu.css"; 
+@import "css/mobile.css"; 
+@import "css/tablet.css"; 
+@import "css/desktop.css"; 
+
+#logo{
+    margin: 12px 0;
+} 
+#logo, .searchbar{
+
+    z-index: 9999;
+    }
+    
+.right {float:right;} 
+.no-padding{
+    padding:0;
+    
+}
+.post-categories li{ 
+     list-style:none;
+     
+}
+ul.post-categories {
+    padding:  0;
+    
+}
+.video-container {
+display: inline-block;
+position: relative;
+padding-bottom: 60%;
+width: 100%;
+} 
+     
+.video-container iframe {
+height: 100% !important;
+position: absolute;
+top: 0; left: 0;
+width: 100% !important;
+border:none;
+}
+.footer{
+    height:200px;
+    background:#000;
+	padding:30px 0;
+}
+.subfooter{
+	padding: 10px 0;
+	background:#111;
+
+}
+.right_subfooter{
+	text-align:right;
+		color:#fff;
+	font-size:13px;
+}
+.left_subfooter{
+	 font-size:13px;
+		color:#ccc;
+}
+.top{
+    height: 30px;
+    padding: 5px 0;
+    font-size: 12px;
+}
+
+.top-right {
+    text-align: right;
+}
+
+.socialblock a {
+    padding:4px;
+   
+}
+ 
+
+
+
+
+
+
