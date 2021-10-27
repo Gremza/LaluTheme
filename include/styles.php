@@ -48,10 +48,10 @@ a {
         color:<?php  echo  get_theme_mod( 'gr_a_color_settings', '#333' );?>;
 }
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: <?php  echo  get_theme_mod( 'gr_toggle', '#fff' );?>;
+  background-color: <?php  echo  get_theme_mod( 'gr_toggle_settings', '#fff' );?>;
 }
 
-.cart button , button { background-color: <?php  echo  get_theme_mod( 'gr_a_color_settings', '#333' )?>!important;}
+.cart button  { background-color: <?php  echo  get_theme_mod( 'gr_a_color_settings', '#333' )?>!important;}
 
 .top{ 
 	 background:<?php  echo  get_theme_mod( 'gr_top_bg_settings', '#000' );?>;

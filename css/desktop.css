@@ -1,3 +1,5 @@
-.navbar-nav > li:first-child  {
-     margin: 0 0 0 -40px;
+@media (min-width: 1200px) {
+    .navbar-nav>li:first-child {
+        margin: 0 0 0 -40px;
+    }
 }

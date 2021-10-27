@@ -1,8 +1,8 @@
 <header> 
 <div class="top ">
 	<div class="container ">
-	 <div class=" top-left col-lg-6 no-padding"> 	<?php dynamic_sidebar( 'top_left' ); ?> 	 </div>
-	  <div class="top-right  col-lg-6 no-padding"> 
+	 <div class=" top-left col-xs-6 no-padding"> 	<?php dynamic_sidebar( 'top_left' ); ?> 	 </div>
+	  <div class="top-right  col-xs-6 no-padding"> 
  <?php require get_template_directory() . '/include/socialblock.php'; ?>		<?php dynamic_sidebar( 'top_right' ); ?>  </div>
 	 </div>
 </div>
