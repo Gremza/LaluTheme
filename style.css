@@ -21,7 +21,7 @@ Text Domain: lalutheme
 
 #logo,
 .searchbar {
-    z-index: 9999;
+   
 }
 
 .right {
@@ -90,4 +90,7 @@ ul.post-categories {
 
 .socialblock a {
     padding: 4px;
+}
+.searchbar{
+    float: right;
 }

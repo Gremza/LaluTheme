@@ -239,8 +239,71 @@ $wp_customize->add_control( 'gr_header_mode_settings', array(
  
     )));
     
-    
+//content
 
+$wp_customize->add_setting( 'gr_font_content_select_settings' , array(
+    'type'          => 'theme_mod', 
+    'transport'     => 'refresh',
+) );
+
+$wp_customize->add_control( 'gr_font_content_select_settings', array(
+'label'      => __('Font Contnet Selector', 'gremza22'),
+'section'    => 'gr_logo',
+'settings'   => 'gr_font_content_select_settings',
+'type'       => 'select',
+    'choices'    => array( 
+      'Raleway' => __('Raleway', 'gremza22'),
+      'Monda' => __('Monda', 'gremza22'),
+      'Anton' => __('Anton', 'gremza22'),
+      'Staatliches' => __('Staatliches', 'gremza22'),
+      'Kalam' => __('Kalam', 'gremza22'),
+      'Merienda' => __('Merienda', 'gremza22'),
+      'Mukta' => __('Mukta', 'gremza22'),
+      'Roboto' => __('Roboto', 'gremza22'),
+     'Bebas Neue'=> __('Bebas Neue', 'gremza22'),
+      'Montserrat'=> __('Montserrat', 'gremza22'),
+    ),
+) );
+
+$wp_customize->add_setting( 'gr_font_content_weight_settings' , array(
+    'type'          => 'theme_mod', 
+    'transport'     => 'refresh',
+) );
+
+$wp_customize->add_control( 'gr_font_content_weight_settings', array(
+'label'      => __('Font Content Weight', 'gremza22'),
+'section'    => 'gr_logo',
+'settings'   => 'gr_font_content_weight_settings',
+'type'       => 'select',
+    'choices'    => array( 
+      'normal' => __('Normal', 'gremza22'),
+      'Bold' => __('bold', 'gremza22'),
+      'lighter' => __('Lighter', 'gremza22'),
+      '100' => __('100', 'gremza22'),
+      '200' => __('200', 'gremza22'),
+      '400' => __('400', 'gremza22'),
+      '800' => __('800', 'gremza22'),
+     
+      
+    ),
+) );
+
+$wp_customize->add_setting( 'gr_font_content_size_settings' , array(
+    'type'          => 'theme_mod', 
+    'transport'     => 'refresh',
+) );
+
+$wp_customize->add_control( 'gr_font_content_size_settings', array(
+'type' => 'text',
+'section' => 'gr_logo', // Add a default or your own section
+'label' => __( 'Font Size' ),
+'description' => __( 'font must be in number expamle 12' ),
+) );
+
+
+
+
+//menuja
  $wp_customize->add_setting( 'gr_font_select_settings' , array(
         'type'          => 'theme_mod', 
         'transport'     => 'refresh',
@@ -261,7 +324,7 @@ $wp_customize->add_control( 'gr_font_select_control', array(
           'Mukta' => __('Mukta', 'gremza22'),
 		  'Roboto' => __('Roboto', 'gremza22'),
          'Bebas Neue'=> __('Bebas Neue', 'gremza22'),
-          
+          'Montserrat'=> __('Montserrat', 'gremza22'),
         ),
 ) );
 
@@ -306,7 +369,7 @@ $wp_customize->add_control( 'gr_font_size_settings', array(
 
 
 
-//fonts settings
+//H1 fonts settings
 
 $wp_customize->add_section( 'gr_fonts' , array(
         'title'             => __('Font and text', 'gremza22'),
@@ -334,7 +397,7 @@ $wp_customize->add_control( 'gr_h1_select_control', array(
           'Merienda' => __('Merienda', 'gremza22'),
           'Anton' => __('Anton', 'gremza22'),
           'Bebas Neue'=> __('Bebas', 'gremza22'),
-          
+          'Montserrat'=> __('Montserrat', 'gremza22'),
         ),
 ) );
 
@@ -396,7 +459,7 @@ $wp_customize->add_control( 'gr_h2_select_control', array(
           'Merienda' => __('Merienda', 'gremza22'),
           'Anton' => __('Anton', 'gremza22'),
           'Bebas Neue'=> __('Bebas', 'gremza22'),
-          
+          'Montserrat'=> __('Montserrat', 'gremza22'),
         ),
 ) );
 
@@ -458,7 +521,7 @@ $wp_customize->add_control( 'gr_h3_select_control', array(
           'Merienda' => __('Merienda', 'gremza22'),
           'Anton' => __('Anton', 'gremza22'),
           'Bebas Neue'=> __('Bebas', 'gremza22'),
-          
+          'Montserrat'=> __('Montserrat', 'gremza22'),
         ),
 ) );
 

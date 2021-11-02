@@ -2,6 +2,9 @@
 	body{
 		background:<?php  echo  get_theme_mod( 'gr_body_background_settings', '#000' );?>;
 		color:<?php   echo  get_theme_mod( 'gr_body_color_setting', '#fff' );?>;
+        font-family:<?php  echo  get_theme_mod( 'gr_font_content_select_settings', 'arial' );?>;
+        font-size:<?php  echo  get_theme_mod( 'gr_font_content_size_settings', '16' );?>px;
+        font-weight:<?php  echo  get_theme_mod( 'gr_font_content_weight_settings', 'normal' );?>;
 	}
 
 #logo{
@@ -64,7 +67,9 @@ a {
 	width:<?php  echo  get_theme_mod( 'gr_social_width_height_settings', '30px' );?>px;
 	height:<?php  echo  get_theme_mod( 'gr_social_width_height_settings', '30px' );?>px;
 }
-
+.socialblock svg:hover{
+    opacity: 0.7;
+}
 
 
 </style>
