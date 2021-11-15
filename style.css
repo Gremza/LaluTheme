@@ -15,6 +15,7 @@ Text Domain: lalutheme
 @import "css/mobile.css";
 @import "css/tablet.css";
 @import "css/desktop.css";
+@import "css/woocommerce.css";
 #logo {
     margin: 12px 0;
 }
@@ -57,8 +58,8 @@ ul.post-categories {
 }
 
 .footer {
-    height: 200px;
-    background: #000;
+    min-height: 200px;
+    background: #333;
     padding: 30px 0;
 }
 
@@ -72,7 +73,10 @@ ul.post-categories {
     color: #fff;
     font-size: 13px;
 }
-
+.right_subfooter a,.left_subfooter a{
+    color:#fff; 
+    font-weight: bold;
+}
 .left_subfooter {
     font-size: 13px;
     color: #ccc;

@@ -15,7 +15,7 @@ if ($fb !== '') {
 if ($ig !== '') { 
 ?>
    <a href="<?php echo $ig; ?>"><svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="108.2px" height="107px" viewBox="0 0 108.2 107" enable-background="new 0 0 108.2 107" xml:space="preserve">
+   width="30px" height="30px" viewBox="0 0 108.2 107" enable-background="new 0 0 108.2 107" xml:space="preserve">
 <g display="none">
 	<g display="inline">
 		<path fill-rule="evenodd" clip-rule="evenodd" d="M46.6,0.1c5,0,10.1,0,15.1,0c0.2,0.1,0.4,0.2,0.7,0.2C75.2,2.4,86.1,8.2,94.6,18
@@ -112,7 +112,7 @@ if ($yt !== '') {
 ?>
  
    <a href="<?php echo $yt; ?>"><svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="108.2px" height="107px" viewBox="0 0 108.2 107" enable-background="new 0 0 108.2 107" xml:space="preserve">
+   width="30px" height="30px" viewBox="0 0 108.2 107" enable-background="new 0 0 108.2 107" xml:space="preserve">
 <g display="none">
 	<g display="inline">
 		<path fill-rule="evenodd" clip-rule="evenodd" d="M46.6,0.1c5,0,10.1,0,15.1,0c0.2,0.1,0.4,0.2,0.7,0.2C75.2,2.4,86.1,8.2,94.6,18

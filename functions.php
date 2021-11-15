@@ -263,14 +263,42 @@ add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_p
 
 
 
+//************ SHORTCODES */
+//SITE URL
+add_action( 'init', function() {
+
+	add_shortcode( 'site_url', function( $atts = null, $content = null ) {
+		return site_url();
+	} );
+
+} );
+ 
+  function copyright() { 
+ 
+	// Things that you want to do. 
+	$message = date('Y'). ' All right reserverd © <a href="[site_path]">'. get_bloginfo() .  '</a> '; 
+	 
+	// Output needs to be return
+	return $message;
+	} 
+	// register shortcode
+	add_shortcode('copyright', 'copyright'); 
 
 
-
-
-
-
-
-
+	function gremza() { 
+ 
+		// Things that you want to do. 
+		$message =  ' Design by <a href="https://gremza.com"> Gremza </a> '; 
+		 
+		// Output needs to be return
+		return $message;
+		} 
+		// register shortcode
+		add_shortcode('gremza', 'gremza'); 
+	
+	
+	
+	
 
 
 
