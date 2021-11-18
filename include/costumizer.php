@@ -31,7 +31,18 @@ function gr_customize_register( $wp_customize ) {
         'type'          => 'theme_mod', 
         'transport'     => 'refresh',
     ) );
-    
+    $wp_customize->add_setting( 'gr_favicon' , array(
+        'type'          => 'theme_mod', 
+        'transport'     => 'refresh',
+    ) );
+ 
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'gr_favicon_control', array(
+        'label'      => __('Favicon', 'gremza22'), 
+        'section'    => 'gr_logo',
+        'settings'   => 'gr_favicon',
+        'priority'   => 2,
+        'type'       => 'image',
+    ) ));
 $wp_customize->add_control( 'gr_logo_width_settings', array(
   'type' => 'text',
   'section' => 'gr_logo', // Add a default or your own section
