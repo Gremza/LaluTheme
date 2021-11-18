@@ -27,15 +27,12 @@ function gr_customize_register( $wp_customize ) {
         'priority'   => 1,
         'type'       => 'image',
     ) ));
-     $wp_customize->add_setting( 'gr_logo_width_settings' , array(
-        'type'          => 'theme_mod', 
-        'transport'     => 'refresh',
-    ) );
+   
     $wp_customize->add_setting( 'gr_favicon' , array(
         'type'          => 'theme_mod', 
         'transport'     => 'refresh',
     ) );
- 
+    
     $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'gr_favicon_control', array(
         'label'      => __('Favicon', 'gremza22'), 
         'section'    => 'gr_logo',
@@ -43,13 +40,17 @@ function gr_customize_register( $wp_customize ) {
         'priority'   => 2,
         'type'       => 'image',
     ) ));
+    $wp_customize->add_setting( 'gr_logo_width_settings' , array(
+        'type'          => 'theme_mod', 
+        'transport'     => 'refresh',
+        'priority'   => 3,
+    ) );
 $wp_customize->add_control( 'gr_logo_width_settings', array(
   'type' => 'text',
   'section' => 'gr_logo', // Add a default or your own section
   'label' => __( 'Logo Width in px' ),
   'description' => __( 'No px needed to be add at the end. Expamle 100' ),
 ) );
-
 
 //social links
 //fb
