@@ -3,10 +3,8 @@
     $fb=get_theme_mod( 'gr_social_fb_settings');  
 if ($fb !== '') { 
 ?>
- 
-   <a href="<?php echo $fb; ?>"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" 	 width="30px" height="30px" viewBox="0 0 142 139" enable-background="new 0 0 142 139" xml:space="preserve"> <g> 	<path class="icon fb"  d="M138.2,69.4c0-37.3-30.2-67.5-67.5-67.5S3.2,32.2,3.2,69.4c0,33.7,24.7,61.6,57,66.7V89H43V69.4h17.1V54.6
-		c0-16.9,10.1-26.3,25.5-26.3c7.4,0,15.1,1.3,15.1,1.3v16.6h-8.5c-8.4,0-11,5.2-11,10.5v12.7h18.7l-3,19.5H81.2v47.2 		C113.5,131.1,138.2,103.1,138.2,69.4z"/> </g> </svg>
-</a> 
+<a href="<?php echo $fb; ?>"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" 	 width="30px" height="30px" viewBox="0 0 142 139" enable-background="new 0 0 142 139" xml:space="preserve"> <g> 	<path class="icon fb"  d="M138.2,69.4c0-37.3-30.2-67.5-67.5-67.5S3.2,32.2,3.2,69.4c0,33.7,24.7,61.6,57,66.7V89H43V69.4h17.1V54.6
+		c0-16.9,10.1-26.3,25.5-26.3c7.4,0,15.1,1.3,15.1,1.3v16.6h-8.5c-8.4,0-11,5.2-11,10.5v12.7h18.7l-3,19.5H81.2v47.2 		C113.5,131.1,138.2,103.1,138.2,69.4z"/> </g> </svg></a> 
 <?php 
 }?>
 
@@ -14,9 +12,8 @@ if ($fb !== '') {
     $ig=get_theme_mod( 'gr_social_ig_settings');  
 if ($ig !== '') { 
 ?>
-   <a href="<?php echo $ig; ?>"><svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-   width="30px" height="30px" viewBox="0 0 108.2 107" enable-background="new 0 0 108.2 107" xml:space="preserve">
-<g display="none">
+<a href="<?php echo $ig; ?>"><svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   width="30px" height="30px" viewBox="0 0 108.2 107" enable-background="new 0 0 108.2 107" xml:space="preserve"><g display="none">
 	<g display="inline">
 		<path fill-rule="evenodd" clip-rule="evenodd" d="M46.6,0.1c5,0,10.1,0,15.1,0c0.2,0.1,0.4,0.2,0.7,0.2C75.2,2.4,86.1,8.2,94.6,18
 			c11.8,13.6,16.1,29.4,12.3,46.9c-4.3,20-16.7,33.3-36,40.1c-2.6,0.9-5.3,1.4-8,2.1c0-12.7,0-25.2,0-37.8c4.2,0,8.4,0,12.5,0
@@ -97,8 +94,7 @@ if ($ig !== '') {
 	<path fill-rule="evenodd" clip-rule="evenodd" d="M53.2,64.4c-6.1,0-11.2-5.1-11.2-11.2c0-6.1,5.1-11.2,11.2-11.2
 		c6.2,0,11.3,5.2,11.3,11.3C64.4,59.4,59.3,64.4,53.2,64.4z"/>
 </g>
-</svg>
-</a> 
+</svg></a> 
 <?php 
 }?>
 
@@ -110,8 +106,7 @@ if ($ig !== '') {
     $yt=get_theme_mod( 'gr_social_yt_settings');  
 if ($yt !== '') { 
 ?>
- 
-   <a href="<?php echo $yt; ?>"><svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<a href="<?php echo $yt; ?>"><svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
    width="30px" height="30px" viewBox="0 0 108.2 107" enable-background="new 0 0 108.2 107" xml:space="preserve">
 <g display="none">
 	<g display="inline">
@@ -287,8 +282,7 @@ if ($yt !== '') {
 	<path fill-rule="evenodd" clip-rule="evenodd" d="M46.2,63.9c0-7.1,0-14,0-21.1c6.1,3.5,12.1,7,18.3,10.5
 		C58.4,56.9,52.4,60.3,46.2,63.9z"/>
 </g>
-</svg>
-</a> 
+</svg></a> 
 <?php 
 }?>
 
