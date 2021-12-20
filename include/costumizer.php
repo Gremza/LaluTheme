@@ -55,39 +55,39 @@ $wp_customize->add_control( 'gr_logo_width_settings', array(
 //social links
 //fb
 $wp_customize->add_section( 'gr_social' , array(
-        'title'             => __('Social links', 'gremza22'),
-        'priority'          => 12, 
-        'panel'             => 'gr_header',
-    ) );  
+    'title'             => __('Social links', 'gremza22'),
+    'priority'          => 12, 
+    'panel'             => 'gr_header',
+) );  
 $wp_customize->add_setting( 'gr_social_fb_settings' , array(
-        'type'          => 'theme_mod', 
-        'transport'     => 'refresh',
-        'default' => '',
-    ) );     
-	
+    'type'          => 'theme_mod', 
+    'transport'     => 'refresh',
+    'default' => '',
+) );     
+
 $wp_customize->add_control( 'gr_social_fb_settings', array(
-  'type' => 'text',
-  'section' => 'gr_social', // Add a default or your own section
-  'label' => __( 'Instagram link' ),
-    'settings' => 'gr_social_fb_settings'
+'type' => 'text',
+'section' => 'gr_social', // Add a default or your own section
+'label' => __( 'Facebook link' ),
+'settings' => 'gr_social_fb_settings'
 ) );
 
 //ig
 $wp_customize->add_section( 'gr_social' , array(
-        'title'             => __('Social links', 'gremza22'),
-        'priority'          => 13, 
-        'panel'             => 'gr_header',
-    ) );  
+    'title'             => __('Social links', 'gremza22'),
+    'priority'          => 13, 
+    'panel'             => 'gr_header',
+) );  
 $wp_customize->add_setting( 'gr_social_ig_settings' , array(
-        'type'          => 'theme_mod', 
-        'transport'     => 'refresh',
-        'default' => '',
-    ) );     
+    'type'          => 'theme_mod', 
+    'transport'     => 'refresh',
+    'default' => '',
+) );     
 $wp_customize->add_control( 'gr_social_ig_settings', array(
-  'type' => 'text',
-  'section' => 'gr_social', // Add a default or your own section
-  'label' => __( 'Facebook link' ),
-    'settings' => 'gr_social_ig_settings'
+'type' => 'text',
+'section' => 'gr_social', // Add a default or your own section
+'label' => __( 'Instagram link' ),
+'settings' => 'gr_social_ig_settings'
 ) );
 
 
