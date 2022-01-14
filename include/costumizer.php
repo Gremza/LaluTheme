@@ -648,8 +648,8 @@ $wp_customize->add_section( 'gr_colors' , array(
     
 $wp_customize->add_control( 'gr_social_width_height_settings', array(
   'type' => 'text',
-  'section' => 'gr_fonts', // Add a default or your own section
-  'label' => __( 'Size in px ' ),
+  'section' => 'gr_colors', // Add a default or your own section
+  'label' => __( 'Social icons size in px ' ),
   'description' => __( 'Size is in pixel, there is no need to add px at the end. ex 30' ),
 ) );
  
