@@ -11,7 +11,7 @@
   <?php the_content();  ?> 
    
 	<?php endwhile; else: ?>
-	<p><?php _e('Sorry, this page does not exist.','gremza22'); ?></p>
+	<p><?php _e('Sorry, this page does not exist.','lalutheme'); ?></p>
 	<?php endif; ?>
 	</div>
 	

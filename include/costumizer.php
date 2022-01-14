@@ -6,12 +6,12 @@ function gr_customize_register( $wp_customize ) {
     // Create our panels
     //panel gr_header
     $wp_customize->add_panel( 'gr_header', array( 
-        'title'          => __('Theme Settings', 'gremza22'),
-        'description'    => __('Things on header', 'gremza22'),
+        'title'          => __('Theme Settings', 'lalutheme'),
+        'description'    => __('Things on header', 'lalutheme'),
           'priority'          => 1, 
     ) );
      $wp_customize->add_section( 'gr_logo' , array(
-        'title'             => __('Header costumizer', 'gremza22'),
+        'title'             => __('Header costumizer', 'lalutheme'),
         'priority'          => 1, 
         'panel'             => 'gr_header',
     ) );
@@ -21,7 +21,7 @@ function gr_customize_register( $wp_customize ) {
     ) );
  
     $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'gr_logo_control', array(
-        'label'      => __('Logo', 'gremza22'), 
+        'label'      => __('Logo', 'lalutheme'), 
         'section'    => 'gr_logo',
         'settings'   => 'gr_logo',
         'priority'   => 1,
@@ -34,7 +34,7 @@ function gr_customize_register( $wp_customize ) {
     ) );
     
     $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'gr_favicon_control', array(
-        'label'      => __('Favicon', 'gremza22'), 
+        'label'      => __('Favicon', 'lalutheme'), 
         'section'    => 'gr_logo',
         'settings'   => 'gr_favicon',
         'priority'   => 2,
@@ -50,12 +50,13 @@ $wp_customize->add_control( 'gr_logo_width_settings', array(
   'section' => 'gr_logo', // Add a default or your own section
   'label' => __( 'Logo Width in px' ),
   'description' => __( 'No px needed to be add at the end. Expamle 100' ),
+  'default'=>''
 ) );
 
 //social links
 //fb
 $wp_customize->add_section( 'gr_social' , array(
-    'title'             => __('Social links', 'gremza22'),
+    'title'             => __('Social links', 'lalutheme'),
     'priority'          => 12, 
     'panel'             => 'gr_header',
 ) );  
@@ -69,12 +70,13 @@ $wp_customize->add_control( 'gr_social_fb_settings', array(
 'type' => 'text',
 'section' => 'gr_social', // Add a default or your own section
 'label' => __( 'Facebook link' ),
-'settings' => 'gr_social_fb_settings'
+'settings' => 'gr_social_fb_settings',
+'default'=>''
 ) );
 
 //ig
 $wp_customize->add_section( 'gr_social' , array(
-    'title'             => __('Social links', 'gremza22'),
+    'title'             => __('Social links', 'lalutheme'),
     'priority'          => 13, 
     'panel'             => 'gr_header',
 ) );  
@@ -87,14 +89,15 @@ $wp_customize->add_control( 'gr_social_ig_settings', array(
 'type' => 'text',
 'section' => 'gr_social', // Add a default or your own section
 'label' => __( 'Instagram link' ),
-'settings' => 'gr_social_ig_settings'
+'settings' => 'gr_social_ig_settings',
+'default'=>''
 ) );
 
 
 
 //yt
 $wp_customize->add_section( 'gr_social' , array(
-        'title'             => __('Social links', 'gremza22'),
+        'title'             => __('Social links', 'lalutheme'),
         'priority'          => 14, 
         'panel'             => 'gr_header',
     ) );  
@@ -189,14 +192,14 @@ $wp_customize->add_control( 'gr_social_yt_settings', array(
     ) );
     
 $wp_customize->add_control( 'gr_header_mode_settings', array(
-	'label'      => __('Navigation Options', 'gremza22'),
+	'label'      => __('Navigation Options', 'lalutheme'),
 	'section'    => 'gr_logo',
 	'settings'   => 'gr_header_mode_settings',
 	'type'       => 'select',
         'choices'    => array( 
-          '1' => __('Menu right', 'gremza22'),
-          '2' => __('Full length menu', 'gremza22'),
-          '3' => __('Trasparent Header', 'gremza22'),
+          '1' => __('Menu right', 'lalutheme'),
+          '2' => __('Full length menu', 'lalutheme'),
+          '3' => __('Trasparent Header', 'lalutheme'),
           
           
         ),
@@ -259,21 +262,21 @@ $wp_customize->add_setting( 'gr_font_content_select_settings' , array(
 ) );
 
 $wp_customize->add_control( 'gr_font_content_select_settings', array(
-'label'      => __('Font Contnet Selector', 'gremza22'),
+'label'      => __('Font Contnet Selector', 'lalutheme'),
 'section'    => 'gr_logo',
 'settings'   => 'gr_font_content_select_settings',
 'type'       => 'select',
     'choices'    => array( 
-      'Raleway' => __('Raleway', 'gremza22'),
-      'Monda' => __('Monda', 'gremza22'),
-      'Anton' => __('Anton', 'gremza22'),
-      'Staatliches' => __('Staatliches', 'gremza22'),
-      'Kalam' => __('Kalam', 'gremza22'),
-      'Merienda' => __('Merienda', 'gremza22'),
-      'Mukta' => __('Mukta', 'gremza22'),
-      'Roboto' => __('Roboto', 'gremza22'),
-     'Bebas Neue'=> __('Bebas Neue', 'gremza22'),
-      'Montserrat'=> __('Montserrat', 'gremza22'),
+      'Raleway' => __('Raleway', 'lalutheme'),
+      'Monda' => __('Monda', 'lalutheme'),
+      'Anton' => __('Anton', 'lalutheme'),
+      'Staatliches' => __('Staatliches', 'lalutheme'),
+      'Kalam' => __('Kalam', 'lalutheme'),
+      'Merienda' => __('Merienda', 'lalutheme'),
+      'Mukta' => __('Mukta', 'lalutheme'),
+      'Roboto' => __('Roboto', 'lalutheme'),
+     'Bebas Neue'=> __('Bebas Neue', 'lalutheme'),
+      'Montserrat'=> __('Montserrat', 'lalutheme'),
     ),
 ) );
 
@@ -283,18 +286,18 @@ $wp_customize->add_setting( 'gr_font_content_weight_settings' , array(
 ) );
 
 $wp_customize->add_control( 'gr_font_content_weight_settings', array(
-'label'      => __('Font Content Weight', 'gremza22'),
+'label'      => __('Font Content Weight', 'lalutheme'),
 'section'    => 'gr_logo',
 'settings'   => 'gr_font_content_weight_settings',
 'type'       => 'select',
     'choices'    => array( 
-      'normal' => __('Normal', 'gremza22'),
-      'Bold' => __('bold', 'gremza22'),
-      'lighter' => __('Lighter', 'gremza22'),
-      '100' => __('100', 'gremza22'),
-      '200' => __('200', 'gremza22'),
-      '400' => __('400', 'gremza22'),
-      '800' => __('800', 'gremza22'),
+      'normal' => __('Normal', 'lalutheme'),
+      'Bold' => __('bold', 'lalutheme'),
+      'lighter' => __('Lighter', 'lalutheme'),
+      '100' => __('100', 'lalutheme'),
+      '200' => __('200', 'lalutheme'),
+      '400' => __('400', 'lalutheme'),
+      '800' => __('800', 'lalutheme'),
      
       
     ),
@@ -322,21 +325,21 @@ $wp_customize->add_control( 'gr_font_content_size_settings', array(
     ) );
     
 $wp_customize->add_control( 'gr_font_select_control', array(
-	'label'      => __('Menu Font Selector', 'gremza22'),
+	'label'      => __('Menu Font Selector', 'lalutheme'),
 	'section'    => 'gr_logo',
 	'settings'   => 'gr_font_select_settings',
 	'type'       => 'select',
         'choices'    => array( 
-          'Raleway' => __('Raleway', 'gremza22'),
-          'Monda' => __('Monda', 'gremza22'),
-          'Anton' => __('Anton', 'gremza22'),
-          'Staatliches' => __('Staatliches', 'gremza22'),
-          'Kalam' => __('Kalam', 'gremza22'),
-          'Merienda' => __('Merienda', 'gremza22'),
-          'Mukta' => __('Mukta', 'gremza22'),
-		  'Roboto' => __('Roboto', 'gremza22'),
-         'Bebas Neue'=> __('Bebas Neue', 'gremza22'),
-          'Montserrat'=> __('Montserrat', 'gremza22'),
+          'Raleway' => __('Raleway', 'lalutheme'),
+          'Monda' => __('Monda', 'lalutheme'),
+          'Anton' => __('Anton', 'lalutheme'),
+          'Staatliches' => __('Staatliches', 'lalutheme'),
+          'Kalam' => __('Kalam', 'lalutheme'),
+          'Merienda' => __('Merienda', 'lalutheme'),
+          'Mukta' => __('Mukta', 'lalutheme'),
+		  'Roboto' => __('Roboto', 'lalutheme'),
+         'Bebas Neue'=> __('Bebas Neue', 'lalutheme'),
+          'Montserrat'=> __('Montserrat', 'lalutheme'),
         ),
 ) );
 
@@ -347,18 +350,18 @@ $wp_customize->add_control( 'gr_font_select_control', array(
     ) );
     
 $wp_customize->add_control( 'gr_font_weight_settings', array(
-	'label'      => __('Font Weight', 'gremza22'),
+	'label'      => __('Font Weight', 'lalutheme'),
 	'section'    => 'gr_logo',
 	'settings'   => 'gr_font_weight_settings',
 	'type'       => 'select',
         'choices'    => array( 
-          'normal' => __('Normal', 'gremza22'),
-          'Bold' => __('bold', 'gremza22'),
-          'lighter' => __('Lighter', 'gremza22'),
-          '100' => __('100', 'gremza22'),
-          '200' => __('200', 'gremza22'),
-          '400' => __('400', 'gremza22'),
-          '800' => __('800', 'gremza22'),
+          'normal' => __('Normal', 'lalutheme'),
+          'Bold' => __('bold', 'lalutheme'),
+          'lighter' => __('Lighter', 'lalutheme'),
+          '100' => __('100', 'lalutheme'),
+          '200' => __('200', 'lalutheme'),
+          '400' => __('400', 'lalutheme'),
+          '800' => __('800', 'lalutheme'),
          
           
         ),
@@ -384,7 +387,7 @@ $wp_customize->add_control( 'gr_font_size_settings', array(
 //H1 fonts settings
 
 $wp_customize->add_section( 'gr_fonts' , array(
-        'title'             => __('Font and text', 'gremza22'),
+        'title'             => __('Font and text', 'lalutheme'),
         'priority'          => 1, 
         'panel'             => 'gr_header',
     ) );
@@ -396,20 +399,20 @@ $wp_customize->add_section( 'gr_fonts' , array(
     ) );
     
 $wp_customize->add_control( 'gr_h1_select_control', array(
-	'label'      => __('Font H1 Selector', 'gremza22'),
+	'label'      => __('Font H1 Selector', 'lalutheme'),
 	'section'    => 'gr_fonts',
 	'settings'   => 'gr_h1_select_settings',
 	'type'       => 'select',
         'choices'    => array( 
-          'Raleway' => __('Raleway', 'gremza22'),
-          'Monda' => __('Monda', 'gremza22'),
-          'Anton' => __('Anton', 'gremza22'),
-          'Staatliches' => __('Staatliches', 'gremza22'),
-          'Kalam' => __('Kalam', 'gremza22'),
-          'Merienda' => __('Merienda', 'gremza22'),
-          'Anton' => __('Anton', 'gremza22'),
-          'Bebas Neue'=> __('Bebas', 'gremza22'),
-          'Montserrat'=> __('Montserrat', 'gremza22'),
+          'Raleway' => __('Raleway', 'lalutheme'),
+          'Monda' => __('Monda', 'lalutheme'),
+          'Anton' => __('Anton', 'lalutheme'),
+          'Staatliches' => __('Staatliches', 'lalutheme'),
+          'Kalam' => __('Kalam', 'lalutheme'),
+          'Merienda' => __('Merienda', 'lalutheme'),
+          'Anton' => __('Anton', 'lalutheme'),
+          'Bebas Neue'=> __('Bebas', 'lalutheme'),
+          'Montserrat'=> __('Montserrat', 'lalutheme'),
         ),
 ) );
 
@@ -420,18 +423,18 @@ $wp_customize->add_control( 'gr_h1_select_control', array(
     ) );
     
 $wp_customize->add_control( 'gr_h1_weight_settings', array(
-	'label'      => __('Font H1 Weight', 'gremza22'),
+	'label'      => __('Font H1 Weight', 'lalutheme'),
 	'section'    => 'gr_fonts',
 	'settings'   => 'gr_h1_weight_settings',
 	'type'       => 'select',
         'choices'    => array( 
-          'normal' => __('Normal', 'gremza22'),
-          'Bold' => __('bold', 'gremza22'),
-          'lighter' => __('Lighter', 'gremza22'),
-          '100' => __('100', 'gremza22'),
-          '200' => __('200', 'gremza22'),
-          '400' => __('400', 'gremza22'),
-          '800' => __('800', 'gremza22'),
+          'normal' => __('Normal', 'lalutheme'),
+          'Bold' => __('bold', 'lalutheme'),
+          'lighter' => __('Lighter', 'lalutheme'),
+          '100' => __('100', 'lalutheme'),
+          '200' => __('200', 'lalutheme'),
+          '400' => __('400', 'lalutheme'),
+          '800' => __('800', 'lalutheme'),
          
           
         ),
@@ -458,20 +461,20 @@ $wp_customize->add_control( 'gr_h1_size_settings', array(
     ) );
     
 $wp_customize->add_control( 'gr_h2_select_control', array(
-	'label'      => __('Font H2 Selector', 'gremza22'),
+	'label'      => __('Font H2 Selector', 'lalutheme'),
 	'section'    => 'gr_fonts',
 	'settings'   => 'gr_h2_select_settings',
 	'type'       => 'select',
         'choices'    => array( 
-          'Raleway' => __('Raleway', 'gremza22'),
-          'Monda' => __('Monda', 'gremza22'),
-          'Anton' => __('Anton', 'gremza22'),
-          'Staatliches' => __('Staatliches', 'gremza22'),
-          'Kalam' => __('Kalam', 'gremza22'),
-          'Merienda' => __('Merienda', 'gremza22'),
-          'Anton' => __('Anton', 'gremza22'),
-          'Bebas Neue'=> __('Bebas', 'gremza22'),
-          'Montserrat'=> __('Montserrat', 'gremza22'),
+          'Raleway' => __('Raleway', 'lalutheme'),
+          'Monda' => __('Monda', 'lalutheme'),
+          'Anton' => __('Anton', 'lalutheme'),
+          'Staatliches' => __('Staatliches', 'lalutheme'),
+          'Kalam' => __('Kalam', 'lalutheme'),
+          'Merienda' => __('Merienda', 'lalutheme'),
+          'Anton' => __('Anton', 'lalutheme'),
+          'Bebas Neue'=> __('Bebas', 'lalutheme'),
+          'Montserrat'=> __('Montserrat', 'lalutheme'),
         ),
 ) );
 
@@ -482,18 +485,18 @@ $wp_customize->add_control( 'gr_h2_select_control', array(
     ) );
     
 $wp_customize->add_control( 'gr_h2_weight_settings', array(
-	'label'      => __('Font H2 Weight', 'gremza22'),
+	'label'      => __('Font H2 Weight', 'lalutheme'),
 	'section'    => 'gr_fonts',
 	'settings'   => 'gr_h2_weight_settings',
 	'type'       => 'select',
         'choices'    => array( 
-          'normal' => __('Normal', 'gremza22'),
-          'Bold' => __('bold', 'gremza22'),
-          'lighter' => __('Lighter', 'gremza22'),
-          '100' => __('100', 'gremza22'),
-          '200' => __('200', 'gremza22'),
-          '400' => __('400', 'gremza22'),
-          '800' => __('800', 'gremza22'),
+          'normal' => __('Normal', 'lalutheme'),
+          'Bold' => __('bold', 'lalutheme'),
+          'lighter' => __('Lighter', 'lalutheme'),
+          '100' => __('100', 'lalutheme'),
+          '200' => __('200', 'lalutheme'),
+          '400' => __('400', 'lalutheme'),
+          '800' => __('800', 'lalutheme'),
          
           
         ),
@@ -520,20 +523,20 @@ $wp_customize->add_control( 'gr_h2_size_settings', array(
     ) );
     
 $wp_customize->add_control( 'gr_h3_select_control', array(
-	'label'      => __('Font H3 Selector', 'gremza22'),
+	'label'      => __('Font H3 Selector', 'lalutheme'),
 	'section'    => 'gr_fonts',
 	'settings'   => 'gr_h3_select_settings',
 	'type'       => 'select',
         'choices'    => array( 
-          'Raleway' => __('Raleway', 'gremza22'),
-          'Monda' => __('Monda', 'gremza22'),
-          'Anton' => __('Anton', 'gremza22'),
-          'Staatliches' => __('Staatliches', 'gremza22'),
-          'Kalam' => __('Kalam', 'gremza22'),
-          'Merienda' => __('Merienda', 'gremza22'),
-          'Anton' => __('Anton', 'gremza22'),
-          'Bebas Neue'=> __('Bebas', 'gremza22'),
-          'Montserrat'=> __('Montserrat', 'gremza22'),
+          'Raleway' => __('Raleway', 'lalutheme'),
+          'Monda' => __('Monda', 'lalutheme'),
+          'Anton' => __('Anton', 'lalutheme'),
+          'Staatliches' => __('Staatliches', 'lalutheme'),
+          'Kalam' => __('Kalam', 'lalutheme'),
+          'Merienda' => __('Merienda', 'lalutheme'),
+          'Anton' => __('Anton', 'lalutheme'),
+          'Bebas Neue'=> __('Bebas', 'lalutheme'),
+          'Montserrat'=> __('Montserrat', 'lalutheme'),
         ),
 ) );
 
@@ -544,18 +547,18 @@ $wp_customize->add_control( 'gr_h3_select_control', array(
     ) );
     
 $wp_customize->add_control( 'gr_h3_weight_settings', array(
-	'label'      => __('Font H3 Weight', 'gremza22'),
+	'label'      => __('Font H3 Weight', 'lalutheme'),
 	'section'    => 'gr_fonts',
 	'settings'   => 'gr_h3_weight_settings',
 	'type'       => 'select',
         'choices'    => array( 
-          'normal' => __('Normal', 'gremza22'),
-          'Bold' => __('bold', 'gremza22'),
-          'lighter' => __('Lighter', 'gremza22'),
-          '100' => __('100', 'gremza22'),
-          '200' => __('200', 'gremza22'),
-          '400' => __('400', 'gremza22'),
-          '800' => __('800', 'gremza22'),
+          'normal' => __('Normal', 'lalutheme'),
+          'Bold' => __('bold', 'lalutheme'),
+          'lighter' => __('Lighter', 'lalutheme'),
+          '100' => __('100', 'lalutheme'),
+          '200' => __('200', 'lalutheme'),
+          '400' => __('400', 'lalutheme'),
+          '800' => __('800', 'lalutheme'),
          
           
         ),
@@ -577,7 +580,7 @@ $wp_customize->add_control( 'gr_h3_size_settings', array(
 //colors
 
 $wp_customize->add_section( 'gr_colors' , array(
-        'title'             => __('Colors', 'gremza22'),
+        'title'             => __('Colors', 'lalutheme'),
         'priority'          => 1, 
         'panel'             => 'gr_header',
     ) );
