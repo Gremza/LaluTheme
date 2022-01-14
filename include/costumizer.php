@@ -56,7 +56,7 @@ $wp_customize->add_control( 'gr_logo_width_settings', array(
 //social links
 //fb
 $wp_customize->add_section( 'gr_social' , array(
-    'title'             => __('Social links', 'lalutheme'),
+    'title'             => __('Social settings', 'lalutheme'),
     'priority'          => 12, 
     'panel'             => 'gr_header',
 ) );  
@@ -648,7 +648,7 @@ $wp_customize->add_section( 'gr_colors' , array(
     
 $wp_customize->add_control( 'gr_social_width_height_settings', array(
   'type' => 'text',
-  'section' => 'gr_colors', // Add a default or your own section
+  'section' => 'gr_social', // Add a default or your own section
   'label' => __( 'Social icons size in px ' ),
   'description' => __( 'Size is in pixel, there is no need to add px at the end. ex 30' ),
 ) );
