@@ -8,7 +8,7 @@
  <div class="container">
     <div class="row">    <div class="col-xl-12 col-lg-12 col-xs-12 col-md-12 col-sm-12 no-padding">
         <!-- logo begin --> 
-        <div id="logo" class="col-xl-3 col-lg-3  col-md-3  col-sm-3 col-xs-8 no-padding">
+        <div id="logo" class="col-xl-3 col-lg-3  col-md-3  col-sm-3 col-xs-8  ">
             <a href="<?php  echo home_url(); ?>">
             <img class="img-responsive" src="<?php echo get_theme_mod('gr_logo');?>"   alt="">
             </a>
