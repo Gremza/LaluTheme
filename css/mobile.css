@@ -1,0 +1,18 @@
+@media only screen and (max-width: 600px) {
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+ 
+  float: left;
+  min-width: 100%;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  font-size: 16px;
+  text-align: left;
+  list-style: none;   
+}
+	.dropdown-menu li{padding:7px 0; }
+	.dropdown-menu {position:relative;}
+}

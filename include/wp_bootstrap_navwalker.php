@@ -88,7 +88,7 @@ class wp_bootstrap_navwalker extends Walker_Nav_Menu {
 	    	//  $atts['aria-haspopup']	= 'true';
 	        	$atts['href']          = ! empty( $item->url ) ? $item->url : ''; 
                 $atts['aria-haspopup'] = 'true';
-                $atts['aria-expanded'] = 'false';
+                $atts['aria-expanded'] = 'true';
                 $atts['class']         = 'dropdown-toggle nav-link';
                 $atts['id']           = 'menu-item-dropdown-' . $item->ID;
                 		

@@ -50,7 +50,7 @@ $wp_customize->add_control( 'gr_logo_width_settings', array(
   'section' => 'gr_logo', // Add a default or your own section
   'label' => __( 'Logo Width in px' ),
   'description' => __( 'No px needed to be add at the end. Expamle 100' ),
-  'default'=>''
+  'default'=>'',
 ) );
 
 //social links
@@ -71,7 +71,7 @@ $wp_customize->add_control( 'gr_social_fb_settings', array(
 'section' => 'gr_social', // Add a default or your own section
 'label' => __( 'Facebook link' ),
 'settings' => 'gr_social_fb_settings',
-'default'=>''
+'default'=>'',
 ) );
 
 //ig
@@ -90,7 +90,7 @@ $wp_customize->add_control( 'gr_social_ig_settings', array(
 'section' => 'gr_social', // Add a default or your own section
 'label' => __( 'Instagram link' ),
 'settings' => 'gr_social_ig_settings',
-'default'=>''
+'default' => '',
 ) );
 
 
@@ -213,7 +213,7 @@ $wp_customize->add_control( 'gr_header_mode_settings', array(
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'gr_menu_color_setting', array(
         'label' => 'Menu Color',
         'section' => 'gr_logo',
-        'settings' => 'gr_menu_color_setting'
+        'settings' => 'gr_menu_color_setting',
  
     )));
  
@@ -238,7 +238,7 @@ $wp_customize->add_control( 'gr_header_mode_settings', array(
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'gr_menu_sub_color_setting', array(
         'label' => 'Submenu   Color',
         'section' => 'gr_logo',
-        'settings' => 'gr_menu_sub_color_setting'
+        'settings' => 'gr_menu_sub_color_setting',
  
     )));
  
@@ -250,7 +250,7 @@ $wp_customize->add_control( 'gr_header_mode_settings', array(
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'gr_menu_active_setting', array(
         'label' => 'Active Menu Color',
         'section' => 'gr_logo',
-        'settings' => 'gr_menu_active_setting'
+        'settings' => 'gr_menu_active_setting',
  
     )));
     
@@ -594,7 +594,7 @@ $wp_customize->add_section( 'gr_colors' , array(
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'gr_a_color_settings', array(
         'label' => 'Links color',
         'section' => 'gr_colors',
-        'settings' => 'gr_a_color_settings'
+        'settings' => 'gr_a_color_settings',
  
     )));
  
@@ -610,7 +610,7 @@ $wp_customize->add_section( 'gr_colors' , array(
    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'gr_social_color', array(
         'label' => 'Social links color',
         'section' => 'gr_colors',
-        'settings' => 'gr_social_color_settings'
+        'settings' => 'gr_social_color_settings',
  
     )));
 
@@ -624,7 +624,7 @@ $wp_customize->add_section( 'gr_colors' , array(
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'gr_top_color_settings', array(
         'label' => 'Top Color Text',
         'section' => 'gr_colors',
-        'settings' => 'gr_top_color_settings'
+        'settings' => 'gr_top_color_settings',
  
     )));
  $wp_customize->add_setting( 'gr_top_bg_settings' , array(
@@ -634,7 +634,7 @@ $wp_customize->add_section( 'gr_colors' , array(
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'gr_top_bg_settings', array(
         'label' => 'Top Background  ',
         'section' => 'gr_colors',
-        'settings' => 'gr_top_bg_settings'
+        'settings' => 'gr_top_bg_settings',
  
     )));
 

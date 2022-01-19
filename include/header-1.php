@@ -1,8 +1,8 @@
 <header><!-- header right -->
 <div class="top ">
 	<div class="container ">
-		<div class=" top-left col-xs-6 no-padding"> 	<?php dynamic_sidebar( 'top_left' ); ?> 	 </div>
-		<div class="top-right  col-xs-6 no-padding"> <?php require get_template_directory() . '/include/socialblock.php'; ?>		<?php dynamic_sidebar( 'top_right' ); ?>  </div>
+		<div class=" top-left col-xl-8 col-lg-8 col-xs-8 col-md-8 col-sm-8  no-padding"> 	<?php dynamic_sidebar( 'top_left' ); ?> 	 </div>
+		<div class="top-right  col-xl-4 col-lg-4 col-xs-4 col-md-4 col-sm-4  no-padding"> <?php require get_template_directory() . '/include/socialblock.php'; ?>		<?php dynamic_sidebar( 'top_right' ); ?>  </div>
 	</div>
 </div>  
  <div class="container">
@@ -15,8 +15,8 @@
         </div>
          <!-- logo close -->
 		<div class="headerright col-xl-6 col-lg-6 col-sm-6 col-md-7 ">		 
-			<nav class="navbar navbar-default  no-padding "  >
-				<div class="container-fluid no-padding"> 
+			<nav class="navbar navbar-default   "  >
+				<div class="container-fluid  "> 
 				<div class="navbar-header">
 					  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 						<span class="sr-only">Toggle navigation</span>
