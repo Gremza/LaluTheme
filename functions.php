@@ -31,7 +31,7 @@ function lalutheme_register_required_plugins() {
 			'name'               => 'Slider Revolution', // The plugin name.
 			'slug'               => 'revslider', // The plugin slug (typically the folder name).
 			'source'             => get_template_directory() . '/plugins/revslider.zip', // The plugin source.
-			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
+			'required'           => false, // If false, the plugin is only 'recommended' instead of required.
 			'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
 			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
 			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
@@ -42,7 +42,7 @@ function lalutheme_register_required_plugins() {
 			'name'               => 'WPBakery Page Builder', // The plugin name.
 			'slug'               => 'js_composer', // The plugin slug (typically the folder name).
 			'source'             => get_template_directory() . '/plugins/js_composer.zip', // The plugin source.
-			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
+			'required'           => false, // If false, the plugin is only 'recommended' instead of required.
 			'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
 			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
 			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
