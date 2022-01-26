@@ -36,16 +36,19 @@ h1{
     font-family:<?php  echo  get_theme_mod( 'gr_h1_select_settings', 'arial' );?>;
     font-size:<?php  echo  get_theme_mod( 'gr_h1_size_settings', '16' );?>px;
     font-weight:<?php  echo  get_theme_mod( 'gr_h1_weight_settings', 'normal' );?>;
+    color:<?php  echo  get_theme_mod( 'gr_h1_color_settings', 'black' );?>;
 }
 h2{
     font-family:<?php  echo  get_theme_mod( 'gr_h2_select_settings', 'arial' );?>;
     font-size:<?php  echo  get_theme_mod( 'gr_h2_size_settings', '16' );?>px;
     font-weight:<?php  echo  get_theme_mod( 'gr_h2_weight_settings', 'normal' );?>;
+    color:<?php  echo  get_theme_mod( 'gr_h2_color_settings', 'black' );?>;
 }
 h3{
     font-family:<?php  echo  get_theme_mod( 'gr_h3_select_settings', 'arial' );?>;
     font-size:<?php  echo  get_theme_mod( 'gr_h3_size_settings', '16' );?>px;
     font-weight:<?php  echo  get_theme_mod( 'gr_h3_weight_settings', 'normal' );?>;
+    color:<?php  echo  get_theme_mod( 'gr_h3_color_settings', 'black' );?>;
 }
 a {
         color:<?php  echo  get_theme_mod( 'gr_a_color_settings', '#333' );?>;

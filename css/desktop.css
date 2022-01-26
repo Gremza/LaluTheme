@@ -16,4 +16,15 @@
 	  text-align: left;
 	  list-style: none;   
 	}
+
+	.dropdown-menu > li > a { 
+		padding: 10px 20px;
+	}
+
+
+
+
+
+
 }
+

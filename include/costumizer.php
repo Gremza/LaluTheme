@@ -639,7 +639,37 @@ $wp_customize->add_section( 'gr_colors' , array(
     )));
 
   //social svg dimessions
-  
+  //HADER COLORS
+  $wp_customize->add_setting( 'gr_h1_color_settings' , array(
+    'type'          => 'theme_mod', 
+    'transport'     => 'refresh',
+) );
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'gr_h1_color_settings', array(
+    'label' => 'H1 color  ',
+    'section' => 'gr_colors',
+    'settings' => 'gr_h1_color_settings',
+
+)));
+$wp_customize->add_setting( 'gr_h2_color_settings' , array(
+    'type'          => 'theme_mod', 
+    'transport'     => 'refresh',
+) );
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'gr_h2_color_settings', array(
+    'label' => 'H2 color  ',
+    'section' => 'gr_colors',
+    'settings' => 'gr_h2_color_settings',
+
+)));
+$wp_customize->add_setting( 'gr_h3_color_settings' , array(
+    'type'          => 'theme_mod', 
+    'transport'     => 'refresh',
+) );
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'gr_h3_color_settings', array(
+    'label' => 'H3 color  ',
+    'section' => 'gr_colors',
+    'settings' => 'gr_h3_color_settings',
+
+)));
   
  $wp_customize->add_setting( 'gr_social_width_height_settings' , array(
         'type'          => 'theme_mod', 
