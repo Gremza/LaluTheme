@@ -386,7 +386,13 @@ add_action( 'init', function() {
 		// register shortcode
 		add_shortcode('gremza', 'gremza'); 
 	
-	
+	// evince.uk visual composer activation nag remover
+function admin_css() {
+	echo '<style type="text/css">
+   #vc_license-activation-notice {display:none !important;}
+	</style>';
+   }
+   add_action('admin_head', 'admin_css');
 	
 	
 
