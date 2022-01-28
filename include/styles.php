@@ -73,6 +73,11 @@ a {
 .socialblock svg:hover{
     opacity: 0.7;
 }
-
+.footer {
+    background-color: <?php  echo  get_theme_mod( 'gr_footer_bg_settings', '#ccc' );?>;
+}
+.subfooter {
+    background-color: <?php  echo  get_theme_mod( 'gr_subfooter_bg_settings', '#333' );?>;
+}
 
 </style>

@@ -1,24 +1,7 @@
 <?php
 require_once dirname( __FILE__ ) . '/include/class-tgm-plugin-activation.php';
 add_action( 'tgmpa_register', 'lalutheme_register_required_plugins' );
-
-/**
- * Register the required plugins for this theme.
- *
- * In this example, we register five plugins:
- * - one included with the TGMPA library
- * - two from an external source, one from an arbitrary source, one from a GitHub repository
- * - two from the .org repo, where one demonstrates the use of the `is_callable` argument
- *
- * The variables passed to the `tgmpa()` function should be:
- * - an array of plugin arrays;
- * - optionally a configuration array.
- * If you are not changing anything in the configuration array, you can remove the array and remove the
- * variable from the function call: `tgmpa( $plugins );`.
- * In that case, the TGMPA default settings will be used.
- *
- * This function is hooked into `tgmpa_register`, which is fired on the WP `init` action on priority 10.
- */
+ 
 function lalutheme_register_required_plugins() {
 	/*
 	 * Array of plugin arrays. Required keys are name and slug.
@@ -57,17 +40,7 @@ function lalutheme_register_required_plugins() {
 			'required'  => false,
 		),
 
-	);
-
-	/*
-	 * Array of configuration settings. Amend each line as needed.
-	 *
-	 * TGMPA will start providing localized text strings soon. If you already have translations of our standard
-	 * strings available, please help us make TGMPA even better by giving us access to these translations or by
-	 * sending in a pull-request with .po file(s) with the translations.
-	 *
-	 * Only uncomment the strings in the config array if you want to customize the strings.
-	 */
+	); 
 	$config = array(
 		'id'           => 'lalutheme',                 // Unique ID for hashing notices for multiple instances of TGMPA.
 		'default_path' => '',                      // Default absolute path to bundled plugins.
@@ -86,17 +59,14 @@ function lalutheme_register_required_plugins() {
 	tgmpa( $plugins, $config );
 }
  
-
-  
-
+ 
 require get_template_directory() . '/update/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
     'https://gremza.com/lalu/info.json',
     __FILE__,
     'lalutheme'
 );
- 
-
+  
 require get_template_directory() . '/include/wp_bootstrap_navwalker.php';
 require get_template_directory() . '/include/costumizer.php';
  function gu_add_image_responsive_class($content){
@@ -257,29 +227,24 @@ function gn_alx_embed_html( $html ) {
 }
 add_filter( 'embed_oembed_html', 'gn_alx_embed_html', 10, 3 );
 add_filter( 'video_embed_html', 'gn_alx_embed_html' );
- 
-
-
+  
 function gu_scripts_with_jquery()
 {
   // wp_enqueue_script( 'jquery', get_stylesheet_directory_uri() . /js/jquery.min.js',   true ); 
-
-
+ 
   wp_enqueue_script( 'jquery',  get_template_directory_uri() .'/js/jquery.min.js'  , array(), '', false );
   wp_enqueue_script( 'bootstrap',  get_template_directory_uri() .'/js/bootstrap.js'  , array(), '', true ); 
   wp_enqueue_script( 'fontawesome',  'https://use.fontawesome.com/674fa29360.js'  , array(), '', true );
   
 }
 add_action( 'wp_enqueue_scripts', 'gu_scripts_with_jquery' );
-  
-
+   
 function new_submenu_class($menu) {    
     $menu = preg_replace('/ class=" dropdown"/','/ class=" " /',$menu);        
     return $menu;      
 }
 
 add_filter('wp_nav_menu','new_submenu_class'); 
-
  
 function  custom_nav_menu_link_attributes( $atts, $item, $args ){
 	if ( !wp_is_mobile() && $args->has_children  ) {
