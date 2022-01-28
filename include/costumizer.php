@@ -277,6 +277,8 @@ $wp_customize->add_control( 'gr_font_content_select_settings', array(
       'Roboto' => __('Roboto', 'lalutheme'),
      'Bebas Neue'=> __('Bebas Neue', 'lalutheme'),
       'Montserrat'=> __('Montserrat', 'lalutheme'),
+      'Cinzel+Decorative&display=swap'=> __('Cinzel Decorative', 'lalutheme'),
+      
     ),
 ) );
 
@@ -339,7 +341,8 @@ $wp_customize->add_control( 'gr_font_select_control', array(
           'Mukta' => __('Mukta', 'lalutheme'),
 		  'Roboto' => __('Roboto', 'lalutheme'),
          'Bebas Neue'=> __('Bebas Neue', 'lalutheme'),
-          'Montserrat'=> __('Montserrat', 'lalutheme'),
+          'Montserrat'=> __('Montserrat', 'lalutheme'),          
+        'Cinzel+Decorative&display=swap'=> __('Cinzel Decorative', 'lalutheme'),
         ),
 ) );
 
@@ -413,6 +416,7 @@ $wp_customize->add_control( 'gr_h1_select_control', array(
           'Anton' => __('Anton', 'lalutheme'),
           'Bebas Neue'=> __('Bebas', 'lalutheme'),
           'Montserrat'=> __('Montserrat', 'lalutheme'),
+          'Cinzel+Decorative&display=swap'=> __('Cinzel Decorative', 'lalutheme'),
         ),
 ) );
 
@@ -475,6 +479,7 @@ $wp_customize->add_control( 'gr_h2_select_control', array(
           'Anton' => __('Anton', 'lalutheme'),
           'Bebas Neue'=> __('Bebas', 'lalutheme'),
           'Montserrat'=> __('Montserrat', 'lalutheme'),
+          'Cinzel+Decorative&display=swap'=> __('Cinzel Decorative', 'lalutheme'),
         ),
 ) );
 
@@ -537,6 +542,7 @@ $wp_customize->add_control( 'gr_h3_select_control', array(
           'Anton' => __('Anton', 'lalutheme'),
           'Bebas Neue'=> __('Bebas', 'lalutheme'),
           'Montserrat'=> __('Montserrat', 'lalutheme'),
+          'Cinzel+Decorative&display=swap'=> __('Cinzel Decorative', 'lalutheme'),
         ),
 ) );
 

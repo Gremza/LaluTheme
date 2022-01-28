@@ -1,3 +1,13 @@
+<?php
+$fonti=get_theme_mod( 'gr_h3_select_settings', 'arial' );
+if ($fonti = "Cinzel+Decorative&display=swap"){
+    $fontf='Cinzel Decorative';
+}
+else{
+    $fontf="arial";
+    
+}
+?>
 <style>
 	body{
 		background:<?php  echo  get_theme_mod( 'gr_body_background_settings', '#000' );?>;
@@ -50,6 +60,12 @@ h3{
     font-weight:<?php  echo  get_theme_mod( 'gr_h3_weight_settings', 'normal' );?>;
     color:<?php  echo  get_theme_mod( 'gr_h3_color_settings', 'black' );?>;
 }
+h4{
+    font-family:<?php  echo $fontf;?>;
+    font-size:<?php  echo  get_theme_mod( 'gr_h3_size_settings', '16' );?>px;
+    font-weight:<?php  echo  get_theme_mod( 'gr_h3_weight_settings', 'normal' );?>;
+    color:<?php  echo  get_theme_mod( 'gr_h3_color_settings', 'black' );?>;
+}
 a {
         color:<?php  echo  get_theme_mod( 'gr_a_color_settings', '#333' );?>;
 }
@@ -81,3 +97,4 @@ a {
 }
 
 </style>
+
