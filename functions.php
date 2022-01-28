@@ -130,6 +130,12 @@ function gu_widgets_init() {
         'name'          => 'Footer 3  ',
 		'id'            => 'footer3',
 	) ); 
+	register_sidebar( array(
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+        'name'          => 'Footer 4  ',
+		'id'            => 'footer4',
+	) ); 
     register_sidebar( array(
 		'before_widget' => '<div>',
 		'after_widget'  => '</div>',
@@ -238,7 +244,18 @@ function gu_scripts_with_jquery()
   
 }
 add_action( 'wp_enqueue_scripts', 'gu_scripts_with_jquery' );
+function gr_enqueue_styles() {
    
+    wp_enqueue_style(   get_template_directory_uri() . '/css/bootstrap.css' );
+    wp_enqueue_style(   get_template_directory_uri() . '/css/bootstrapxxl.css' );
+    wp_enqueue_style(   get_template_directory_uri() . '/css/desktop.css' );
+    wp_enqueue_style(   get_template_directory_uri() . '/css/menu.css' );
+    wp_enqueue_style(   get_template_directory_uri() . '/css/mobile.css' );
+    wp_enqueue_style(   get_template_directory_uri() . '/css/tablet.css' );
+    wp_enqueue_style(   get_template_directory_uri() . '/css/woocommerce.css' );
+    
+}
+add_action( 'wp_enqueue_scripts', 'gr_enqueue_styles' );   
 function new_submenu_class($menu) {    
     $menu = preg_replace('/ class=" dropdown"/','/ class=" " /',$menu);        
     return $menu;      
@@ -299,6 +316,13 @@ if (!function_exists('gr_login_logo')) {
 add_action('login_head', 'gr_login_logo');
 
 
+function gr_logo()     {
+	$logo_url = wp_get_attachment_url(get_theme_mod('gr_logo'));
+	echo '<a href='.get_site_url().'><img src='.get_theme_mod('gr_logo').' style="max-width:200px; class="img-responsive"></a>' ;
+	 
+}
+add_shortcode('logo','gr_logo');  
+
 
  //single product template
  //
@@ -357,9 +381,29 @@ function admin_css() {
    #vc_license-activation-notice {display:none !important;}
 	</style>';
    }
-   add_action('admin_head', 'admin_css');
+   add_action('admin_head', 'admin_css'); 
+	 
+   function gr_social($params = array()) {
+
+	extract(shortcode_atts(array(
+	'file' => 'default' //Use the real file name here
+	), $params));
 	
+	ob_start();
+	include( dirname( __FILE__ ) . '/include/socialblock.php');
+	 
+	 
 	
+	return ob_get_clean();
+	}
+	
+	add_shortcode('social','gr_social');
+		
+
+
+
+
+
 
 
 
