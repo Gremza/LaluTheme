@@ -1,8 +1,8 @@
 <header><!-- header right -->
 <div class="top ">
-	<div class="container ">
-		<div class=" top-left col-xl-8 col-lg-8 col-xs-8 col-md-8 col-sm-8  no-padding"> 	<?php dynamic_sidebar( 'top_left' ); ?> 	 </div>
-		<div class="top-right  col-xl-4 col-lg-4 col-xs-4 col-md-4 col-sm-4  no-padding"> <?php require get_template_directory() . '/include/socialblock.php'; ?>		<?php dynamic_sidebar( 'top_right' ); ?>  </div>
+	<div class="container no-padding ">
+		<div class="top-left col-xl-8 col-lg-8  col-md-8 col-sm-10 col-xs-10  no-padding"> 	<?php dynamic_sidebar( 'top_left' ); ?> 	 </div>
+		<div class="top-right col-xl-4 col-lg-4  col-md-4 col-sm-2 col-xs-2  no-padding"> <?php require get_template_directory() . '/include/socialblock.php'; ?>		<?php dynamic_sidebar( 'top_right' ); ?>  </div>
 	</div>
 </div>  
  <div class="container">
@@ -10,11 +10,10 @@
         <!-- logo begin --> 
         <div id="logo" class="col-xl-3 col-lg-3  col-md-3  col-sm-3 col-xs-8  ">
             <a href="<?php  echo home_url(); ?>">
-            <img class="img-responsive" src="<?php echo get_theme_mod('gr_logo');?>"   alt="">
-            </a>
-        </div>
+            <img class="img-responsive" src="<?php echo get_theme_mod('gr_logo');?>"   alt="">            </a>        
+		</div>
          <!-- logo close -->
-		<div class="headerright col-xl-6 col-lg-6 col-sm-6 col-md-7 ">		 
+		<div class="headerright col-xl-9 col-lg-9 col-sm-8 col-md-8 col-xs-4">		 
 			<nav class="navbar navbar-default   "  >
 				<div class="container-fluid  "> 
 				<div class="navbar-header">

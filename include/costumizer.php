@@ -656,6 +656,17 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'gr_f
     'settings' => 'gr_footer_bg_settings',
 
 )));
+
+$wp_customize->add_setting( 'gr_footer_txt_settings' , array(
+    'type'          => 'theme_mod', 
+    'transport'     => 'refresh',
+) );
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'gr_footer_txt_settings', array(
+    'label' => ' Footer text Color   ',
+    'section' => 'gr_colors',
+    'settings' => 'gr_footer_txt_settings',
+
+)));
   //subfooter bg color
   $wp_customize->add_setting( 'gr_subfooter_bg_settings' , array(
     'type'          => 'theme_mod', 
