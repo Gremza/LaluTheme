@@ -243,7 +243,7 @@ function gu_scripts_with_jquery()
   wp_enqueue_script( 'fontawesome',  'https://use.fontawesome.com/674fa29360.js'  , array(), '', true );
   
 }
-add_action( 'wp_enqueue_scripts', 'gu_scripts_with_jquery' );
+add_action( 'wp_footer', 'gu_scripts_with_jquery' );
 function gr_enqueue_styles() {
         
     wp_enqueue_style( 'bootstrap',   get_template_directory_uri() . '/css/bootstrap.css',array(), '20130608' );
@@ -255,7 +255,7 @@ function gr_enqueue_styles() {
     wp_enqueue_style( 'woocommerce',   get_template_directory_uri() . '/css/woocommerce.css' ,array(), '20130608');
     
 }
-add_action( 'wp_enqueue_scripts', 'gr_enqueue_styles' );   
+add_action( 'wp_footer', 'gr_enqueue_styles' );   
 function new_submenu_class($menu) {    
     $menu = preg_replace('/ class=" dropdown"/','/ class=" " /',$menu);        
     return $menu;      
@@ -399,6 +399,12 @@ function admin_css() {
 	
 	add_shortcode('social','gr_social');
 		
+
+//excertp length
+function gr_excerpt_length( $length ) {
+    return get_theme_mod( 'gr_excerpt_settings', '20' ) ;
+}
+add_filter( 'excerpt_length', 'gr_excerpt_length');
 
 
 

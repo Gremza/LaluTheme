@@ -53,6 +53,22 @@ $wp_customize->add_control( 'gr_logo_width_settings', array(
   'default'=>'',
 ) );
 
+//excerpt lengh
+ 
+$wp_customize->add_setting( 'gr_excerpt_settings' , array(
+    'type'          => 'theme_mod', 
+    'transport'     => 'refresh',
+    'default' => '',
+) );   
+$wp_customize->add_control( 'gr_excerpt_settings', array(
+    'type' => 'text',
+    'section' => 'gr_logo', // Add a default or your own section
+    'label' => __( 'Excerpt length' ),
+    'settings' => 'gr_excerpt_settings',
+    'description' => __( 'Length in words number.' ),
+    'default'=>'20',
+    ) );
+
 //social links
 //fb
 $wp_customize->add_section( 'gr_social' , array(
@@ -275,8 +291,8 @@ $wp_customize->add_control( 'gr_font_content_select_settings', array(
       'Merienda' => __('Merienda', 'lalutheme'),
       'Mukta' => __('Mukta', 'lalutheme'),
       'Roboto' => __('Roboto', 'lalutheme'),
-     'Bebas Neue'=> __('Bebas Neue', 'lalutheme'),
-      'Montserrat'=> __('Montserrat', 'lalutheme'),
+     'Bebas+Neue&display=swap'=> __('Bebas Neue', 'lalutheme'),
+      'Montserrat:wght@100&display=swap'=> __('Montserrat', 'lalutheme'),
       'Cinzel+Decorative&display=swap'=> __('Cinzel Decorative', 'lalutheme'),
       
     ),
@@ -340,8 +356,8 @@ $wp_customize->add_control( 'gr_font_select_control', array(
           'Merienda' => __('Merienda', 'lalutheme'),
           'Mukta' => __('Mukta', 'lalutheme'),
 		  'Roboto' => __('Roboto', 'lalutheme'),
-         'Bebas Neue'=> __('Bebas Neue', 'lalutheme'),
-          'Montserrat'=> __('Montserrat', 'lalutheme'),          
+         'Bebas+Neue&display=swap'=> __('Bebas Neue', 'lalutheme'),
+          'Montserrat:wght@100&display=swap'=> __('Montserrat', 'lalutheme'),          
         'Cinzel+Decorative&display=swap'=> __('Cinzel Decorative', 'lalutheme'),
         ),
 ) );
@@ -383,6 +399,68 @@ $wp_customize->add_control( 'gr_font_size_settings', array(
 ) );
 
 
+//top
+$wp_customize->add_setting( 'gr_font_top_select_settings' , array(
+    'type'          => 'theme_mod', 
+    'transport'     => 'refresh',
+) );
+
+$wp_customize->add_control( 'gr_font_top_select_settings', array(
+'label'      => __('Top Font Selector', 'lalutheme'),
+'section'    => 'gr_logo',
+'settings'   => 'gr_font_top_select_settings',
+'type'       => 'select',
+    'choices'    => array( 
+      'Raleway' => __('Raleway', 'lalutheme'),
+      'Monda' => __('Monda', 'lalutheme'),
+      'Anton' => __('Anton', 'lalutheme'),
+      'Staatliches' => __('Staatliches', 'lalutheme'),
+      'Kalam' => __('Kalam', 'lalutheme'),
+      'Merienda' => __('Merienda', 'lalutheme'),
+      'Mukta' => __('Mukta', 'lalutheme'),
+      'Roboto' => __('Roboto', 'lalutheme'),
+     'Bebas+Neue&display=swap'=> __('Bebas Neue', 'lalutheme'),
+      'Montserrat:wght@100&display=swap'=> __('Montserrat', 'lalutheme'),          
+    'Cinzel+Decorative&display=swap'=> __('Cinzel Decorative', 'lalutheme'),
+    ),
+) );
+
+
+$wp_customize->add_setting( 'gr_font_top_weight_settings' , array(
+    'type'          => 'theme_mod', 
+    'transport'     => 'refresh',
+) );
+
+$wp_customize->add_control( 'gr_font_top_weight_settings', array(
+'label'      => __('Font top Weight', 'lalutheme'),
+'section'    => 'gr_logo',
+'settings'   => 'gr_font_top_weight_settings',
+'type'       => 'select',
+    'choices'    => array( 
+      'normal' => __('Normal', 'lalutheme'),
+      'Bold' => __('bold', 'lalutheme'),
+      'lighter' => __('Lighter', 'lalutheme'),
+      '100' => __('100', 'lalutheme'),
+      '200' => __('200', 'lalutheme'),
+      '400' => __('400', 'lalutheme'),
+      '800' => __('800', 'lalutheme'),
+     
+      
+    ),
+) );
+
+$wp_customize->add_setting( 'gr_font_top_size_settings' , array(
+    'type'          => 'theme_mod', 
+    'transport'     => 'refresh',
+) );
+
+$wp_customize->add_control( 'gr_font_top_size_settings', array(
+'type' => 'text',
+'section' => 'gr_logo', // Add a default or your own section
+'label' => __( 'Font Top Size' ),
+'description' => __( 'font must be in number expamle 12' ),
+) );
+
 
 
 
@@ -414,8 +492,8 @@ $wp_customize->add_control( 'gr_h1_select_control', array(
           'Kalam' => __('Kalam', 'lalutheme'),
           'Merienda' => __('Merienda', 'lalutheme'),
           'Anton' => __('Anton', 'lalutheme'),
-          'Bebas Neue'=> __('Bebas', 'lalutheme'),
-          'Montserrat'=> __('Montserrat', 'lalutheme'),
+          'Bebas+Neue&display=swap'=> __('Bebas', 'lalutheme'),
+          'Montserrat:wght@100&display=swap'=> __('Montserrat', 'lalutheme'),
           'Cinzel+Decorative&display=swap'=> __('Cinzel Decorative', 'lalutheme'),
         ),
 ) );
@@ -477,8 +555,8 @@ $wp_customize->add_control( 'gr_h2_select_control', array(
           'Kalam' => __('Kalam', 'lalutheme'),
           'Merienda' => __('Merienda', 'lalutheme'),
           'Anton' => __('Anton', 'lalutheme'),
-          'Bebas Neue'=> __('Bebas', 'lalutheme'),
-          'Montserrat'=> __('Montserrat', 'lalutheme'),
+          'Bebas+Neue&display=swap'=> __('Bebas', 'lalutheme'),
+          'Montserrat:wght@100&display=swap'=> __('Montserrat', 'lalutheme'),
           'Cinzel+Decorative&display=swap'=> __('Cinzel Decorative', 'lalutheme'),
         ),
 ) );
@@ -540,8 +618,8 @@ $wp_customize->add_control( 'gr_h3_select_control', array(
           'Kalam' => __('Kalam', 'lalutheme'),
           'Merienda' => __('Merienda', 'lalutheme'),
           'Anton' => __('Anton', 'lalutheme'),
-          'Bebas Neue'=> __('Bebas', 'lalutheme'),
-          'Montserrat'=> __('Montserrat', 'lalutheme'),
+          'Bebas+Neue&display=swap'=> __('Bebas', 'lalutheme'),
+          'Montserrat:wght@100&display=swap'=> __('Montserrat', 'lalutheme'),
           'Cinzel+Decorative&display=swap'=> __('Cinzel Decorative', 'lalutheme'),
         ),
 ) );

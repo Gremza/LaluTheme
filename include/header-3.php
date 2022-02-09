@@ -1,15 +1,21 @@
-<div id="headergrad">
+<div id="headergrad"><!--- Header transparent --->
+<div class="top ">
+	<div class="container no-padding ">
+		<div class="top-left col-xl-8 col-lg-8  col-md-8 col-sm-10 hidden-xs  no-padding"> 	<?php dynamic_sidebar( 'top_left' ); ?> 	 </div>
+		<div class="top-right col-xl-4 col-lg-4  col-md-4    no-padding"> <?php require get_template_directory() . '/include/socialblock.php'; ?>		<?php dynamic_sidebar( 'top_right' ); ?>  </div>
+	</div>
+</div>
      <div class="container">
-      <div class="col-lg-12 ">
+ 
             <!-- logo begin --> 
-            <div id="logo" class="col-lg-3 col-xs-8">
+            <div id="logo" class="col-xl-2 col-lg-2  col-md-3 col-sm-8 col-xs-9  no-padding">
                 <a href="<?php  echo home_url(); ?>">
                 <img class="img-responsive" src="<?php echo get_theme_mod('gr_logo');?>"   alt="">
                 </a>
             </div>
              <!-- logo close -->
-    		<div class="headerright">		 
-    			<nav class="navbar navbar-default col-lg-7 no-padding "  >
+    		<div class="headerright col-xl-10 col-lg-10  col-md-9     no-padding">		 
+    			<nav class="navbar navbar-default   no-padding "  >
     				<div class="container-fluid no-padding"> 
     				<div class="navbar-header">
     					  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -33,10 +39,11 @@
     						?>
     				</div>
     			</nav>
+				<div class="searchbar col-lg-2  hidden-xs no-padding"><?php echo   dynamic_sidebar( 'right_header' ); ?>  </div>
     		</div>
-            <div class="searchbar col-lg-2  hidden-xs no-padding"><?php echo   dynamic_sidebar( 'right_header' ); ?>  </div>
-  <?php require get_template_directory() . '/include/socialblock.php'; ?>		  
+            
+ 
         </div>
-    </div>
+     
 </div>
  
