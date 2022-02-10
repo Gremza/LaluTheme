@@ -91,11 +91,7 @@ $wp_customize->add_control( 'gr_social_fb_settings', array(
 ) );
 
 //ig
-$wp_customize->add_section( 'gr_social' , array(
-    'title'             => __('Social links', 'lalutheme'),
-    'priority'          => 13, 
-    'panel'             => 'gr_header',
-) );  
+  
 $wp_customize->add_setting( 'gr_social_ig_settings' , array(
     'type'          => 'theme_mod', 
     'transport'     => 'refresh',
@@ -128,14 +124,28 @@ $wp_customize->add_control( 'gr_social_yt_settings', array(
   'label' => __( 'Youtube link' ),
     'settings' => 'gr_social_yt_settings'
 ) );
-
+//yt 
+$wp_customize->add_setting( 'gr_social_ln_settings' , array(
+        'type'          => 'theme_mod', 
+        'transport'     => 'refresh',
+        'default' => '',
+    ) );     
+$wp_customize->add_control( 'gr_social_ln_settings', array(
+  'type' => 'text',
+  'section' => 'gr_social', // Add a default or your own section
+  'label' => __( 'Linkedin link' ),
+    'settings' => 'gr_social_ln_settings'
+) );
+ 
+	
      $wp_customize->add_setting( 'gr_headerright_settings' , array(
         'type'          => 'theme_mod', 
         'transport'     => 'refresh',
          'priority'          => 2, 
     ) );
 
-	
+
+
 	
 	
     $wp_customize->add_control( 'gr_headerright_settings', array(

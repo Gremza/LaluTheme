@@ -2,9 +2,7 @@
 .dropdown-menu > li > a { 
     padding: 3px 20px;
 }
-.navbar-nav>li:first-child {
-    margin: 0 0 0 -40px;
-}
+ 
 .dropdown-menu {
   position: absolute;
   top: 100%;

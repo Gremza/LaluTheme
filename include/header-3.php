@@ -14,7 +14,7 @@
                 </a>
             </div>
              <!-- logo close -->
-    		<div class="headerright col-xl-10 col-lg-10  col-md-9     no-padding">		 
+    		<div class="headerright col-xl-10 col-lg-10  col-md-12     no-padding">		 
     			<nav class="navbar navbar-default   no-padding "  >
     				<div class="container-fluid no-padding"> 
     				<div class="navbar-header">
