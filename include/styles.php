@@ -150,7 +150,7 @@ switch ($fontih3) {
         font-weight:<?php  echo  get_theme_mod( 'gr_font_content_weight_settings', 'normal' );?>;
 	}
     
-}
+ 
 #logo img {
    
 	    width:<?php  echo  get_theme_mod( 'gr_logo_width_settings', '150' ).'px'; ?>;
