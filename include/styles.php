@@ -1,7 +1,7 @@
 <?php
-$fontih1=get_theme_mod( 'gr_h1_select_settings', 'Raleway' );
-$fontih2=get_theme_mod( 'gr_h2_select_settings', 'Raleway' );
-$fontih3=get_theme_mod( 'gr_h3_select_settings', 'Raleway' );
+$fontih1=get_theme_mod( 'gr_h1_select_settings', 'Sans Source' );
+$fontih2=get_theme_mod( 'gr_h2_select_settings', 'Sans Source' );
+$fontih3=get_theme_mod( 'gr_h3_select_settings', 'Sans Source' );
 switch ($fontih1) { 
   case "Anton":
     $fh1= "Anton";
@@ -145,12 +145,12 @@ switch ($fontih3) {
 	body{
 		background:<?php  echo  get_theme_mod( 'gr_body_background_settings', '#000' );?>;
 		color:<?php   echo  get_theme_mod( 'gr_body_color_setting', '#fff' );?>;
-        font-family:<?php  echo  get_theme_mod( 'gr_font_content_select_settings', 'Raleway' );?>;
+        font-family:<?php  echo  get_theme_mod( 'gr_font_content_select_settings', 'Sans Source' );?>;
         font-size:<?php  echo  get_theme_mod( 'gr_font_content_size_settings', '16' );?>px;
         font-weight:<?php  echo  get_theme_mod( 'gr_font_content_weight_settings', 'normal' );?>;
 	}
     
- 
+}
 #logo img {
    
 	    width:<?php  echo  get_theme_mod( 'gr_logo_width_settings', '150' ).'px'; ?>;
@@ -168,7 +168,7 @@ switch ($fontih3) {
 }
 .navbar-default .navbar-nav > li > a  {
     color:<?php  echo  get_theme_mod( 'gr_menu_color_setting', '#fff' );?>;
-    font-family:<?php  echo  get_theme_mod( 'gr_font_select_settings', 'Raleway' );?>;
+    font-family:<?php  echo  get_theme_mod( 'gr_font_select_settings', 'Sans Source' );?>;
     font-size:<?php  echo  get_theme_mod( 'gr_font_size_settings', '16' );?>px;
     font-weight:<?php  echo  get_theme_mod( 'gr_font_weight_settings', 'normal' );?>;
 }
@@ -214,7 +214,7 @@ a {
 .top{ 
     background:<?php  echo  get_theme_mod( 'gr_top_bg_settings', '#000' );?>;
     color:<?php  echo  get_theme_mod( 'gr_top_color_settings', '#fff' );?>;
-    font-family:<?php echo  get_theme_mod( 'gr_font_top_select_settings', 'Raleway' );?> ;  
+    font-family:<?php echo  get_theme_mod( 'gr_font_top_select_settings', 'Sans Source' );?> ;  
     font-size:<?php  echo  get_theme_mod( 'gr_font_top_size_settings', '16' );?>px !important; 
     font-weight:<?php  echo  get_theme_mod( 'gr_font_top_weight_settings', 'normal' );?>;
 }

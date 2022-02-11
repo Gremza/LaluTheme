@@ -91,7 +91,11 @@ $wp_customize->add_control( 'gr_social_fb_settings', array(
 ) );
 
 //ig
-  
+$wp_customize->add_section( 'gr_social' , array(
+    'title'             => __('Social links', 'lalutheme'),
+    'priority'          => 13, 
+    'panel'             => 'gr_header',
+) );  
 $wp_customize->add_setting( 'gr_social_ig_settings' , array(
     'type'          => 'theme_mod', 
     'transport'     => 'refresh',
@@ -124,28 +128,14 @@ $wp_customize->add_control( 'gr_social_yt_settings', array(
   'label' => __( 'Youtube link' ),
     'settings' => 'gr_social_yt_settings'
 ) );
-//yt 
-$wp_customize->add_setting( 'gr_social_ln_settings' , array(
-        'type'          => 'theme_mod', 
-        'transport'     => 'refresh',
-        'default' => '',
-    ) );     
-$wp_customize->add_control( 'gr_social_ln_settings', array(
-  'type' => 'text',
-  'section' => 'gr_social', // Add a default or your own section
-  'label' => __( 'Linkedin link' ),
-    'settings' => 'gr_social_ln_settings'
-) );
- 
-	
+
      $wp_customize->add_setting( 'gr_headerright_settings' , array(
         'type'          => 'theme_mod', 
         'transport'     => 'refresh',
          'priority'          => 2, 
     ) );
 
-
-
+	
 	
 	
     $wp_customize->add_control( 'gr_headerright_settings', array(
@@ -304,6 +294,8 @@ $wp_customize->add_control( 'gr_font_content_select_settings', array(
      'Bebas+Neue&display=swap'=> __('Bebas Neue', 'lalutheme'),
       'Montserrat:wght@100&display=swap'=> __('Montserrat', 'lalutheme'),
       'Cinzel+Decorative&display=swap'=> __('Cinzel Decorative', 'lalutheme'),
+      'Source+Sans+Pro:200,300'=> __('Sans Source', 'lalutheme'),
+       
       
     ),
 ) );
@@ -324,6 +316,7 @@ $wp_customize->add_control( 'gr_font_content_weight_settings', array(
       'lighter' => __('Lighter', 'lalutheme'),
       '100' => __('100', 'lalutheme'),
       '200' => __('200', 'lalutheme'),
+      '300' => __('300', 'lalutheme'),
       '400' => __('400', 'lalutheme'),
       '800' => __('800', 'lalutheme'),
      
@@ -369,6 +362,8 @@ $wp_customize->add_control( 'gr_font_select_control', array(
          'Bebas+Neue&display=swap'=> __('Bebas Neue', 'lalutheme'),
           'Montserrat:wght@100&display=swap'=> __('Montserrat', 'lalutheme'),          
         'Cinzel+Decorative&display=swap'=> __('Cinzel Decorative', 'lalutheme'),
+              'Source+Sans+Pro:200,300'=> __('Sans Source', 'lalutheme'),
+
         ),
 ) );
 
@@ -389,6 +384,7 @@ $wp_customize->add_control( 'gr_font_weight_settings', array(
           'lighter' => __('Lighter', 'lalutheme'),
           '100' => __('100', 'lalutheme'),
           '200' => __('200', 'lalutheme'),
+          '300' => __('300', 'lalutheme'),
           '400' => __('400', 'lalutheme'),
           '800' => __('800', 'lalutheme'),
          
@@ -432,6 +428,8 @@ $wp_customize->add_control( 'gr_font_top_select_settings', array(
      'Bebas+Neue&display=swap'=> __('Bebas Neue', 'lalutheme'),
       'Montserrat:wght@100&display=swap'=> __('Montserrat', 'lalutheme'),          
     'Cinzel+Decorative&display=swap'=> __('Cinzel Decorative', 'lalutheme'),
+          'Source+Sans+Pro:200,300'=> __('Sans Source', 'lalutheme'),
+
     ),
 ) );
 
@@ -452,6 +450,7 @@ $wp_customize->add_control( 'gr_font_top_weight_settings', array(
       'lighter' => __('Lighter', 'lalutheme'),
       '100' => __('100', 'lalutheme'),
       '200' => __('200', 'lalutheme'),
+      '300' => __('300', 'lalutheme'),
       '400' => __('400', 'lalutheme'),
       '800' => __('800', 'lalutheme'),
      
@@ -505,6 +504,8 @@ $wp_customize->add_control( 'gr_h1_select_control', array(
           'Bebas+Neue&display=swap'=> __('Bebas', 'lalutheme'),
           'Montserrat:wght@100&display=swap'=> __('Montserrat', 'lalutheme'),
           'Cinzel+Decorative&display=swap'=> __('Cinzel Decorative', 'lalutheme'),
+                'Source+Sans+Pro:200,300'=> __('Sans Source', 'lalutheme'),
+
         ),
 ) );
 
@@ -525,6 +526,7 @@ $wp_customize->add_control( 'gr_h1_weight_settings', array(
           'lighter' => __('Lighter', 'lalutheme'),
           '100' => __('100', 'lalutheme'),
           '200' => __('200', 'lalutheme'),
+          '300' => __('300', 'lalutheme'),
           '400' => __('400', 'lalutheme'),
           '800' => __('800', 'lalutheme'),
          
@@ -568,6 +570,8 @@ $wp_customize->add_control( 'gr_h2_select_control', array(
           'Bebas+Neue&display=swap'=> __('Bebas', 'lalutheme'),
           'Montserrat:wght@100&display=swap'=> __('Montserrat', 'lalutheme'),
           'Cinzel+Decorative&display=swap'=> __('Cinzel Decorative', 'lalutheme'),
+                'Source+Sans+Pro:200,300'=> __('Sans Source', 'lalutheme'),
+
         ),
 ) );
 
@@ -588,6 +592,7 @@ $wp_customize->add_control( 'gr_h2_weight_settings', array(
           'lighter' => __('Lighter', 'lalutheme'),
           '100' => __('100', 'lalutheme'),
           '200' => __('200', 'lalutheme'),
+          '300' => __('300', 'lalutheme'),
           '400' => __('400', 'lalutheme'),
           '800' => __('800', 'lalutheme'),
          
@@ -631,6 +636,8 @@ $wp_customize->add_control( 'gr_h3_select_control', array(
           'Bebas+Neue&display=swap'=> __('Bebas', 'lalutheme'),
           'Montserrat:wght@100&display=swap'=> __('Montserrat', 'lalutheme'),
           'Cinzel+Decorative&display=swap'=> __('Cinzel Decorative', 'lalutheme'),
+                'Source+Sans+Pro:200,300'=> __('Sans Source', 'lalutheme'),
+
         ),
 ) );
 
@@ -651,6 +658,7 @@ $wp_customize->add_control( 'gr_h3_weight_settings', array(
           'lighter' => __('Lighter', 'lalutheme'),
           '100' => __('100', 'lalutheme'),
           '200' => __('200', 'lalutheme'),
+          '300' => __('300', 'lalutheme'),
           '400' => __('400', 'lalutheme'),
           '800' => __('800', 'lalutheme'),
          
