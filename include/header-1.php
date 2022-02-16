@@ -13,7 +13,7 @@
             <img class="img-responsive" src="<?php echo get_theme_mod('gr_logo');?>"   alt="">            </a>        
 		</div>
          <!-- logo close -->
-		<div class="headerright col-xl-9 col-lg-9 col-sm-8 col-md-8 col-xs-4">		 
+		<div class="headerright col-xl-9 col-lg-9 col-sm-8 col-md-8 ">		 
 			<nav class="navbar navbar-default   "  >
 				<div class="container-fluid  "> 
 				<div class="navbar-header">
@@ -39,12 +39,12 @@
 				</div>
 			</nav>
 		</div>
-    <div class="searchbar headerright col-lg-2  col-md-2 hidden-xs no-padding">
+    <div class="searchbar   col-lg-2  col-md-2 hidden-xs no-padding">
      <?php if ( is_active_sidebar( 'right_header' ) ) : ?>
         <?php dynamic_sidebar( 'right_header' ); ?>
         <?php endif; ?>
  																				 
         </div>
 </div>
- 
+</div></div>
 </header>

@@ -9,10 +9,7 @@
 
 <link rel="shortcut icon" type="image/jpg" href="<?php if (get_theme_mod( 'gr_favicon' )) : echo get_theme_mod( 'gr_favicon'); else: echo get_template_directory_uri().'/img/favicon.png'; endif; ?>"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-
-<link href=" <?php echo get_template_directory_uri(); ?>/css/bootstrap.css" rel="stylesheet">
-<link href=" <?php echo get_template_directory_uri(); ?>/css/bootstrapxxl.css" rel="stylesheet">
-<link href=" <?php echo get_template_directory_uri(); ?>/css/woocommerce.css" rel="stylesheet">
+ 
 
  <!-- CSS Files
     ================================================== -->

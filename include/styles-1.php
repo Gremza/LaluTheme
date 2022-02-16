@@ -7,6 +7,8 @@
 .navbar-nav>li:first-child {
     margin: 0 0 0 -40px;
 } 
+.navbar-nav{float:left;}
 .top{padding-top: 5px;}
 }
+ .searchbar{float:right;}
 </style>
