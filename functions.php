@@ -265,7 +265,7 @@ add_filter('wp_nav_menu','new_submenu_class');
  
 function  custom_nav_menu_link_attributes( $atts, $item, $args ){
 	if ( !wp_is_mobile() && $args->has_children  ) {
-			  $atts['href'] = ! empty( $item->url ) ? $item->url : '';
+		//	  $atts['href'] = !empty( $item->url ) ? $item->url : '';
 	  }
 	return $atts;
   }
@@ -418,7 +418,81 @@ function turn_off_feed() {
 	add_action('do_feed_rss2_comments', 'turn_off_feed', 1);
 	add_action('do_feed_atom_comments', 'turn_off_feed', 1);
 	
+//lalutheme page on admin
 
+
+add_action('admin_menu', 'lalatheme_page');
+	
+	function lalatheme_page()
+	{
+		// Add the top-level admin menu
+		$page_title = 'Lalu theme';
+		$menu_title = 'Lalu theme';
+		$capability = 'manage_options';
+		$menu_slug = 'lalatheme-settings';
+		$function = 'lalathemesettings'; 
+		$icon =  'data:image/svg+xml;base64,' . base64_encode( '<svg
+		xmlns="http://www.w3.org/2000/svg"
+		viewBox="0 0 20 20"
+	 >
+	   <path
+		  style="fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.31579"
+		  d="M 9.9999995,0.9473685 C 2,5.4736845 2,5.4736845 2,5.4736845 2,14.526315 2,14.526315 2,14.526315 9.9999995,19.052631 9.9999995,19.052631 9.9999995,19.052631 18,14.526315 18,14.526315 18,14.526315 18,5.4736845 18,5.4736845 18,5.4736845 Z m 0,15.0526305 c -3.3684207,0 -5.9999989,-2.631578 -5.9999989,-5.9999995 0,-3.368421 2.6315782,-6 5.9999989,-6 3.3684205,0 6.0000005,2.631579 6.0000005,6 0,3.3684215 -2.63158,5.9999995 -6.0000005,5.9999995 z"
+		  id="path17" />
+	   <path
+		  style="fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.350878"
+		  d="m 13.62573,10.052631 c 0,1.988305 -1.637426,3.62573 -3.6257305,3.62573 -1.9883036,0 -3.6257309,-1.637425 -3.6257309,-3.62573 0,-1.988304 1.6374273,-3.625731 3.6257309,-3.625731 1.9883045,0 3.6257305,1.637427 3.6257305,3.625731 z"
+		  id="path19" />
+	 </svg>' );
+
+		add_menu_page($page_title, $menu_title, $capability, $menu_slug, $function,);
+
+		 
+	}
+function lalathemesettings()
+	{
+?>
+
+<div class="container">
+	<h1> Lalu theme shortcodes</h1>
+<div class="row">
+	<div class="col-lg-12"><h2>copyright text on footer, put as a shortcode to footer left widget</h2></div>
+	 <div class="col-lg-12">
+		<code> [copywrite]</code>
+	</div> 
+	</div>
+<div class="row">
+		<div class="col-lg-12"><h2>site_url link</h2></div>
+	 <div class="col-lg-12">
+		<code> [site_url]</code>
+	</div> 
+	</div>
+<div class="row">
+		<div class="col-lg-12"><h2>social links and icons</h2></div>
+ 	<div class="col-lg-12">
+		<code> [social]</code>
+	</div> 
+	</div>
+<div class="row">
+		<div class="col-lg-12"><h2>gremza text on footer, put as a shortcode to footer right widget</h2></div>
+ 	<div class="col-lg-12">
+		<code> [gremza]</code>
+	</div> 
+	</div>
+	<div class="row">
+		<div class="col-lg-12"><h2>Insert website logo with home link</h2></div>
+ 	<div class="col-lg-12">
+		<code> [logo]</code>
+	</div> 
+	</div>
+	
+	
+	
+</div>
+<?php
+}
+
+//////////////////////////////////////////////
 
 
 
