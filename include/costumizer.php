@@ -1,7 +1,5 @@
-    <?php
-
-
-    function gr_customize_register( $wp_customize ) {
+<?php
+function gr_customize_register( $wp_customize ) {
 
         // Create our panels
         //panel gr_header
@@ -860,4 +858,4 @@
 
         }
         add_action( 'customize_register', 'gr_customize_register' );
-    ?>
+ ?>
