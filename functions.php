@@ -264,9 +264,9 @@ function new_submenu_class($menu) {
 add_filter('wp_nav_menu','new_submenu_class'); 
  
 function  custom_nav_menu_link_attributes( $atts, $item, $args ){
-	if ( !wp_is_mobile() && $args->has_children  ) {
-		//	  $atts['href'] = !empty( $item->url ) ? $item->url : '';
-	  }
+//	if ( !wp_is_mobile() && $args->has_children  ) {
+		 	  $atts['href'] = !empty( $item->url ) ? $item->url : '';
+//	  }
 	return $atts;
   }
   add_filter( 'nav_menu_link_attributes', 'custom_nav_menu_link_attributes', 99, 3 );
