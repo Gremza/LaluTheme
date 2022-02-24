@@ -86,6 +86,7 @@ function gr_customize_register( $wp_customize ) {
     'label' => __( 'Facebook link' ),
     'settings' => 'gr_social_fb_settings',
     'default'=>'',
+    'priority'          => 1,
     ) );
 
     //ig
@@ -101,6 +102,7 @@ function gr_customize_register( $wp_customize ) {
     'label' => __( 'Instagram link' ),
     'settings' => 'gr_social_ig_settings',
     'default' => '',
+    'priority'          => 2,
     ) );
 
 
@@ -116,15 +118,10 @@ function gr_customize_register( $wp_customize ) {
     'type' => 'text',
     'section' => 'gr_social', // Add a default or your own section
     'label' => __( 'Youtube link' ),
-        'settings' => 'gr_social_yt_settings'
+        'settings' => 'gr_social_yt_settings',
+        'priority'          => 3,
     ) );
-
-        $wp_customize->add_setting( 'gr_headerright_settings' , array(
-            'type'          => 'theme_mod', 
-            'transport'     => 'refresh',
-            'priority'          => 2, 
-        ) );
-
+ 
     //linkedin
     
     $wp_customize->add_setting( 'gr_social_ln_settings' , array(
@@ -136,14 +133,39 @@ function gr_customize_register( $wp_customize ) {
     'type' => 'text',
     'section' => 'gr_social', // Add a default or your own section
     'label' => __( 'linkedin link' ),
-    'settings' => 'gr_social_ln_settings'
+    'settings' => 'gr_social_ln_settings',
+    'priority'          => 4,
     ) );
+ 
+//other link
+$wp_customize->add_setting( 'gr_social_other_settings' , array(
+    'type'          => 'theme_mod', 
+    'transport'     => 'refresh',
+    'default' => '',
+) );     
+$wp_customize->add_control( 'gr_social_other_settings', array(
+'type' => 'text',
+'section' => 'gr_social', // Add a default or your own section
+'label' => __( 'Other link' ),
+'settings' => 'gr_social_other_settings',
+'priority'          => 5,
+) );
 
-    $wp_customize->add_setting( 'gr_headerright_settings' , array(
-        'type'          => 'theme_mod', 
-        'transport'     => 'refresh',
-        'priority'          => 2, 
-    ) );
+$wp_customize->add_setting( 'gr_social_other_img_settings' , array(
+    'type'          => 'theme_mod', 
+    'transport'     => 'refresh',
+) );
+
+$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'gr_social_other_img_control', array(
+    'label'      => __('other link Logo', 'lalutheme'), 
+    'section'    => 'gr_social',
+    'settings'   => 'gr_social_other_img_settings',
+    'priority'   => 6,
+    'type'       => 'image',
+    ) ));
+
+ ///////////////////////////
+
 
         
         

@@ -225,9 +225,7 @@ a {
 	width:<?php  echo  get_theme_mod( 'gr_social_width_height_settings', '21px' );?>px;
 	height:<?php  echo  get_theme_mod( 'gr_social_width_height_settings', '21px' );?>px;
 }
-.socialblock svg:hover{
-    opacity: 0.7;
-}
+
 .footer {
     background-color: <?php  echo  get_theme_mod( 'gr_footer_bg_settings', '#ccc' );?>;
     color: <?php  echo  get_theme_mod( 'gr_footer_txt_settings', '#fff' );?>;

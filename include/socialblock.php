@@ -322,9 +322,20 @@ width="21px" height="21px" viewBox="0 0 276 292.5" enable-background="new 0 0 27
 </g>
 </svg>
 	</a> 
-<?php 
+	<?php 
 }?>
-	
+
+<?php
+////other links
+
+    $ot=get_theme_mod( 'gr_social_other_settings');  
+if ($ot !== '') { ?>
+<a href="<?php echo $ot; ?>"> <img src="<?php echo  get_theme_mod( 'gr_social_other_img_settings');  ?>" width="<?php echo  get_theme_mod( 'gr_social_width_height_settings');?>" height="<?php echo  get_theme_mod( 'gr_social_width_height_settings');?>"></a> 
+<?php  } ?>
+
+
+
+
 
 
 

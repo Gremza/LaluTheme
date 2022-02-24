@@ -20,7 +20,7 @@
 		<?php dynamic_sidebar( 'left_subfooter' ); ?>
 	</div>
 	<div class="col-lg-6 col-xm-6 right_subfooter">
-		<?php dynamic_sidebar( 'right_subfooter' ); ?>
+		<?php dynamic_sidebar( 'right_subfooter' ); echo do_shortcode('[gremza]');  ?> 
 	</div>
     </div>	
 </div>

@@ -355,7 +355,7 @@ add_action( 'init', function() {
   function copyright() { 
  
 	// Things that you want to do. 
-	$message = date('Y'). ' All right reserverd © <a href="[site_path]">'. get_bloginfo() .  '</a> '; 
+	$message = date('Y'). ' All right reserverd © <a href=' .   do_shortcode('[site_url]') .'>'. get_bloginfo() .  '</a> '; 
 	 
 	// Output needs to be return
 	return $message;
@@ -445,7 +445,7 @@ add_action('admin_menu', 'lalatheme_page');
 		  id="path19" />
 	 </svg>' );
 
-		add_menu_page($page_title, $menu_title, $capability, $menu_slug, $function,);
+		add_menu_page($page_title, $menu_title, $capability, $menu_slug, $function);
 
 		 
 	}
@@ -473,12 +473,7 @@ function lalathemesettings()
 		<code> [social]</code>
 	</div> 
 	</div>
-<div class="row">
-		<div class="col-lg-12"><h2>gremza text on footer, put as a shortcode to footer right widget</h2></div>
- 	<div class="col-lg-12">
-		<code> [gremza]</code>
-	</div> 
-	</div>
+ 
 	<div class="row">
 		<div class="col-lg-12"><h2>Insert website logo with home link</h2></div>
  	<div class="col-lg-12">

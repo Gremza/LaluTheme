@@ -4,18 +4,7 @@ Template Name: Without title
 */
 get_header();  
 ?>  
-<style>
- #headergrad{
  
- position: absolute;
-height: 150px;
-z-index: 9999;
-width: 100%;
-}
-</style>
-<!-- header close -->
-
-<!-- content begin -->
 <div   class="container  page  ">
 	 
  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
