@@ -2,6 +2,7 @@
 $fontih1=get_theme_mod( 'gr_h1_select_settings', 'Sans Source' );
 $fontih2=get_theme_mod( 'gr_h2_select_settings', 'Sans Source' );
 $fontih3=get_theme_mod( 'gr_h3_select_settings', 'Sans Source' );
+$fontih4=get_theme_mod( 'gr_h4_select_settings', 'Sans Source' );
 switch ($fontih1) { 
   case "Anton":
     $fh1= "Anton";
@@ -125,6 +126,47 @@ switch ($fontih3) {
       default:
         $fh3=  "Kalam";
 }
+
+switch ($fontih4) { 
+  case "Anton":
+      $fh4= "Anton";
+      break;
+    case "Raleway":
+     $fh4=  "Raleway";
+      break;
+    case "Mukta":
+      $fh4=  "Mukta";
+      break;
+    case "Monda":
+      $fh4=  "Monda";
+      break;
+    case "Mukta":
+      $fh4=  "Mukta";
+      break;
+    case "Staatliches":
+      $fh4=  "Staatliches";
+      break;
+    case "Kalam":
+      $fh4=  "Kalam";
+      break;
+    case "Merienda":
+      $fh4=  "Merienda";
+      break;
+    case "Roboto":
+      echo "Roboto";
+      break;
+    case "Bebas+Neue&display=swap":
+      $fh4=  "Bebas Neue";
+      break;
+    case "Montserrat:wght@100&display=swap":
+      $fh4=  "Montserrat";
+      break;
+    case "Cinzel+Decorative&display=swap":
+      $fh4=  "Cinzel Decorative";
+      break;
+    default:
+      $fh4=  "Kalam";
+}
   
 
 
@@ -148,9 +190,7 @@ switch ($fontih3) {
         font-family:<?php  echo  get_theme_mod( 'gr_font_content_select_settings', 'Sans Source' );?>;
         font-size:<?php  echo  get_theme_mod( 'gr_font_content_size_settings', '16' );?>px;
         font-weight:<?php  echo  get_theme_mod( 'gr_font_content_weight_settings', 'normal' );?>;
-	}
-    
-}
+	} 
 #logo img {
    
 	    width:<?php  echo  get_theme_mod( 'gr_logo_width_settings', '150' ).'px'; ?>;
@@ -197,10 +237,10 @@ h3{
     color:<?php  echo  get_theme_mod( 'gr_h3_color_settings', 'black' );?>;
 }
 h4{
-       font-family:<?php  echo $fh3;?>!important; 
-    font-size:<?php  echo  get_theme_mod( 'gr_h3_size_settings', '16' );?>px !important; 
-    font-weight:<?php  echo  get_theme_mod( 'gr_h3_weight_settings', 'normal' );?>;
-    color:<?php  echo  get_theme_mod( 'gr_h3_color_settings', 'black' );?>;
+       font-family:<?php  echo $fh4;?>!important; 
+    font-size:<?php  echo  get_theme_mod( 'gr_h4_size_settings', '16' );?>px !important; 
+    font-weight:<?php  echo  get_theme_mod( 'gr_h4_weight_settings', 'normal' );?>;
+    color:<?php  echo  get_theme_mod( 'gr_h4_color_settings', 'black' );?>;
 }
 a {
         color:<?php  echo  get_theme_mod( 'gr_a_color_settings', '#333' );?>;

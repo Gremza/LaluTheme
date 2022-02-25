@@ -710,6 +710,74 @@ $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'gr_s
     'description' => __( 'font must be in number expamle 12' ),
     ) );
 
+//h4
+
+    $wp_customize->add_setting( 'gr_h4_select_settings' , array(
+        'type'          => 'theme_mod', 
+        'transport'     => 'refresh',
+    ) );
+    
+$wp_customize->add_control( 'gr_h4_select_control', array(
+    'label'      => __('Font h4 Selector', 'lalutheme'),
+    'section'    => 'gr_fonts',
+    'settings'   => 'gr_h4_select_settings',
+    'type'       => 'select',
+        'choices'    => array( 
+        'Raleway' => __('Raleway', 'lalutheme'),
+        'Monda' => __('Monda', 'lalutheme'),
+        'Anton' => __('Anton', 'lalutheme'),
+        'Staatliches' => __('Staatliches', 'lalutheme'),
+        'Kalam' => __('Kalam', 'lalutheme'),
+        'Merienda' => __('Merienda', 'lalutheme'),
+        'Anton' => __('Anton', 'lalutheme'),
+        'Bebas+Neue&display=swap'=> __('Bebas', 'lalutheme'),
+        'Montserrat:wght@100&display=swap'=> __('Montserrat', 'lalutheme'),
+        'Cinzel+Decorative&display=swap'=> __('Cinzel Decorative', 'lalutheme'),
+                'Source+Sans+Pro:200,300'=> __('Sans Source', 'lalutheme'),
+
+        ),
+) );
+
+
+$wp_customize->add_setting( 'gr_h4_weight_settings' , array(
+        'type'          => 'theme_mod', 
+        'transport'     => 'refresh',
+    ) );
+    
+$wp_customize->add_control( 'gr_h4_weight_settings', array(
+    'label'      => __('Font h4 Weight', 'lalutheme'),
+    'section'    => 'gr_fonts',
+    'settings'   => 'gr_h4_weight_settings',
+    'type'       => 'select',
+        'choices'    => array( 
+        'normal' => __('Normal', 'lalutheme'),
+        'Bold' => __('bold', 'lalutheme'),
+        'lighter' => __('Lighter', 'lalutheme'),
+        '100' => __('100', 'lalutheme'),
+        '200' => __('200', 'lalutheme'),
+        '300' => __('300', 'lalutheme'),
+        '400' => __('400', 'lalutheme'),
+        '800' => __('800', 'lalutheme'),
+        
+        
+        ),
+) );
+
+$wp_customize->add_setting( 'gr_h4_size_settings' , array(
+        'type'          => 'theme_mod', 
+        'transport'     => 'refresh',
+    ) );
+    
+$wp_customize->add_control( 'gr_h4_size_settings', array(
+'type' => 'text',
+'section' => 'gr_fonts', // Add a default or your own section
+'label' => __( 'h4 Font Size' ),
+'description' => __( 'font must be in number expamle 12' ),
+) );
+
+
+
+
 
     //colors
 
