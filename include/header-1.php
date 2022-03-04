@@ -8,12 +8,12 @@
  <div class="container">
     <div class="row">    <div class="col-xl-12 col-lg-12 col-xs-12 col-md-12 col-sm-12 no-padding">
         <!-- logo begin --> 
-        <div id="logo" class="col-xl-3 col-lg-3  col-md-3  col-sm-3 col-xs-8  ">
+        <div id="logo" class="col-xl-2 col-lg-2  col-md-3  col-sm-3 col-xs-8  ">
             <a href="<?php  echo home_url(); ?>">
             <img class="img-responsive" src="<?php echo get_theme_mod('gr_logo');?>"   alt="">            </a>        
 		</div>
          <!-- logo close -->
-		<div class="headerright col-xl-9 col-lg-9 col-sm-8 col-md-8 ">		 
+		<div class="headerright col-xl-10 col-lg-10 col-sm-8 col-md-8 ">		 
 			<nav class="navbar navbar-default   "  >
 				<div class="container-fluid  "> 
 				<div class="navbar-header">

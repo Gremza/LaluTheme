@@ -273,6 +273,22 @@ a {
 .subfooter {
     background-color: <?php  echo  get_theme_mod( 'gr_subfooter_bg_settings', '#333' );?>;
 }
+ 
+.cd-top {
+  background:<?php  echo  get_theme_mod( 'gr_a_color_settings', '#333' );?>;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
 
 </style>
 

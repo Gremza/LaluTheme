@@ -24,7 +24,7 @@
 	</div>
     </div>	
 </div>
-
+<a href="#0" class="cd-top"><i class="fa fa-arrow-up"></i></a>
 <?php wp_footer(); ?>
 </body>
 </html>

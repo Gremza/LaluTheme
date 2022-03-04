@@ -1,11 +1,11 @@
 <?php
 /*
-Template Name: Without title
+Template Name: Home Page
 */
 get_header();  
 ?>  
  
-<div   class="container  page notit  ">
+<div   class="container  page homepage  ">
 	 
  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	  
