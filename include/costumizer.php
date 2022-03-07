@@ -301,7 +301,23 @@ $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'gr_s
             'settings' => 'gr_menu_active_setting',
     
         )));
-        
+ // Add sticky menu
+
+ //add setting
+        $wp_customize->add_setting( 'gr_stick_checkbox_settings', array(
+            'default' => '',
+        ));
+
+        //add control
+        $wp_customize->add_control( 'gr_stick_checkbox_control', array(
+            'label' => 'Activate sticky menu',
+            'type'  => 'checkbox', // this indicates the type of control
+            'section' => 'gr_logo',
+            'settings' => 'gr_stick_checkbox_settings'
+        ));
+         
+
+
     //content
 
     $wp_customize->add_setting( 'gr_font_content_select_settings' , array(

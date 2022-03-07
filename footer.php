@@ -26,5 +26,19 @@
 </div>
 <a href="#0" class="cd-top"><i class="fa fa-arrow-up"></i></a>
 <?php wp_footer(); ?>
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("headbar");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
 </body>
 </html>

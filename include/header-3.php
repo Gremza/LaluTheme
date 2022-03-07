@@ -5,6 +5,8 @@
 		<div class="top-right col-xl-4 col-lg-4  col-md-4    no-padding"> <?php require get_template_directory() . '/include/socialblock.php'; ?>		<?php dynamic_sidebar( 'top_right' ); ?>  </div>
 	</div>
 </div>
+
+<div   <?php   $stiky = get_theme_mod( 'gr_stick_checkbox_settings', '' ); if ($stiky == true) { ?> id="headbar" <?php }   ?> > 
      <div class="container">
  
             <!-- logo begin --> 
@@ -44,6 +46,6 @@
             
  
         </div>
-     
+	</div>
 </div>
  

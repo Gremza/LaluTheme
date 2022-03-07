@@ -1,6 +1,6 @@
 <?php
 require_once dirname( __FILE__ ) . '/fonts.php';
-echo 'fnt'.$fontchoice.'aaa';
+//echo 'fnt'.$fontchoice.'aaa';
 if ($fontchoice == TRUE ){ ?>  
     <style>
         @font-face {
@@ -110,7 +110,11 @@ a {
   
 }
 
-
+#headbar {   
+  background:<?php  echo  get_theme_mod( 'gr_header_background_settings', '#000' );?>;
+   z-index: 999;
+ }
+ 
 
 
 

@@ -5,6 +5,7 @@
 		<div class="top-right  col-xs-6 no-padding"> <?php require get_template_directory() . '/include/socialblock.php'; ?>		<?php dynamic_sidebar( 'top_right' ); ?>  </div>
 	</div>
 </div>
+<div   <?php   $stiky = get_theme_mod( 'gr_stick_checkbox_settings', '' ); if ($stiky == true) { ?> id="headbar" <?php }   ?> > 
  <div class="container">
     <div class="row">    
 	 
@@ -23,8 +24,8 @@
 			</div>
 		</div>
  
-<div class="col-lg-12 no-padding">
-<nav class="navbar navbar-default "  >
+	<div class="col-lg-12 no-padding">
+	<nav class="navbar navbar-default "  >
 	<div class="container-fluid  "> 
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gr_menu_collapse">
@@ -49,5 +50,5 @@
 	</div>
 </nav>
 </div>
-
+</div>
 </header>
