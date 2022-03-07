@@ -14,13 +14,15 @@
  <!-- CSS Files
     ================================================== -->
 <link href="<?php bloginfo('stylesheet_url');?>" rel="stylesheet">
-<?php get_template_part( 'include/styles' );   ?>   
+<?php get_template_part( 'include/styles' ); ?> 
+
+
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=<?php  echo  get_theme_mod( 'gr_font_select_settings', 'arial' );  ?> " rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=<?php  echo  get_theme_mod( 'gr_font_content_select_settings', 'arial' );  ?> " rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=<?php  echo  get_theme_mod( 'gr_h3_select_settings', 'arial' );  ?> " rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=<?php  echo  get_theme_mod( 'gr_h1_select_settings', 'arial' );  ?> " rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=<?php  echo  get_theme_mod( 'gr_h2_select_settings', 'arial' );  ?> " rel="stylesheet"> 
+
 <?php wp_head(); ?>
 </head>
 <body <?php body_class( ); ?> >

@@ -323,7 +323,7 @@ width="21px" height="21px" viewBox="0 0 276 292.5" enable-background="new 0 0 27
 </svg>
 	</a> 
 
-
+	<?php  } ?>
 <?php
 ////other links
 
