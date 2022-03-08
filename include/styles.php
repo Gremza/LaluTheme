@@ -4,8 +4,8 @@ require_once dirname( __FILE__ ) . '/fonts.php';
 if ($fontchoice == TRUE ){ ?>  
     <style>
         @font-face {
-        font-family: corporates;
-        src: url(<?php echo get_template_directory_uri().'/fonts/corporates.woff2';?>);
+        font-family: <?php  echo  get_theme_mod( 'gr_font_content_select_settings', '' );?>;
+        src: url(<?php echo get_template_directory_uri().'/fonts/'. get_theme_mod( 'gr_font_content_select_settings', '' ) .'.woff2';?>);
         }
     </style>
 <?php } else { ?>
