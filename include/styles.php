@@ -1,6 +1,6 @@
 <?php
 require_once dirname( __FILE__ ) . '/fonts.php';
-//echo 'fnt'.$fontchoice.'aaa';
+// 
 if ($fontchoiceh1 == TRUE ){ ?>  
     <style>
         @font-face {
@@ -64,6 +64,19 @@ if ($fontchoicemenu == TRUE ){ ?>
     </style>
 <?php } else { ?>
         <link href="https://fonts.googleapis.com/css2?family=<?php echo $fh5 ?> " rel="stylesheet">
+<?php }  ?>
+
+
+<?php  
+if ($fontchoicetop == TRUE ){ ?>  
+    <style>
+        @font-face {
+        font-family: <?php  echo  get_theme_mod( 'gr_font_top_select_settings', '' );?>;
+        src: url(<?php echo get_template_directory_uri().'/fonts/'. get_theme_mod( 'gr_font_top_select_settings', '' ) .'.woff2';?>);
+        }
+    </style>
+<?php } else { ?>
+        <link href="https://fonts.googleapis.com/css2?family=<?php echo $fh7 ?> " rel="stylesheet">
 <?php }  ?>
 
 
@@ -139,7 +152,7 @@ a {
 .top{ 
     background:<?php  echo  get_theme_mod( 'gr_top_bg_settings', '#000' );?>;
     color:<?php  echo  get_theme_mod( 'gr_top_color_settings', '#fff' );?>;
-    font-family:<?php echo  get_theme_mod( 'gr_font_top_select_settings', 'Sans Source' );?> ;  
+    font-family:<?php  echo $fh7?>!important; 
     font-size:<?php  echo  get_theme_mod( 'gr_font_top_size_settings', '16' );?>px !important; 
     font-weight:<?php  echo  get_theme_mod( 'gr_font_top_weight_settings', 'normal' );?>;
 }

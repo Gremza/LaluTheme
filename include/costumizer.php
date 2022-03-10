@@ -455,6 +455,19 @@ $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'gr_s
 
 
     //top
+     //add setting
+     $wp_customize->add_setting( 'gr_top_checkbox_settings', array(
+        'default' => '',
+    ));
+
+    //add control
+    $wp_customize->add_control( 'gr_top_checkbox_control', array(
+        'label' => 'Activate Header Top',
+        'type'  => 'checkbox', // this indicates the type of control
+        'section' => 'gr_logo',
+        'settings' => 'gr_top_checkbox_settings'
+    ));
+     
     $wp_customize->add_setting( 'gr_font_top_select_settings' , array(
         'type'          => 'theme_mod', 
         'transport'     => 'refresh',
@@ -477,9 +490,9 @@ $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'gr_s
         'Bebas+Neue&display=swap'=> __('Bebas Neue', 'lalutheme'),
         'Montserrat:wght@100&display=swap'=> __('Montserrat', 'lalutheme'),          
         'Cinzel+Decorative&display=swap'=> __('Cinzel Decorative', 'lalutheme'),
-            'Source+Sans+Pro:200,300'=> __('Sans Source', 'lalutheme'),
-            'corporates'=> __('corporates', 'lalutheme'),
-            'corporatea'=> __('corporatea', 'lalutheme'),
+        'Source+Sans+Pro:200,300'=> __('Sans Source', 'lalutheme'),
+        'corporates'=> __('corporates', 'lalutheme'),
+        'corporatea'=> __('corporatea', 'lalutheme'),
         ),
     ) );
 

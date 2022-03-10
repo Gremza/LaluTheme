@@ -1,11 +1,12 @@
 <?php
-$fontih1=get_theme_mod( 'gr_h1_select_settings', 'Sans Source' );
-$fontih2=get_theme_mod( 'gr_h2_select_settings', 'Sans Source' );
-$fontih3=get_theme_mod( 'gr_h3_select_settings', 'Sans Source' );
-$fontih4=get_theme_mod( 'gr_h4_select_settings', 'Sans Source' );
-$fontihcontent=get_theme_mod( 'gr_font_content_select_settings', 'Sans Source' );
-$fontimenu=get_theme_mod( 'gr_font_select_settings', 'Sans Source' );
-
+$fontih1=get_theme_mod( 'gr_h1_select_settings', 'Kalam' );
+$fontih2=get_theme_mod( 'gr_h2_select_settings', 'Kalam' );
+$fontih3=get_theme_mod( 'gr_h3_select_settings', 'Kalam' );
+$fontih4=get_theme_mod( 'gr_h4_select_settings', 'Kalam' );
+$fontihcontent=get_theme_mod( 'gr_font_content_select_settings', 'Kalam' );
+$fontimenu=get_theme_mod( 'gr_font_select_settings', 'Kalam' );
+$fonttop=get_theme_mod( 'gr_font_top_select_settings', 'Kalam' );
+ 
 
 switch ($fontih1) { 
   case 'Anton':  
@@ -379,7 +380,69 @@ case 'corporatea':
     $fh6=  "Kalam";
     $fontchoicemenu =FALSE;
   }
-    
+
+  switch ($fonttop) { 
+    case 'Anton':  
+      $fh7= "Anton";
+      $fontchoicetop =FALSE;
+      break;
+    case "Raleway":
+     $fh7=  "Raleway";
+     $fontchoicetop =FALSE;
+      break;
+    case "Mukta":
+      $fh7=  "Mukta";
+      $fontchoicetop =FALSE;
+      break;
+    case "Monda":
+      $fh7=  "Monda";
+      $fontchoicetop =FALSE;
+      break;
+    case "Mukta":
+      $fh7=  "Mukta";
+      $fontchoicetop =FALSE;
+      break;
+    case "Staatliches":
+      $fh7=  "Staatliches";
+      $fontchoicetop =FALSE;
+      break;
+    case "Kalam":
+      $fh7=  "Kalam";
+      $fontchoicetop =FALSE;
+      break;
+    case "Merienda":
+      $fh7=  "Merienda";
+      $fontchoicetop =FALSE;
+      break;
+    case "Roboto":
+      echo "Roboto";
+      $fontchoicetop =FALSE;
+      break;
+    case "Bebas+Neue&display=swap":
+      $fh7=  "Bebas Neue";
+      $fontchoicetop =FALSE;
+      break;
+    case "Montserrat:wght@100&display=swap":
+      $fh7=  "Montserrat";
+      $fontchoicetop =FALSE;
+      break;
+    case "Cinzel+Decorative&display=swap":
+      $fh7=  "Cinzel Decorative";
+      $fontchoicetop =FALSE;
+      break;
+  case 'corporates':
+      $fh7=  "corporates";
+      $fontchoicetop =TRUE;
+      break;  
+  case 'corporatea':
+      $fh7=  "corporatea";
+      $fontchoicetop =TRUE;
+      break;  	          
+    default:
+      $fh7=  "Kalam";
+      $fontchoicetop =FALSE;
+  } 
+      
 
 
 
