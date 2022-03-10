@@ -181,9 +181,18 @@ a {
   background:<?php  echo  get_theme_mod( 'gr_header_background_settings', '#000' );?>;
    z-index: 999;
  }
- 
-
-
+ @media (min-width: 601px) {
+ .navbar-nav{
+     float:<?php  echo  get_theme_mod( 'gr_position_select_settings', 'left' );?>!important;
+     
+ }
+ }
+ @media only screen and (max-width: 600px) {
+ .navbar-nav{
+     float:left;
+     
+ }
+ }
 
 
 

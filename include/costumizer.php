@@ -388,6 +388,7 @@ $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'gr_s
 
 
     //menuja
+
     $wp_customize->add_setting( 'gr_font_select_settings' , array(
             'type'          => 'theme_mod', 
             'transport'     => 'refresh',
@@ -415,7 +416,21 @@ $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'gr_s
                 'corporatea'=> __('corporatea', 'lalutheme'),
             ),
     ) );
-
+$wp_customize->add_setting( 'gr_position_select_settings' , array(
+            'type'          => 'theme_mod', 
+            'transport'     => 'refresh',
+        ) );
+        
+    $wp_customize->add_control( 'gr_position_select_control', array(
+        'label'      => __('Menu Position Left/Right', 'lalutheme'),
+        'section'    => 'gr_logo',
+        'settings'   => 'gr_position_select_settings',
+        'type'       => 'select',
+            'choices'    => array( 
+            'Left' => __('Left', 'lalutheme'),
+            'Right' => __('Right', 'lalutheme'), 
+            ),
+    ) );
 
     $wp_customize->add_setting( 'gr_font_weight_settings' , array(
             'type'          => 'theme_mod', 

@@ -1,10 +1,12 @@
 <header> <!-- header Full width -->
+<?php   $topchoice = get_theme_mod( 'gr_top_checkbox_settings', '' ); if ($topchoice == true) { ?>  
 <div class="top ">
 	<div class="container ">
 		<div class=" top-left col-xs-6 no-padding"> 	<?php dynamic_sidebar( 'top_left' ); ?> 	 </div>
 		<div class="top-right  col-xs-6 no-padding"> <?php require get_template_directory() . '/include/socialblock.php'; ?>		<?php dynamic_sidebar( 'top_right' ); ?>  </div>
 	</div>
 </div>
+<?php }   ?> 
 <div   <?php   $stiky = get_theme_mod( 'gr_stick_checkbox_settings', '' ); if ($stiky == true) { ?> id="headbar" <?php }   ?> > 
  <div class="container">
     <div class="row">    

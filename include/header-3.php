@@ -1,11 +1,12 @@
 <div id="headergrad"><!--- Header transparent --->
+<?php   $topchoice = get_theme_mod( 'gr_top_checkbox_settings', '' ); if ($topchoice == true) { ?>  
 <div class="top ">
 	<div class="container no-padding ">
 		<div class="top-left col-xl-8 col-lg-8  col-md-8 col-sm-10 hidden-xs  no-padding"> 	<?php dynamic_sidebar( 'top_left' ); ?> 	 </div>
 		<div class="top-right col-xl-4 col-lg-4  col-md-4    no-padding"> <?php require get_template_directory() . '/include/socialblock.php'; ?>		<?php dynamic_sidebar( 'top_right' ); ?>  </div>
 	</div>
 </div>
-
+<?php }   ?> 
 <div   <?php   $stiky = get_theme_mod( 'gr_stick_checkbox_settings', '' ); if ($stiky == true) { ?> id="headbar" <?php }   ?> > 
      <div class="container">
  
