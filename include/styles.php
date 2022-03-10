@@ -1,7 +1,50 @@
 <?php
 require_once dirname( __FILE__ ) . '/fonts.php';
 //echo 'fnt'.$fontchoice.'aaa';
-if ($fontchoice == TRUE ){ ?>  
+if ($fontchoiceh1 == TRUE ){ ?>  
+    <style>
+        @font-face {
+        font-family: <?php  echo  get_theme_mod( 'gr_h1_select_settings', '' );?>;
+        src: url(<?php echo get_template_directory_uri().'/fonts/'. get_theme_mod( 'gr_h1_select_settings', '' ) .'.woff2';?>);
+        }
+    </style>
+<?php } else { ?>
+        <link href="https://fonts.googleapis.com/css2?family=<?php echo $fh5 ?> " rel="stylesheet">
+<?php } ?> 
+
+ <?php if ($fontchoiceh2 == TRUE ){ ?>  
+    <style>
+        @font-face {
+        font-family: <?php  echo  get_theme_mod( 'gr_h2_select_settings', '' );?>;
+        src: url(<?php echo get_template_directory_uri().'/fonts/'. get_theme_mod( 'gr_h2_select_settings', '' ) .'.woff2';?>);
+        }
+    </style>
+<?php } else { ?>
+        <link href="https://fonts.googleapis.com/css2?family=<?php echo $fh5 ?> " rel="stylesheet">
+<?php } ?>
+<?php if ($fontchoiceh3 == TRUE ){ ?>  
+    <style>
+        @font-face {
+        font-family: <?php  echo  get_theme_mod( 'gr_h3_select_settings', '' );?>;
+        src: url(<?php echo get_template_directory_uri().'/fonts/'. get_theme_mod( 'gr_h3_select_settings', '' ) .'.woff2';?>);
+        }
+    </style>
+<?php } else { ?>
+        <link href="https://fonts.googleapis.com/css2?family=<?php echo $fh5 ?> " rel="stylesheet">
+<?php }?> 
+<?php 
+if ($fontchoiceh4 == TRUE ){ ?>  
+    <style>
+        @font-face {
+        font-family: <?php  echo  get_theme_mod( 'gr_h4_select_settings', '' );?>;
+        src: url(<?php echo get_template_directory_uri().'/fonts/'. get_theme_mod( 'gr_h4_select_settings', '' ) .'.woff2';?>);
+        }
+    </style>
+<?php } else { ?>
+        <link href="https://fonts.googleapis.com/css2?family=<?php echo $fh5 ?> " rel="stylesheet">
+<?php }?>
+<?php  
+if ($fontchoicecontent == TRUE ){ ?>  
     <style>
         @font-face {
         font-family: <?php  echo  get_theme_mod( 'gr_font_content_select_settings', '' );?>;
@@ -10,9 +53,20 @@ if ($fontchoice == TRUE ){ ?>
     </style>
 <?php } else { ?>
         <link href="https://fonts.googleapis.com/css2?family=<?php echo $fh5 ?> " rel="stylesheet">
-<?php } 
+<?php }?>
+<?php  
+if ($fontchoicemenu == TRUE ){ ?>  
+    <style>
+        @font-face {
+        font-family: <?php  echo  get_theme_mod( 'gr_font_select_settings', '' );?>;
+        src: url(<?php echo get_template_directory_uri().'/fonts/'. get_theme_mod( 'gr_font_select_settings', '' ) .'.woff2';?>);
+        }
+    </style>
+<?php } else { ?>
+        <link href="https://fonts.googleapis.com/css2?family=<?php echo $fh5 ?> " rel="stylesheet">
+<?php }  ?>
 
-?>
+
 
 <style>
 	body{

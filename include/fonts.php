@@ -8,255 +8,376 @@ $fontimenu=get_theme_mod( 'gr_font_select_settings', 'Sans Source' );
 
 
 switch ($fontih1) { 
-  case "Anton":
+  case 'Anton':  
     $fh1= "Anton";
+    $fontchoiceh1 =FALSE;
     break;
   case "Raleway":
    $fh1=  "Raleway";
+   $fontchoiceh1 =FALSE;
     break;
   case "Mukta":
     $fh1=  "Mukta";
+    $fontchoiceh1 =FALSE;
     break;
   case "Monda":
     $fh1=  "Monda";
+    $fontchoiceh1 =FALSE;
     break;
   case "Mukta":
     $fh1=  "Mukta";
+    $fontchoiceh1 =FALSE;
     break;
   case "Staatliches":
     $fh1=  "Staatliches";
+    $fontchoiceh1 =FALSE;
     break;
   case "Kalam":
     $fh1=  "Kalam";
+    $fontchoiceh1 =FALSE;
     break;
   case "Merienda":
     $fh1=  "Merienda";
+    $fontchoiceh1 =FALSE;
     break;
   case "Roboto":
     echo "Roboto";
+    $fontchoiceh1 =FALSE;
     break;
   case "Bebas+Neue&display=swap":
     $fh1=  "Bebas Neue";
+    $fontchoiceh1 =FALSE;
     break;
   case "Montserrat:wght@100&display=swap":
     $fh1=  "Montserrat";
+    $fontchoiceh1 =FALSE;
     break;
   case "Cinzel+Decorative&display=swap":
     $fh1=  "Cinzel Decorative";
+    $fontchoiceh1 =FALSE;
     break;
+case 'corporates':
+    $fh1=  "corporates";
+    $fontchoiceh1 =TRUE;
+    break;  
+case 'corporatea':
+    $fh1=  "corporatea";
+    $fontchoiceh1 =TRUE;
+    break;  	          
   default:
     $fh1=  "Kalam";
+    $fontchoiceh1 =FALSE;
 } 
 
 
 switch ($fontih2) { 
-    case "Anton":
-        $fh2= "Anton";
-        break;
-      case "Raleway":
-       $fh2=  "Raleway";
-        break;
-      case "Mukta":
-        $fh2=  "Mukta";
-        break;
-      case "Monda":
-        $fh2=  "Monda";
-        break;
-      case "Mukta":
-        $fh2=  "Mukta";
-        break;
-      case "Staatliches":
-        $fh2=  "Staatliches";
-        break;
-      case "Kalam":
-        $fh2=  "Kalam";
-        break;
-      case "Merienda":
-        $fh2=  "Merienda";
-        break;
-      case "Roboto":
-        echo "Roboto";
-        break;
-      case "Bebas+Neue&display=swap":
-        $fh2=  "Bebas Neue";
-        break;
-      case "Montserrat:wght@100&display=swap":
-        $fh2=  "Montserrat";
-        break;
-      case "Cinzel+Decorative&display=swap":
-        $fh2=  "Cinzel Decorative";
-        break;
-      default:
-        $fh2=  "Kalam";
+  case 'Anton':  
+    $fh2= "Anton";
+    $fontchoiceh2 =FALSE;
+    break;
+  case "Raleway":
+   $fh2=  "Raleway";
+   $fontchoiceh2 =FALSE;
+    break;
+  case "Mukta":
+    $fh2=  "Mukta";
+    $fontchoiceh2 =FALSE;
+    break;
+  case "Monda":
+    $fh2=  "Monda";
+    $fontchoiceh2 =FALSE;
+    break;
+  case "Mukta":
+    $fh2=  "Mukta";
+    $fontchoiceh2 =FALSE;
+    break;
+  case "Staatliches":
+    $fh2=  "Staatliches";
+    $fontchoiceh2 =FALSE;
+    break;
+  case "Kalam":
+    $fh2=  "Kalam";
+    $fontchoiceh2 =FALSE;
+    break;
+  case "Merienda":
+    $fh2=  "Merienda";
+    $fontchoiceh2 =FALSE;
+    break;
+  case "Roboto":
+    echo "Roboto";
+    $fontchoiceh2 =FALSE;
+    break;
+  case "Bebas+Neue&display=swap":
+    $fh2=  "Bebas Neue";
+    $fontchoiceh2 =FALSE;
+    break;
+  case "Montserrat:wght@100&display=swap":
+    $fh2=  "Montserrat";
+    $fontchoiceh2 =FALSE;
+    break;
+  case "Cinzel+Decorative&display=swap":
+    $fh2=  "Cinzel Decorative";
+    $fontchoiceh2 =FALSE;
+    break;
+case 'corporates':
+    $fh2=  "corporates";
+    $fontchoiceh2 =TRUE;
+    break;  
+case 'corporatea':
+    $fh2=  "corporatea";
+    $fontchoiceh2 =TRUE;
+    break;  	          
+  default:
+    $fh2=  "Kalam";
+    $fontchoiceh2 =FALSE;
 }
 
 switch ($fontih3) { 
-    case "Anton":
-        $fh3= "Anton";
-        break;
-      case "Raleway":
-       $fh3=  "Raleway";
-        break;
-      case "Mukta":
-        $fh3=  "Mukta";
-        break;
-      case "Monda":
-        $fh3=  "Monda";
-        break;
-      case "Mukta":
-        $fh3=  "Mukta";
-        break;
-      case "Staatliches":
-        $fh3=  "Staatliches";
-        break;
-      case "Kalam":
-        $fh3=  "Kalam";
-        break;
-      case "Merienda":
-        $fh3=  "Merienda";
-        break;
-      case "Roboto":
-        echo "Roboto";
-        break;
-      case "Bebas+Neue&display=swap":
-        $fh3=  "Bebas Neue";
-        break;
-      case "Montserrat:wght@100&display=swap":
-        $fh3=  "Montserrat";
-        break;
-      case "Cinzel+Decorative&display=swap":
-        $fh3=  "Cinzel Decorative";
-        break;
-      default:
-        $fh3=  "Kalam";
+  case 'Anton':  
+    $fh3= "Anton";
+    $fontchoiceh3 =FALSE;
+    break;
+  case "Raleway":
+   $fh3=  "Raleway";
+   $fontchoiceh3 =FALSE;
+    break;
+  case "Mukta":
+    $fh3=  "Mukta";
+    $fontchoiceh3 =FALSE;
+    break;
+  case "Monda":
+    $fh3=  "Monda";
+    $fontchoiceh3 =FALSE;
+    break;
+  case "Mukta":
+    $fh3=  "Mukta";
+    $fontchoiceh3 =FALSE;
+    break;
+  case "Staatliches":
+    $fh3=  "Staatliches";
+    $fontchoiceh3 =FALSE;
+    break;
+  case "Kalam":
+    $fh3=  "Kalam";
+    $fontchoiceh3 =FALSE;
+    break;
+  case "Merienda":
+    $fh3=  "Merienda";
+    $fontchoiceh3 =FALSE;
+    break;
+  case "Roboto":
+    echo "Roboto";
+    $fontchoiceh3 =FALSE;
+    break;
+  case "Bebas+Neue&display=swap":
+    $fh3=  "Bebas Neue";
+    $fontchoiceh3 =FALSE;
+    break;
+  case "Montserrat:wght@100&display=swap":
+    $fh3=  "Montserrat";
+    $fontchoiceh3 =FALSE;
+    break;
+  case "Cinzel+Decorative&display=swap":
+    $fh3=  "Cinzel Decorative";
+    $fontchoice =FALSE;
+    break;
+case 'corporates':
+    $fh3=  "corporates";
+    $fontchoiceh3 =TRUE;
+    break;  
+case 'corporatea':
+    $fh3=  "corporatea";
+    $fontchoiceh3 =TRUE;
+    break;  	          
+  default:
+    $fh3=  "Kalam";
+    $fontchoiceh3 =FALSE;
 }
 
 switch ($fontih4) { 
-  case "Anton":
-      $fh4= "Anton";
-      break;
-    case "Raleway":
-     $fh4=  "Raleway";
-      break;
-    case "Mukta":
-      $fh4=  "Mukta";
-      break;
-    case "Monda":
-      $fh4=  "Monda";
-      break;
-    case "Mukta":
-      $fh4=  "Mukta";
-      break;
-    case "Staatliches":
-      $fh4=  "Staatliches";
-      break;
-    case "Kalam":
-      $fh4=  "Kalam";
-      break;
-    case "Merienda":
-      $fh4=  "Merienda";
-      break;
-    case "Roboto":
-      echo "Roboto";
-      break;
-    case "Bebas+Neue&display=swap":
-      $fh4=  "Bebas Neue";
-      break;
-    case "Montserrat:wght@100&display=swap":
-      $fh4=  "Montserrat";
-      break;
-    case "Cinzel+Decorative&display=swap":
-      $fh4=  "Cinzel Decorative";
-      break;
-    default:
-      $fh4=  "Kalam";
+  case 'Anton':  
+    $fh4= "Anton";
+    $fontchoiceh4 =FALSE;
+    break;
+  case "Raleway":
+   $fh4=  "Raleway";
+   $fontchoiceh4 =FALSE;
+    break;
+  case "Mukta":
+    $fh4=  "Mukta";
+    $fontchoiceh4 =FALSE;
+    break;
+  case "Monda":
+    $fh4=  "Monda";
+    $fontchoiceh4 =FALSE;
+    break;
+  case "Mukta":
+    $fh4=  "Mukta";
+    $fontchoiceh4 =FALSE;
+    break;
+  case "Staatliches":
+    $fh4=  "Staatliches";
+    $fontchoiceh4 =FALSE;
+    break;
+  case "Kalam":
+    $fh4=  "Kalam";
+    $fontchoiceh4 =FALSE;
+    break;
+  case "Merienda":
+    $fh4=  "Merienda";
+    $fontchoiceh4 =FALSE;
+    break;
+  case "Roboto":
+    echo "Roboto";
+    $fontchoiceh4 =FALSE;
+    break;
+  case "Bebas+Neue&display=swap":
+    $fh4=  "Bebas Neue";
+    $fontchoiceh4 =FALSE;
+    break;
+  case "Montserrat:wght@100&display=swap":
+    $fh4=  "Montserrat";
+    $fontchoiceh4 =FALSE;
+    break;
+  case "Cinzel+Decorative&display=swap":
+    $fh4=  "Cinzel Decorative";
+    $fontchoiceh4 =FALSE;
+    break;
+case 'corporates':
+    $fh4=  "corporates";
+    $fontchoiceh4 =TRUE;
+    break;  
+case 'corporatea':
+    $fh4=  "corporatea";
+    $fontchoiceh4 =TRUE;
+    break;  	          
+  default:
+    $fh4=  "Kalam";
+    $fontchoiceh4 =FALSE;
 }
   
 switch ($fontihcontent)  { 
-    case 'Anton':  
+      case 'Anton':  
         $fh5= "Anton";
-         $fontchoice =FALSE;
+        $fontchoicecontent =FALSE;
         break;
       case "Raleway":
        $fh5=  "Raleway";
+       $fontchoicecontent =FALSE;
         break;
       case "Mukta":
         $fh5=  "Mukta";
+        $fontchoicecontent =FALSE;
         break;
       case "Monda":
         $fh5=  "Monda";
+        $fontchoicecontent =FALSE;
         break;
       case "Mukta":
         $fh5=  "Mukta";
+        $fontchoicecontent =FALSE;
         break;
       case "Staatliches":
         $fh5=  "Staatliches";
+        $fontchoicecontent =FALSE;
         break;
       case "Kalam":
         $fh5=  "Kalam";
+        $fontchoicecontent =FALSE;
         break;
       case "Merienda":
         $fh5=  "Merienda";
+        $fontchoicecontent =FALSE;
         break;
       case "Roboto":
         echo "Roboto";
+        $fontchoicecontent =FALSE;
         break;
       case "Bebas+Neue&display=swap":
         $fh5=  "Bebas Neue";
+        $fontchoicecontent =FALSE;
         break;
       case "Montserrat:wght@100&display=swap":
         $fh5=  "Montserrat";
+        $fontchoicecontent =FALSE;
         break;
       case "Cinzel+Decorative&display=swap":
         $fh5=  "Cinzel Decorative";
+        $fontchoicecontent =FALSE;
         break;
 	case 'corporates':
-            $fh5=  "corporates";
-           $fontchoice =TRUE;
-            break;  
+        $fh5=  "corporates";
+        $fontchoicecontent =TRUE;
+        break;  
+  case 'corporatea':
+        $fh5=  "corporatea";
+        $fontchoicecontent =TRUE;
+        break;  	          
       default:
         $fh5=  "Kalam";
+        $fontchoicecontent =FALSE;
   }
      
 switch ($fontimenu) { 
-    case "Anton":
-        $fh6= "Anton";
-        break;
-      case "Raleway":
-       $fh6=  "Raleway";
-        break;
-      case "Mukta":
-        $fh6=  "Mukta";
-        break;
-      case "Monda":
-        $fh6=  "Monda";
-        break;
-      case "Mukta":
-        $fh6=  "Mukta";
-        break;
-      case "Staatliches":
-        $fh6=  "Staatliches";
-        break;
-      case "Kalam":
-        $fh6=  "Kalam";
-        break;
-      case "Merienda":
-        $fh6=  "Merienda";
-        break;
-      case "Roboto":
-        echo "Roboto";
-        break;
-      case "Bebas+Neue&display=swap":
-        $fh6=  "Bebas Neue";
-        break;
-      case "Montserrat:wght@100&display=swap":
-        $fh6=  "Montserrat";
-        break;
-      case "Cinzel+Decorative&display=swap":
-        $fh6=  "Cinzel Decorative";
-        break;
-      default:
-        $fh6=  "Kalam";
+  case 'Anton':  
+    $fh6= "Anton";
+    $fontchoicemenu =FALSE;
+    break;
+  case "Raleway":
+   $fh6=  "Raleway";
+   $fontchoicemenu =FALSE;
+    break;
+  case "Mukta":
+    $fh6=  "Mukta";
+    $fontchoicemenu =FALSE;
+    break;
+  case "Monda":
+    $fh6=  "Monda";
+    $fontchoicemenu =FALSE;
+    break;
+  case "Mukta":
+    $fh6=  "Mukta";
+    $fontchoicemenu =FALSE;
+    break;
+  case "Staatliches":
+    $fh6=  "Staatliches";
+    $fontchoicemenu =FALSE;
+    break;
+  case "Kalam":
+    $fh6=  "Kalam";
+    $fontchoicemenu =FALSE;
+    break;
+  case "Merienda":
+    $fh6=  "Merienda";
+    $fontchoicemenu =FALSE;
+    break;
+  case "Roboto":
+    echo "Roboto";
+    $fontchoicemenu =FALSE;
+    break;
+  case "Bebas+Neue&display=swap":
+    $fh6=  "Bebas Neue";
+    $fontchoicemenu =FALSE;
+    break;
+  case "Montserrat:wght@100&display=swap":
+    $fh6=  "Montserrat";
+    $fontchoicemenu =FALSE;
+    break;
+  case "Cinzel+Decorative&display=swap":
+    $fh6=  "Cinzel Decorative";
+    $fontchoicemenu =FALSE;
+    break;
+case 'corporates':
+    $fh6=  "corporates";
+    $fontchoicemenu =TRUE;
+    break;  
+case 'corporatea':
+    $fh6=  "corporatea";
+    $fontchoicemenu =TRUE;
+    break;  	          
+  default:
+    $fh6=  "Kalam";
+    $fontchoicemenu =FALSE;
   }
     
 
