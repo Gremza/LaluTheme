@@ -13,7 +13,7 @@ Text Domain: lalutheme
 
  
 #logo {
-    margin: 12px 0;
+    margin: 5px 0;
 	position:relative;
 	z-index:9;
 } 
@@ -187,7 +187,7 @@ ul.post-categories {
 a:hover, a:focus{text-decoration: none;}
  
 .notit{
-    margin-top:30px;
+    margin-top:0px;
 }
 
 .footer .socialblock {

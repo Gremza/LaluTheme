@@ -65,6 +65,7 @@ function gr_customize_register( $wp_customize ) {
         'settings' => 'gr_excerpt_settings',
         'description' => __( 'Length in words number.' ),
         'default'=>'20',
+        'priority'   => 2,
         ) );
 
     //social links
@@ -167,14 +168,19 @@ $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'gr_s
  ///////////////////////////
 
 
-        
-        
+ $wp_customize->add_setting( 'gr_headerright_settings' , array(
+    'type'          => 'theme_mod', 
+    'transport'     => 'refresh',
+    'default' => '',
+) );   
+ 
         
         $wp_customize->add_control( 'gr_headerright_settings', array(
         'type' => 'text',
         'section' => 'gr_logo', // Add a default or your own section
         'label' => __( 'Header Right Margin Top' ),
         'description' => __( 'No px needed, exmaple value: 35 or 50' ),
+        'priority'   => 1,
         ) );
         
         
