@@ -386,8 +386,9 @@ $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'gr_s
     $wp_customize->add_control( 'gr_font_content_size_settings', array(
     'type' => 'text',
     'section' => 'gr_logo', // Add a default or your own section
-    'label' => __( 'Font Size' ),
+    'label' => __( 'Font Size Content' ),
     'description' => __( 'font must be in number expamle 12' ),
+    'priority'   => 1,
     ) );
 
 
@@ -470,8 +471,9 @@ $wp_customize->add_setting( 'gr_position_select_settings' , array(
     $wp_customize->add_control( 'gr_font_size_settings', array(
     'type' => 'text',
     'section' => 'gr_logo', // Add a default or your own section
-    'label' => __( 'Font Size' ),
+    'label' => __( 'Font Size Menu' ),
     'description' => __( 'font must be in number expamle 12' ),
+    'priority'   => 3,
     ) );
 
 
