@@ -461,7 +461,7 @@ function lalathemesettings()
 <div class="row">
 	<div class="col-lg-12"><h2>copyright text on footer, put as a shortcode to footer left widget</h2></div>
 	 <div class="col-lg-12">
-		<code> [copywrite]</code>
+		<code> [copyright]</code>
 	</div> 
 	</div>
 <div class="row">

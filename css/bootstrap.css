@@ -4745,8 +4745,7 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
 .nav .open>a,
 .nav .open>a:hover,
 .nav .open>a:focus {
-    background-color: #eeeeee;
-    border-color: #337ab7;
+    background-color: #eeeeee; 
 }
 
 .nav .nav-divider {
@@ -4857,8 +4856,7 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
 .nav-pills>li.active>a,
 .nav-pills>li.active>a:hover,
 .nav-pills>li.active>a:focus {
-    color: #fff;
-    background-color: #337ab7;
+    color: #fff; 
 }
 
 .nav-stacked>li {

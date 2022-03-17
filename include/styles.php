@@ -168,12 +168,20 @@ a {
     background-color: <?php  echo  get_theme_mod( 'gr_footer_bg_settings', '#ccc' );?>;
     color: <?php  echo  get_theme_mod( 'gr_footer_txt_settings', '#fff' );?>;
 }
-.subfooter {
+.footer li, .footer li a {
+    color: <?php  echo  get_theme_mod( 'gr_footer_txt_settings', '#fff' );?>;    
+   
+
+}
+.subfooter , .left_subfooter , .right_subfooter {
     background-color: <?php  echo  get_theme_mod( 'gr_subfooter_bg_settings', '#333' );?>;
+    font-size: <?php  echo  get_theme_mod( 'gr_subfooter_text_size_settings', '10' );?>px;
+     
+    }
 }
  
 .cd-top {
-  background:<?php  echo  get_theme_mod( 'gr_a_color_settings', '#333' );?>;
+  background:<?php  // echo  get_theme_mod( 'gr_a_color_settings', '#333' );?>;
   
 }
 

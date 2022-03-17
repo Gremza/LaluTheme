@@ -68,6 +68,22 @@ function gr_customize_register( $wp_customize ) {
         'priority'   => 2,
         ) );
 
+    //subfooter text size
+    
+    $wp_customize->add_setting( 'gr_subfooter_text_size_settings' , array(
+        'type'          => 'theme_mod', 
+        'transport'     => 'refresh',
+        'default' => '',
+    ) );   
+    $wp_customize->add_control( 'gr_subfooter_text_size_settings', array(
+        'type' => 'text',
+        'section' => 'gr_logo', // Add a default or your own section
+        'label' => __( 'subfooter text size' ),
+        'settings' => 'gr_subfooter_text_size_settings',
+        'description' => __( '' ),
+        'default'=>'20',
+        'priority'   => 3,
+        ) );
     //social links
     //fb
     $wp_customize->add_section( 'gr_social' , array(
@@ -932,6 +948,7 @@ $wp_customize->add_control( 'gr_h4_size_settings', array(
         'settings' => 'gr_subfooter_bg_settings',
 
     )));
+    
     //HADER COLORS
     $wp_customize->add_setting( 'gr_h1_color_settings' , array(
         'type'          => 'theme_mod', 

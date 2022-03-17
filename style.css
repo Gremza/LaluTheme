@@ -4,7 +4,7 @@ Theme URI: http://gremza.com
 Author: Marsel Preci
 Author URI: http://gremza.com/lalu
 Description: These is not just a  wordpress theme. Is a full options, all included website.
-Version: 2.2.44
+Version: 2.2.42
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: unversial wordpress theme, general theme, gremza
@@ -54,10 +54,12 @@ ul.post-categories {
 .footer {
     min-height: 200px; 
     padding: 30px 0;
+	font-size:12px;
 }
 
 .subfooter {
     padding: 10px 0; 
+
 }
 
 .footer h2{
@@ -86,17 +88,15 @@ ul.post-categories {
   
 
 
-.right_subfooter {
+.right_subfooter, .right_subfooter a {
     text-align: right;
-    color: #fff;
-    font-size: 13px;
+    color: #fff; 
 }
 .right_subfooter a,.left_subfooter a{
     color:#fff; 
     font-weight: bold;
 }
-.left_subfooter {
-    font-size: 13px;
+.left_subfooter , .left_subfooter a{ 
     color: #ccc;
 }
 
@@ -184,7 +184,10 @@ ul.post-categories {
     bottom: 20px;
   }
 } 
-a:hover, a:focus{text-decoration: none;}
+
+a:hover, a:focus{
+filter: contrast(200%);
+}
  
 .notit{
     margin-top:0px;
@@ -194,17 +197,16 @@ a:hover, a:focus{text-decoration: none;}
     zoom: 150%;
     padding: 30px 0 0 0;
 } 
+
+
+
+
+   
   .sticky {
     position: fixed;
     top: 0;
     width: 100%;
   }
-
-  .archive{
-	margin-top:30px;
-}  
-
-
-
+   
 
 
