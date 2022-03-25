@@ -16,10 +16,10 @@
 </div>
 <div class="subfooter">
 	<div class="container">
-    <div class="col-lg-6 col-xm-6 left_subfooter">
+    <div class="col-lg-10 col-xm-10 left_subfooter">
 		<?php dynamic_sidebar( 'left_subfooter' ); ?>
 	</div>
-	<div class="col-lg-6 col-xm-6 right_subfooter">
+	<div class="col-lg-2 col-xm-2 right_subfooter">
 		<?php dynamic_sidebar( 'right_subfooter' ); echo do_shortcode('[gremza]');  ?> 
 	</div>
     </div>	

@@ -5082,7 +5082,7 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
     position: relative;
     float: right;
     padding: 9px 10px;
-    margin-right: 15px;
+    margin-right: -15px;
     margin-top: 8px;
     margin-bottom: 8px;
     background-color: transparent;
