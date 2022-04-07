@@ -2,8 +2,8 @@
   <?php   $topchoice = get_theme_mod( 'gr_top_checkbox_settings', '' ); if ($topchoice == true) { ?>  
 <div class="top ">
 	<div class="container no-padding ">
-		<div class="top-left col-xl-8 col-lg-8  col-md-8 col-sm-10 col-xs-10  no-padding"> 	<?php dynamic_sidebar( 'top_left' ); ?> 	 </div>
-		<div class="top-right col-xl-4 col-lg-4  col-md-4 col-sm-2 col-xs-2  no-padding"> <?php require get_template_directory() . '/include/socialblock.php'; ?>		<?php dynamic_sidebar( 'top_right' ); ?>  </div>
+		<div class="top-left col-xl-8 col-lg-8  col-md-8 col-sm-10 col-xs-8  no-padding"> 	<?php dynamic_sidebar( 'top_left' ); ?> 	 </div>
+		<div class="top-right col-xl-4 col-lg-4  col-md-4 col-sm-2 col-xs-4  no-padding"> <?php require get_template_directory() . '/include/socialblock.php'; ?>		<?php dynamic_sidebar( 'top_right' ); ?>  </div>
 	</div>
 </div> 
 <?php }   ?> 

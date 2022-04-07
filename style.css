@@ -184,10 +184,7 @@ ul.post-categories {
     bottom: 20px;
   }
 } 
-
-a:hover, a:focus{
-filter: contrast(200%);
-}
+ 
  
 .notit{
     margin-top:0px;

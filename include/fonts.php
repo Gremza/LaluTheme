@@ -8,6 +8,7 @@ $fontimenu=get_theme_mod( 'gr_font_select_settings', 'Kalam' );
 $fonttop=get_theme_mod( 'gr_font_top_select_settings', 'Kalam' );
 $fontchoice =FALSE; 
 
+ 
 switch ($fontih1) { 
   case 'Anton':  
     $fh1= "Anton";

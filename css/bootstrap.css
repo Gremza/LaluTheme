@@ -246,10 +246,7 @@ th {
         background: transparent !important;
         -webkit-box-shadow: none !important;
         box-shadow: none !important;
-    }
-    a,
-    a:visited { 
-    }
+    } 
     a[href]:after {
         content: " (" attr(href) ")";
     }
