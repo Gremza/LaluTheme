@@ -6,7 +6,7 @@ $fontih4=get_theme_mod( 'gr_h4_select_settings', 'Kalam' );
 $fontihcontent=get_theme_mod( 'gr_font_content_select_settings', 'Kalam' );
 $fontimenu=get_theme_mod( 'gr_font_select_settings', 'Kalam' );
 $fonttop=get_theme_mod( 'gr_font_top_select_settings', 'Kalam' );
- 
+$fontchoice =FALSE; 
 
 switch ($fontih1) { 
   case 'Anton':  
