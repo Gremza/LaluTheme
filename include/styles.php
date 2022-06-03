@@ -1,6 +1,15 @@
 <?php
 require_once dirname( __FILE__ ) . '/fonts.php';
 // 
+$fontchoice =FALSE; 
+$fontchoiceh1=FALSE; 
+$fontchoiceh2=FALSE; 
+$fontchoiceh3=FALSE; 
+$fontchoiceh4=FALSE; 
+$fontchoicecontent =FALSE; 
+$fontchoicemenu =FALSE; 
+$fontchoicetop=FALSE; 
+
 if ($fontchoiceh1 == TRUE ){ ?>  
     <style>
         @font-face {

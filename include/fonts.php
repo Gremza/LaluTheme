@@ -58,14 +58,18 @@ switch ($fontih1) {
     $fh1=  "Cinzel Decorative";
     $fontchoiceh1 =FALSE;
     break;
-case 'corporates':
+case "corporates":
     $fh1=  "corporates";
     $fontchoiceh1 =TRUE;
     break;  
-case 'corporatea':
+case "corporatea":
     $fh1=  "corporatea";
     $fontchoiceh1 =TRUE;
     break;  	          
+case "Open+Sans:wght@300;400;500;800&display=swap":
+    $fh1=  "Open Sans";
+    $fontchoiceh1 =FALSE;
+    break;  	     
   default:
     $fh1=  "Kalam";
     $fontchoiceh1 =FALSE;
@@ -129,6 +133,10 @@ case 'corporatea':
     $fh2=  "corporatea";
     $fontchoiceh2 =TRUE;
     break;  	          
+    case "Open+Sans:wght@300;400;500;800&display=swap":
+      $fh2=  "Open Sans";
+      $fontchoiceh2 =FALSE;
+      break;     
   default:
     $fh2=  "Kalam";
     $fontchoiceh2 =FALSE;
@@ -191,6 +199,9 @@ case 'corporatea':
     $fh3=  "corporatea";
     $fontchoiceh3 =TRUE;
     break;  	          
+    case "Open+Sans:wght@300;400;500;800&display=swap":
+      $fh3=  "Open Sans";
+      $fontchoiceh3 =FALSE;
   default:
     $fh3=  "Kalam";
     $fontchoiceh3 =FALSE;
@@ -252,7 +263,10 @@ case 'corporates':
 case 'corporatea':
     $fh4=  "corporatea";
     $fontchoiceh4 =TRUE;
-    break;  	          
+    break;  	        
+    case "Open+Sans:wght@300;400;500;800&display=swap":
+      $fh4=  "Open Sans";
+      $fontchoiceh4 =FALSE;  
   default:
     $fh4=  "Kalam";
     $fontchoiceh4 =FALSE;
@@ -315,9 +329,13 @@ switch ($fontihcontent)  {
         $fh5=  "corporatea";
         $fontchoicecontent =TRUE;
         break;  	          
+        case "Open+Sans:wght@300;400;500;800&display=swap":
+          $fh5=  "Open Sans";
+          $fontchoicecontent =FALSE;  
       default:
         $fh5=  "Kalam";
         $fontchoicecontent =FALSE;
+
   }
      
 switch ($fontimenu) { 
@@ -376,7 +394,10 @@ case 'corporates':
 case 'corporatea':
     $fh6=  "corporatea";
     $fontchoicemenu =TRUE;
-    break;  	          
+    break;  	    
+    case "Open+Sans:wght@300;400;500;800&display=swap":
+      $fh6=  "Open Sans";
+      $fontchoicemenu =FALSE;        
   default:
     $fh6=  "Kalam";
     $fontchoicemenu =FALSE;
@@ -439,17 +460,13 @@ case 'corporatea':
       $fh7=  "corporatea";
       $fontchoicetop =TRUE;
       break;  	          
+      case "Open+Sans:wght@300;300;400;500;800&display=swap":
+        $fh7=  "Open Sans";
+        $fontchoicetop =FALSE;  
     default:
       $fh7=  "Kalam";
       $fontchoicetop =FALSE;
   } 
-      
-
-
-
-
-
-
 
 
 

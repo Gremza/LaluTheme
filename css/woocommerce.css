@@ -2,19 +2,6 @@
 .related {
     clear: both;
 }
-
-.woocommerce-product-gallery__image:hover  {
-    transform: scale(1.05);
-    transition: all .5s;
-
-  }
-  li.product:hover {
-    transform: scale(1.05);
-    transition: all .5s; 
-     
-    
-  }
   li.product{
-    box-shadow: 1px 1px 10px #efefef;
     padding: 10px !important;
   }

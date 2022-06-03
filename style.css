@@ -167,6 +167,7 @@ ul.post-categories {
   /* the button becomes visible */
   visibility: visible;
   opacity: 1; 
+  z-index: 2;
 }
 .cd-top.cd-fade-out {
   /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
@@ -197,13 +198,22 @@ ul.post-categories {
 
 
 
-
-   
+.alignright {
+    float: right;
+    margin-left: 2em;
+}
+.alignleft {
+    float: left;
+    margin-right: 2em;
+}   
   .sticky {
     position: fixed;
     top: 0;
     width: 100%;
   }
    
-
+/* woocomerce */
+  .cart img{
+	min-width:150px;
+}
 
