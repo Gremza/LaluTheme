@@ -217,3 +217,22 @@ ul.post-categories {
 	min-width:150px;
 }
 
+
+.title {padding:50px;}
+.title h2{
+ 
+   width: 100%; 
+   text-align: center; 
+   border-bottom: 2px solid #000; 
+	border-top: 2px solid #ccc; 
+   line-height: 0em;
+   margin: 10px 0 20px; 
+} 
+
+
+.title h2 span { 
+    background:#fff; 
+    padding:0 10px; 
+}
+ 
+ 

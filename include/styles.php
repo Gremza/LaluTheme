@@ -133,7 +133,7 @@ h1{
 }
 h2{
       font-family:<?php  echo $fh2;?>!important; 
-    font-size:<?php  echo  get_theme_mod( 'gr_h2_size_settings', '16' );?>px !important; 
+    font-size:<?php  echo  get_theme_mod( 'gr_h2_size_settings', '16' );?>px  ; 
     font-weight:<?php  echo  get_theme_mod( 'gr_h2_weight_settings', 'normal' );?>;
     color:<?php  echo  get_theme_mod( 'gr_h2_color_settings', 'black' );?>;
 }
