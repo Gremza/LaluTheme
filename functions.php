@@ -529,16 +529,17 @@ add_action('init', function () {
 /////remove comments end/////
 
 
+
 add_action('admin_head', 'my_custom_fonts');
 
 function my_custom_fonts() {
   echo '<style>
-   #wpbody{
-	z-index:999999;
+   .njt-fs-file-manager{
+	z-index:99999;
+	position:relative;
 }
   </style>';
 }
-
 
 
 
