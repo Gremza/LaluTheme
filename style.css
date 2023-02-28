@@ -17,6 +17,10 @@ Text Domain: lalutheme
 	position:relative;
 	z-index:9;
 } 
+.vc_row, .row{
+	margin:0 !important;
+	padding:0 !important;
+}
 .right {
     float: right;
 }
