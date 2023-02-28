@@ -42,7 +42,7 @@
     						?>
     				</div>
     			</nav>
-				<div class="searchbar col-lg-2  hidden-xs no-padding"><?php echo   dynamic_sidebar( 'right_header' ); ?>  </div>
+				<div class="searchbar col-lg-2  hidden-xs no-padding"><?php     dynamic_sidebar( 'right_header' ); ?>  </div>
     		</div>
             
  
