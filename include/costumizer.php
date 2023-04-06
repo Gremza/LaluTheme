@@ -354,6 +354,7 @@ $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'gr_s
     'type'       => 'select',
         'choices'    => array( 
         'Raleway' => __('Raleway', 'lalutheme'),
+        'Lato' => __('Lato', 'lalutheme'),
         'Monda' => __('Monda', 'lalutheme'),
         'Anton' => __('Anton', 'lalutheme'),
         'Staatliches' => __('Staatliches', 'lalutheme'),
@@ -425,6 +426,7 @@ $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'gr_s
         'type'       => 'select',
             'choices'    => array( 
             'Raleway' => __('Raleway', 'lalutheme'),
+            'Lato' => __('Lato', 'lalutheme'),
             'Monda' => __('Monda', 'lalutheme'),
             'Anton' => __('Anton', 'lalutheme'),
             'Staatliches' => __('Staatliches', 'lalutheme'),
@@ -521,6 +523,7 @@ $wp_customize->add_setting( 'gr_position_select_settings' , array(
     'type'       => 'select',
         'choices'    => array( 
         'Raleway' => __('Raleway', 'lalutheme'),
+        'Lato' => __('Lato', 'lalutheme'),
         'Monda' => __('Monda', 'lalutheme'),
         'Anton' => __('Anton', 'lalutheme'),
         'Staatliches' => __('Staatliches', 'lalutheme'),
@@ -600,6 +603,7 @@ $wp_customize->add_setting( 'gr_position_select_settings' , array(
         'type'       => 'select',
             'choices'    => array( 
             'Raleway' => __('Raleway', 'lalutheme'),
+            'Lato' => __('Lato', 'lalutheme'),
             'Monda' => __('Monda', 'lalutheme'),
             'Anton' => __('Anton', 'lalutheme'),
             'Staatliches' => __('Staatliches', 'lalutheme'),
@@ -669,6 +673,7 @@ $wp_customize->add_setting( 'gr_position_select_settings' , array(
         'type'       => 'select',
             'choices'    => array( 
             'Raleway' => __('Raleway', 'lalutheme'),
+            'Lato' => __('Lato', 'lalutheme'),
             'Monda' => __('Monda', 'lalutheme'),
             'Anton' => __('Anton', 'lalutheme'),
             'Staatliches' => __('Staatliches', 'lalutheme'),
@@ -737,6 +742,7 @@ $wp_customize->add_setting( 'gr_position_select_settings' , array(
         'type'       => 'select',
             'choices'    => array( 
             'Raleway' => __('Raleway', 'lalutheme'),
+            'Lato' => __('Lato', 'lalutheme'),
             'Monda' => __('Monda', 'lalutheme'),
             'Anton' => __('Anton', 'lalutheme'),
             'Staatliches' => __('Staatliches', 'lalutheme'),
@@ -804,6 +810,7 @@ $wp_customize->add_control( 'gr_h4_select_control', array(
     'type'       => 'select',
         'choices'    => array( 
         'Raleway' => __('Raleway', 'lalutheme'),
+        'Lato' => __('Lato', 'lalutheme'),
         'Monda' => __('Monda', 'lalutheme'),
         'Anton' => __('Anton', 'lalutheme'),
         'Staatliches' => __('Staatliches', 'lalutheme'),

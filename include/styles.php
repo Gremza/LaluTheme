@@ -194,7 +194,7 @@ a {
   
 }
 
-#headbar {   
+#headbar , #header {   
   background:<?php  echo  get_theme_mod( 'gr_header_background_settings', '#000' );?>;
    z-index: 999;
  }

@@ -18,6 +18,10 @@ switch ($fontih1) {
    $fh1=  "Raleway";
    $fontchoiceh1 =FALSE;
     break;
+    case "Lato":
+      $fh1=  "Lato";
+      $fontchoiceh1 =FALSE;
+       break;   
   case "Mukta":
     $fh1=  "Mukta";
     $fontchoiceh1 =FALSE;
@@ -85,6 +89,10 @@ switch ($fontih2) {
    $fh2=  "Raleway";
    $fontchoiceh2 =FALSE;
     break;
+    case "Lato":
+      $fh2=  "Lato";
+      $fontchoiceh2 =FALSE;
+       break;
   case "Mukta":
     $fh2=  "Mukta";
     $fontchoiceh2 =FALSE;
@@ -151,6 +159,10 @@ switch ($fontih3) {
    $fh3=  "Raleway";
    $fontchoiceh3 =FALSE;
     break;
+    case "Lato":
+      $fh3=  "Lato";
+      $fontchoiceh3 =FALSE;
+       break;
   case "Mukta":
     $fh3=  "Mukta";
     $fontchoiceh3 =FALSE;
@@ -216,6 +228,10 @@ switch ($fontih4) {
    $fh4=  "Raleway";
    $fontchoiceh4 =FALSE;
     break;
+    case "Lato":
+      $fh4=  "Lato";
+      $fontchoiceh4 =FALSE;
+       break;
   case "Mukta":
     $fh4=  "Mukta";
     $fontchoiceh4 =FALSE;
@@ -281,6 +297,10 @@ switch ($fontihcontent)  {
        $fh5=  "Raleway";
        $fontchoicecontent =FALSE;
         break;
+        case "Lato":
+          $fh5=  "Lato";
+          $fontchoicecontent =FALSE;
+           break;
       case "Mukta":
         $fh5=  "Mukta";
         $fontchoicecontent =FALSE;
@@ -343,10 +363,14 @@ switch ($fontimenu) {
     $fh6= "Anton";
     $fontchoicemenu =FALSE;
     break;
-  case "Raleway":
-   $fh6=  "Raleway";
-   $fontchoicemenu =FALSE;
-    break;
+    case "Raleway":
+      $fh6=  "Raleway";
+      $fontchoicemenu =FALSE;
+       break;
+       case "Lato":
+        $fh6=  "Lato";
+        $fontchoicemenu =FALSE;
+         break;
   case "Mukta":
     $fh6=  "Mukta";
     $fontchoicemenu =FALSE;
@@ -412,6 +436,10 @@ case 'corporatea':
      $fh7=  "Raleway";
      $fontchoicetop =FALSE;
       break;
+      case "Lato":
+        $fh7=  "Lato";
+        $fontchoicetop =FALSE;
+         break;
     case "Mukta":
       $fh7=  "Mukta";
       $fontchoicetop =FALSE;
