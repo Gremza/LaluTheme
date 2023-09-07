@@ -55,7 +55,7 @@
   
  <?php else : ?>
  
- <div id="header"><!--- Header transparent --->
+ <div id="headergrad"><!--- Header transparent --->
 	  
  <?php   $topchoice = get_theme_mod( 'gr_top_checkbox_settings', '' ); if ($topchoice == true) { ?>  
  <div class="top ">
