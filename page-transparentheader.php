@@ -16,7 +16,7 @@ width: 100%;
 <!-- header close -->
 
 <!-- content begin -->
-<div   class="container-fluid   page no-padding  ">
+<div   class="container   page no-padding  ">
 	 <div class="row">
 	 
  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
