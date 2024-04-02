@@ -84,7 +84,7 @@ function lalutheme_register_required_plugins() {
  
 require get_template_directory() . '/update/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-    'https://gremza.com/lalu/info.json',
+    'https://raw.githubusercontent.com/Gremza/kastrati/main/infdo.json',
     __FILE__,
     'lalutheme'
 );
@@ -267,7 +267,7 @@ function gu_scripts_with_jquery()
   
 }
 
-add_action( 'wp_footer', 'gu_scripts_with_jquery' );
+add_action( 'wp_enqueue_scripts', 'gu_scripts_with_jquery' );
   
 function gr_enqueue_styles() {
         
@@ -280,7 +280,7 @@ function gr_enqueue_styles() {
     wp_enqueue_style( 'woocommerce',   get_template_directory_uri() . '/css/woocommerce.css' ,array(), '20130608');
     
 }
-add_action( 'wp_footer', 'gr_enqueue_styles' );   
+add_action( 'wp_enqueue_scripts', 'gr_enqueue_styles' );   
 function new_submenu_class($menu) {    
     $menu = preg_replace('/ class=" dropdown"/','/ class=" " /',$menu);        
     return $menu;      

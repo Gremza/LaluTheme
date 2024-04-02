@@ -4,7 +4,7 @@ Theme URI: http://gremza.com
 Author: Marsel Preci
 Author URI: http://gremza.com/lalu
 Description: These is not just a  wordpress theme. Is a full options, all included website.
-Version: 2.3.4
+Version: 2.3.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: unversial wordpress theme, general theme, gremza
@@ -15,7 +15,7 @@ Text Domain: lalutheme
 #logo {
     margin: 5px 0;
 	position:relative;
-	z-index:9;
+	z-index:9;  
 } 
 .vc_row, .row{
 	margin:auto 0 !important;
