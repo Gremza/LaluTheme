@@ -57,10 +57,10 @@ function lalutheme_register_required_plugins() {
 		),
 		array(
 			'name'               => 'Social media tags', // The plugin name.
-			'slug'               => 'sicialmetagremza', // The plugin slug (typically the folder name).
+			'slug'               => 'social-meta-tags-gremza', // The plugin slug (typically the folder name).
 			'source'             =>   => get_template_directory() . '/plugins/socialmetagremza.zip', // The plugin source.
 			'required'           => false, // If false, the plugin is only 'recommended' instead of required.
-			'version'            => '10.6.9', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+			'version'            => '1.1', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
 			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
 			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
 			'external_url'       => '', // If set, overrides default API URL and points to an external URL.
