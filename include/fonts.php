@@ -47,7 +47,7 @@ switch ($fontih1) {
     $fontchoiceh1 =FALSE;
     break;
   case "Roboto":
-    echo "Roboto";
+    $fh1=  "Roboto";
     $fontchoiceh1 =FALSE;
     break;
   case "Bebas+Neue&display=swap":
@@ -118,7 +118,7 @@ switch ($fontih2) {
     $fontchoiceh2 =FALSE;
     break;
   case "Roboto":
-    echo "Roboto";
+     $fh2=  "Roboto";
     $fontchoiceh2 =FALSE;
     break;
   case "Bebas+Neue&display=swap":
@@ -188,7 +188,7 @@ switch ($fontih3) {
     $fontchoiceh3 =FALSE;
     break;
   case "Roboto":
-    echo "Roboto";
+     $fh3=  "Roboto";
     $fontchoiceh3 =FALSE;
     break;
   case "Bebas+Neue&display=swap":
@@ -326,7 +326,7 @@ switch ($fontihcontent)  {
         $fontchoicecontent =FALSE;
         break;
       case "Roboto":
-        echo "Roboto";
+        $fh5= "Roboto";
         $fontchoicecontent =FALSE;
         break;
       case "Bebas+Neue&display=swap":
@@ -396,7 +396,7 @@ switch ($fontimenu) {
     $fontchoicemenu =FALSE;
     break;
   case "Roboto":
-    echo "Roboto";
+     $fh6=  "Roboto";
     $fontchoicemenu =FALSE;
     break;
   case "Bebas+Neue&display=swap":
@@ -465,7 +465,7 @@ case 'corporatea':
       $fontchoicetop =FALSE;
       break;
     case "Roboto":
-      echo "Roboto";
+       $fh7=  "Roboto";
       $fontchoicetop =FALSE;
       break;
     case "Bebas+Neue&display=swap":

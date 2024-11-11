@@ -11,7 +11,9 @@ Tags: unversial wordpress theme, general theme, gremza
 Text Domain: lalutheme
 */
 
- 
+.bardhtxt{
+    color:#fff;
+} 
 #logo {
     margin: 5px 0;
 	position:relative;
