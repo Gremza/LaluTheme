@@ -348,28 +348,11 @@ $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'gr_s
     ) );
 
     $wp_customize->add_control( 'gr_font_content_select_settings', array(
-    'label'      => __('Font Contnet Selector', 'lalutheme'),
+    'label'      => __('Font Content Selector', 'lalutheme'),
     'section'    => 'gr_logo',
     'settings'   => 'gr_font_content_select_settings',
     'type'       => 'select',
-        'choices'    => array( 
-        'Raleway' => __('Raleway', 'lalutheme'),
-        'Lato' => __('Lato', 'lalutheme'),
-        'Monda' => __('Monda', 'lalutheme'),
-        'Anton' => __('Anton', 'lalutheme'),
-        'Staatliches' => __('Staatliches', 'lalutheme'),
-        'Kalam' => __('Kalam', 'lalutheme'),
-        'Merienda' => __('Merienda', 'lalutheme'),
-        'Mukta' => __('Mukta', 'lalutheme'),
-        'Roboto' => __('Roboto', 'lalutheme'),
-        'Bebas+Neue&display=swap'=> __('Bebas Neue', 'lalutheme'),
-        'Montserrat:wght@100&display=swap'=> __('Montserrat', 'lalutheme'),
-        'Cinzel+Decorative&display=swap'=> __('Cinzel Decorative', 'lalutheme'),
-        'Source+Sans+Pro:200,300'=> __('Sans Source', 'lalutheme'),
-        'corporates'=> __('corporates', 'lalutheme'),
-        'corporatea'=> __('corporatea', 'lalutheme'),
-        'Open+Sans:wght@300;400;500;800&display=swap'=> __('Open Sans', 'lalutheme'),
-        ),
+    'choices'    => get_google_fonts_choices(),
     ) );
 
     $wp_customize->add_setting( 'gr_font_content_weight_settings' , array(
@@ -382,18 +365,7 @@ $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'gr_s
     'section'    => 'gr_logo',
     'settings'   => 'gr_font_content_weight_settings',
     'type'       => 'select',
-        'choices'    => array( 
-        'normal' => __('Normal', 'lalutheme'),
-        'Bold' => __('bold', 'lalutheme'),
-        'lighter' => __('Lighter', 'lalutheme'),
-        '100' => __('100', 'lalutheme'),
-        '200' => __('200', 'lalutheme'),
-        '300' => __('300', 'lalutheme'),
-        '400' => __('400', 'lalutheme'),
-        '800' => __('800', 'lalutheme'),
-        
-        
-        ),
+    'choices'    => get_font_weight_choices(),
     ) );
 
     $wp_customize->add_setting( 'gr_font_content_size_settings' , array(
@@ -418,30 +390,12 @@ $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'gr_s
             'type'          => 'theme_mod', 
             'transport'     => 'refresh',
         ) );
-        
-    $wp_customize->add_control( 'gr_font_select_control', array(
+          $wp_customize->add_control( 'gr_font_select_control', array(
         'label'      => __('Menu Font Selector', 'lalutheme'),
         'section'    => 'gr_logo',
         'settings'   => 'gr_font_select_settings',
         'type'       => 'select',
-            'choices'    => array( 
-            'Raleway' => __('Raleway', 'lalutheme'),
-            'Lato' => __('Lato', 'lalutheme'),
-            'Monda' => __('Monda', 'lalutheme'),
-            'Anton' => __('Anton', 'lalutheme'),
-            'Staatliches' => __('Staatliches', 'lalutheme'),
-            'Kalam' => __('Kalam', 'lalutheme'),
-            'Merienda' => __('Merienda', 'lalutheme'),
-            'Mukta' => __('Mukta', 'lalutheme'),
-            'Roboto' => __('Roboto', 'lalutheme'),
-            'Bebas+Neue&display=swap'=> __('Bebas Neue', 'lalutheme'),
-            'Montserrat:wght@100&display=swap'=> __('Montserrat', 'lalutheme'),          
-            'Cinzel+Decorative&display=swap'=> __('Cinzel Decorative', 'lalutheme'),
-                'Source+Sans+Pro:200,300'=> __('Sans Source', 'lalutheme'),
-                'corporates'=> __('corporates', 'lalutheme'),
-                'corporatea'=> __('corporatea', 'lalutheme'),
-                'Open+Sans:wght@300;400;500;800&display=swap'=> __('Open Sans', 'lalutheme'),
-            ),
+        'choices'    => get_google_fonts_choices(),
     ) );
 $wp_customize->add_setting( 'gr_position_select_settings' , array(
             'type'          => 'theme_mod', 
@@ -469,18 +423,7 @@ $wp_customize->add_setting( 'gr_position_select_settings' , array(
         'section'    => 'gr_logo',
         'settings'   => 'gr_font_weight_settings',
         'type'       => 'select',
-            'choices'    => array( 
-            'normal' => __('Normal', 'lalutheme'),
-            'Bold' => __('bold', 'lalutheme'),
-            'lighter' => __('Lighter', 'lalutheme'),
-            '100' => __('100', 'lalutheme'),
-            '200' => __('200', 'lalutheme'),
-            '300' => __('300', 'lalutheme'),
-            '400' => __('400', 'lalutheme'),
-            '800' => __('800', 'lalutheme'),
-            
-            
-            ),
+        'choices'    => get_font_weight_choices(),
     ) );
 
     $wp_customize->add_setting( 'gr_font_size_settings' , array(
@@ -521,24 +464,7 @@ $wp_customize->add_setting( 'gr_position_select_settings' , array(
     'section'    => 'gr_logo',
     'settings'   => 'gr_font_top_select_settings',
     'type'       => 'select',
-        'choices'    => array( 
-        'Raleway' => __('Raleway', 'lalutheme'),
-        'Lato' => __('Lato', 'lalutheme'),
-        'Monda' => __('Monda', 'lalutheme'),
-        'Anton' => __('Anton', 'lalutheme'),
-        'Staatliches' => __('Staatliches', 'lalutheme'),
-        'Kalam' => __('Kalam', 'lalutheme'),
-        'Merienda' => __('Merienda', 'lalutheme'),
-        'Mukta' => __('Mukta', 'lalutheme'),
-        'Roboto' => __('Roboto', 'lalutheme'),
-        'Bebas+Neue&display=swap'=> __('Bebas Neue', 'lalutheme'),
-        'Montserrat:wght@100&display=swap'=> __('Montserrat', 'lalutheme'),          
-        'Cinzel+Decorative&display=swap'=> __('Cinzel Decorative', 'lalutheme'),
-        'Source+Sans+Pro:200,300'=> __('Sans Source', 'lalutheme'),
-        'corporates'=> __('corporates', 'lalutheme'),
-        'corporatea'=> __('corporatea', 'lalutheme'),
-        'Open+Sans:wght@300;400;500;800&display=swap'=> __('Open Sans', 'lalutheme'),
-        ),
+    'choices'    => get_google_fonts_choices(),
     ) );
 
 
@@ -552,18 +478,7 @@ $wp_customize->add_setting( 'gr_position_select_settings' , array(
     'section'    => 'gr_logo',
     'settings'   => 'gr_font_top_weight_settings',
     'type'       => 'select',
-        'choices'    => array( 
-        'normal' => __('Normal', 'lalutheme'),
-        'Bold' => __('bold', 'lalutheme'),
-        'lighter' => __('Lighter', 'lalutheme'),
-        '100' => __('100', 'lalutheme'),
-        '200' => __('200', 'lalutheme'),
-        '300' => __('300', 'lalutheme'),
-        '400' => __('400', 'lalutheme'),
-        '800' => __('800', 'lalutheme'),
-        
-        
-        ),
+    'choices'    => get_font_weight_choices(),
     ) );
 
     $wp_customize->add_setting( 'gr_font_top_size_settings' , array(
@@ -601,24 +516,7 @@ $wp_customize->add_setting( 'gr_position_select_settings' , array(
         'section'    => 'gr_fonts',
         'settings'   => 'gr_h1_select_settings',
         'type'       => 'select',
-            'choices'    => array( 
-            'Raleway' => __('Raleway', 'lalutheme'),
-            'Lato' => __('Lato', 'lalutheme'),
-            'Monda' => __('Monda', 'lalutheme'),
-            'Anton' => __('Anton', 'lalutheme'),
-            'Staatliches' => __('Staatliches', 'lalutheme'),
-            'Kalam' => __('Kalam', 'lalutheme'),
-            'Merienda' => __('Merienda', 'lalutheme'),
-            'Anton' => __('Anton', 'lalutheme'),
-            'Bebas+Neue&display=swap'=> __('Bebas', 'lalutheme'),
-            'Montserrat:wght@100&display=swap'=> __('Montserrat', 'lalutheme'),
-            'Cinzel+Decorative&display=swap'=> __('Cinzel Decorative', 'lalutheme'),
-            'Source+Sans+Pro:200,300'=> __('Sans Source', 'lalutheme'),
-            'corporates'=> __('corporates', 'lalutheme'),
-            'corporatea'=> __('corporatea', 'lalutheme'),
-            'Open+Sans:wght@300;400;500;800&display=swap'=> __('Open Sans', 'lalutheme'),
-            
-            ),
+        'choices'    => get_google_fonts_choices(),
     ) );
 
 
@@ -632,18 +530,7 @@ $wp_customize->add_setting( 'gr_position_select_settings' , array(
         'section'    => 'gr_fonts',
         'settings'   => 'gr_h1_weight_settings',
         'type'       => 'select',
-            'choices'    => array( 
-            'normal' => __('Normal', 'lalutheme'),
-            'Bold' => __('bold', 'lalutheme'),
-            'lighter' => __('Lighter', 'lalutheme'),
-            '100' => __('100', 'lalutheme'),
-            '200' => __('200', 'lalutheme'),
-            '300' => __('300', 'lalutheme'),
-            '400' => __('400', 'lalutheme'),
-            '800' => __('800', 'lalutheme'),
-            
-            
-            ),
+        'choices'    => get_font_weight_choices(),
     ) );
 
     $wp_customize->add_setting( 'gr_h1_size_settings' , array(
@@ -671,23 +558,7 @@ $wp_customize->add_setting( 'gr_position_select_settings' , array(
         'section'    => 'gr_fonts',
         'settings'   => 'gr_h2_select_settings',
         'type'       => 'select',
-            'choices'    => array( 
-            'Raleway' => __('Raleway', 'lalutheme'),
-            'Lato' => __('Lato', 'lalutheme'),
-            'Monda' => __('Monda', 'lalutheme'),
-            'Anton' => __('Anton', 'lalutheme'),
-            'Staatliches' => __('Staatliches', 'lalutheme'),
-            'Kalam' => __('Kalam', 'lalutheme'),
-            'Merienda' => __('Merienda', 'lalutheme'),
-            'Anton' => __('Anton', 'lalutheme'),
-            'Bebas+Neue&display=swap'=> __('Bebas', 'lalutheme'),
-            'Montserrat:wght@100&display=swap'=> __('Montserrat', 'lalutheme'),
-            'Cinzel+Decorative&display=swap'=> __('Cinzel Decorative', 'lalutheme'),
-            'Source+Sans+Pro:200,300'=> __('Sans Source', 'lalutheme'),
-            'corporates'=> __('corporates', 'lalutheme'),
-            'corporatea'=> __('corporatea', 'lalutheme'),
-            'Open+Sans:wght@300;400;500;800&display=swap'=> __('Open Sans', 'lalutheme'),
-            ),
+        'choices'    => get_google_fonts_choices(),
     ) );
 
 
@@ -701,18 +572,7 @@ $wp_customize->add_setting( 'gr_position_select_settings' , array(
         'section'    => 'gr_fonts',
         'settings'   => 'gr_h2_weight_settings',
         'type'       => 'select',
-            'choices'    => array( 
-            'normal' => __('Normal', 'lalutheme'),
-            'Bold' => __('bold', 'lalutheme'),
-            'lighter' => __('Lighter', 'lalutheme'),
-            '100' => __('100', 'lalutheme'),
-            '200' => __('200', 'lalutheme'),
-            '300' => __('300', 'lalutheme'),
-            '400' => __('400', 'lalutheme'),
-            '800' => __('800', 'lalutheme'),
-            
-            
-            ),
+        'choices'    => get_font_weight_choices(),
     ) );
 
     $wp_customize->add_setting( 'gr_h2_size_settings' , array(
@@ -740,23 +600,7 @@ $wp_customize->add_setting( 'gr_position_select_settings' , array(
         'section'    => 'gr_fonts',
         'settings'   => 'gr_h3_select_settings',
         'type'       => 'select',
-            'choices'    => array( 
-            'Raleway' => __('Raleway', 'lalutheme'),
-            'Lato' => __('Lato', 'lalutheme'),
-            'Monda' => __('Monda', 'lalutheme'),
-            'Anton' => __('Anton', 'lalutheme'),
-            'Staatliches' => __('Staatliches', 'lalutheme'),
-            'Kalam' => __('Kalam', 'lalutheme'),
-            'Merienda' => __('Merienda', 'lalutheme'),
-            'Anton' => __('Anton', 'lalutheme'),
-            'Bebas+Neue&display=swap'=> __('Bebas', 'lalutheme'),
-            'Montserrat:wght@100&display=swap'=> __('Montserrat', 'lalutheme'),
-            'Cinzel+Decorative&display=swap'=> __('Cinzel Decorative', 'lalutheme'),
-            'Source+Sans+Pro:200,300'=> __('Sans Source', 'lalutheme'),
-            'corporates'=> __('corporates', 'lalutheme'),
-            'corporatea'=> __('corporatea', 'lalutheme'),
-            'Open+Sans:wght@300;400;500;800&display=swap'=> __('Open Sans', 'lalutheme'),
-            ),
+        'choices'    => get_google_fonts_choices(),
     ) );
 
 
@@ -770,18 +614,7 @@ $wp_customize->add_setting( 'gr_position_select_settings' , array(
         'section'    => 'gr_fonts',
         'settings'   => 'gr_h3_weight_settings',
         'type'       => 'select',
-            'choices'    => array( 
-            'normal' => __('Normal', 'lalutheme'),
-            'Bold' => __('bold', 'lalutheme'),
-            'lighter' => __('Lighter', 'lalutheme'),
-            '100' => __('100', 'lalutheme'),
-            '200' => __('200', 'lalutheme'),
-            '300' => __('300', 'lalutheme'),
-            '400' => __('400', 'lalutheme'),
-            '800' => __('800', 'lalutheme'),
-            
-            
-            ),
+        'choices'    => get_font_weight_choices(),
     ) );
 
     $wp_customize->add_setting( 'gr_h3_size_settings' , array(
@@ -808,23 +641,7 @@ $wp_customize->add_control( 'gr_h4_select_control', array(
     'section'    => 'gr_fonts',
     'settings'   => 'gr_h4_select_settings',
     'type'       => 'select',
-        'choices'    => array( 
-        'Raleway' => __('Raleway', 'lalutheme'),
-        'Lato' => __('Lato', 'lalutheme'),
-        'Monda' => __('Monda', 'lalutheme'),
-        'Anton' => __('Anton', 'lalutheme'),
-        'Staatliches' => __('Staatliches', 'lalutheme'),
-        'Kalam' => __('Kalam', 'lalutheme'),
-        'Merienda' => __('Merienda', 'lalutheme'),
-        'Anton' => __('Anton', 'lalutheme'),
-        'Bebas+Neue&display=swap'=> __('Bebas', 'lalutheme'),
-        'Montserrat:wght@100&display=swap'=> __('Montserrat', 'lalutheme'),
-        'Cinzel+Decorative&display=swap'=> __('Cinzel Decorative', 'lalutheme'),
-        'Source+Sans+Pro:200,300'=> __('Sans Source', 'lalutheme'),
-        'corporates'=> __('corporates', 'lalutheme'),
-        'corporatea'=> __('corporatea', 'lalutheme'),
-        'Open+Sans:wght@300;400;500;800&display=swap'=> __('Open Sans', 'lalutheme'),
-        ),
+    'choices'    => get_google_fonts_choices(),
 ) );
 
 
@@ -838,18 +655,7 @@ $wp_customize->add_control( 'gr_h4_weight_settings', array(
     'section'    => 'gr_fonts',
     'settings'   => 'gr_h4_weight_settings',
     'type'       => 'select',
-        'choices'    => array( 
-        'normal' => __('Normal', 'lalutheme'),
-        'Bold' => __('bold', 'lalutheme'),
-        'lighter' => __('Lighter', 'lalutheme'),
-        '100' => __('100', 'lalutheme'),
-        '200' => __('200', 'lalutheme'),
-        '300' => __('300', 'lalutheme'),
-        '400' => __('400', 'lalutheme'),
-        '800' => __('800', 'lalutheme'),
-        
-        
-        ),
+    'choices'    => get_font_weight_choices(),
 ) );
 
 $wp_customize->add_setting( 'gr_h4_size_settings' , array(
@@ -1039,3 +845,80 @@ $wp_customize->add_control( 'gr_h4_size_settings', array(
         }
         add_action( 'customize_register', 'gr_customize_register' );
  ?>
+<?php
+
+// Helper function to get Google Fonts choices for customizer
+function get_google_fonts_choices() {
+    $google_fonts = array(
+        'Roboto' => 'Roboto',
+        'Open Sans' => 'Open Sans',
+        'Lato' => 'Lato',
+        'Montserrat' => 'Montserrat',
+        'Oswald' => 'Oswald',
+        'Source Sans Pro' => 'Source Sans Pro',
+        'Raleway' => 'Raleway',
+        'Poppins' => 'Poppins',
+        'PT Sans' => 'PT Sans',
+        'Nunito' => 'Nunito',
+        'Ubuntu' => 'Ubuntu',
+        'Playfair Display' => 'Playfair Display',
+        'Merriweather' => 'Merriweather',
+        'Inter' => 'Inter',
+        'Noto Sans' => 'Noto Sans',
+        'Rubik' => 'Rubik',
+        'Work Sans' => 'Work Sans',
+        'Fira Sans' => 'Fira Sans',
+        'Crimson Text' => 'Crimson Text',
+        'Libre Baskerville' => 'Libre Baskerville',
+        'Droid Sans' => 'Droid Sans',
+        'PT Serif' => 'PT Serif',
+        'Titillium Web' => 'Titillium Web',
+        'Muli' => 'Muli',
+        'Oxygen' => 'Oxygen',
+        'Lora' => 'Lora',
+        'Slabo 27px' => 'Slabo 27px',
+        'Arimo' => 'Arimo',
+        'Hind' => 'Hind',
+        'Roboto Slab' => 'Roboto Slab',
+        'Francois One' => 'Francois One',
+        'Mukta' => 'Mukta',
+        'Archivo' => 'Archivo',
+        'Anton' => 'Anton',
+        'Vollkorn' => 'Vollkorn',
+        'Exo' => 'Exo',
+        'Josefin Sans' => 'Josefin Sans',
+        'Cabin' => 'Cabin',
+        'Fjalla One' => 'Fjalla One',
+        'Libre Franklin' => 'Libre Franklin',
+        'Cormorant Garamond' => 'Cormorant Garamond',
+        'Karla' => 'Karla',
+        'Quicksand' => 'Quicksand',
+        'Bitter' => 'Bitter',
+        'Inconsolata' => 'Inconsolata',
+        'Dosis' => 'Dosis',
+        'BenchNine' => 'BenchNine',
+        'Abril Fatface' => 'Abril Fatface',
+        'Pacifico' => 'Pacifico',
+        'Lobster' => 'Lobster',
+        'Dancing Script' => 'Dancing Script',
+        'Comfortaa' => 'Comfortaa',
+        'Shadows Into Light' => 'Shadows Into Light'
+    );
+    
+    return $google_fonts;
+}
+
+// Helper function to get font weight choices
+function get_font_weight_choices() {
+    return array(
+        '100' => __('Thin (100)', 'lalutheme'),
+        '200' => __('Extra Light (200)', 'lalutheme'),
+        '300' => __('Light (300)', 'lalutheme'),
+        '400' => __('Regular (400)', 'lalutheme'),
+        '500' => __('Medium (500)', 'lalutheme'),
+        '600' => __('Semi Bold (600)', 'lalutheme'),
+        '700' => __('Bold (700)', 'lalutheme'),
+        '800' => __('Extra Bold (800)', 'lalutheme'),
+        '900' => __('Black (900)', 'lalutheme')
+    );
+}
