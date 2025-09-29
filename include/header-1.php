@@ -11,12 +11,13 @@
   <div  class="container">
     <div class="row">    <div class="col-xl-12 col-lg-12 col-xs-12 col-md-12 col-sm-12 no-padding">
         <!-- logo begin --> 
-        <div id="logo" class="col-xl-2 col-lg-2  col-md-3  col-sm-3 col-xs-8  no-padding">
+        <?php $rightheader_active = get_theme_mod( 'gr_right_header_checkbox_settings', '' ); ?>
+        <div id="logo" class="<?php echo ($rightheader_active == true) ? 'col-xl-2 col-lg-2 col-md-2 col-sm-3 col-xs-8' : 'col-xl-2 col-lg-2 col-md-3 col-sm-3 col-xs-8'; ?> no-padding">
             <a href="<?php  echo home_url(); ?>">
             <img class="img-responsive" src="<?php echo get_theme_mod('gr_logo');?>"   alt="">            </a>        
 		</div>
          <!-- logo close -->
-		<div class="headerright col-xl-10 col-lg-10 col-sm-8 col-md-8 ">		 
+		<div class="headerright <?php echo ($rightheader_active == true) ? 'col-xl-8 col-lg-8 col-md-8 col-sm-6' : 'col-xl-10 col-lg-10 col-sm-8 col-md-8'; ?>">		 
 			<nav class="navbar navbar-default   "  >
 				<div class="container-fluid  "> 
 				<div class="navbar-header">
@@ -42,12 +43,14 @@
 				</div>
 			</nav>
 		</div>
-    <!-- <div class="searchbar   col-lg-2  col-md-2 hidden-xs no-padding">
-     <?php if ( is_active_sidebar( 'right_header' ) ) : ?>
-        <?php dynamic_sidebar( 'right_header' ); ?>
+        
+        <?php if ($rightheader_active == true) : ?>
+        <div class="searchbar col-xl-2 col-lg-2 col-md-2 col-sm-3 hidden-xs no-padding">
+         <?php if ( is_active_sidebar( 'right_header' ) ) : ?>
+            <?php dynamic_sidebar( 'right_header' ); ?>
+            <?php endif; ?>
+        </div>
         <?php endif; ?>
- 																				 
-        </div> -->
 </div>
 </div>
 </div></div>

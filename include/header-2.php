@@ -13,18 +13,21 @@
 	 
     <div class="col-lg-12 no-padding">
         <!-- logo begin --> 
-        <div id="logo" class="col-lg-4 col-xs-8 no-padding">
+        <?php $rightheader_active = get_theme_mod( 'gr_right_header_checkbox_settings', '' ); ?>
+        <div id="logo" class="<?php echo ($rightheader_active == true) ? 'col-lg-2 col-md-2 col-xs-8' : 'col-lg-4 col-xs-8'; ?> no-padding">
             <a href="<?php  echo home_url(); ?>">
             <img class="img-responsive" src="<?php echo get_theme_mod('gr_logo');?>"   alt="">
             </a>
         </div>
          <!-- logo close -->
          
-		<div class="headerright col-lg-8  hidden-xs right">	
+        <?php if ($rightheader_active == true) : ?>
+		<div class="headerright col-lg-8 col-md-8 hidden-xs right">	
 			<div class="    right">	
 		  	<?php dynamic_sidebar( 'right_header' ); ?> 
 			</div>
 		</div>
+        <?php endif; ?>
  
 	<div class="col-lg-12 no-padding">
 	<nav class="navbar navbar-default "  >

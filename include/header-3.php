@@ -27,13 +27,14 @@ if ( is_front_page() ) :
 	  <div class="container">
   
 			 <!-- logo begin --> 
-			 <div id="logo" class="col-xl-2 col-lg-2  col-md-3 col-sm-8 col-xs-9  no-padding">
+			 <?php $rightheader_active = get_theme_mod( 'gr_right_header_checkbox_settings', '' ); ?>
+			 <div id="logo" class="<?php echo ($rightheader_active == true) ? 'col-xl-2 col-lg-2 col-md-2 col-sm-8 col-xs-9' : 'col-xl-2 col-lg-2 col-md-3 col-sm-8 col-xs-9'; ?> no-padding">
 				 <a href="<?php  echo home_url(); ?>">
 				 <img class="img-responsive" src="<?php echo get_theme_mod('gr_logo');?>"   alt="">
 				 </a>
 			 </div>
 			  <!-- logo close -->
-			 <div class="headerright col-xl-10 col-lg-10  col-md-12     no-padding">		 
+			 <div class="headerright <?php echo ($rightheader_active == true) ? 'col-xl-8 col-lg-8 col-md-8' : 'col-xl-10 col-lg-10 col-md-12'; ?> no-padding">		 
 				 <nav class="navbar navbar-default   no-padding "  >
 					 <div class="container-fluid no-padding"> 
 					 <div class="navbar-header">
@@ -58,7 +59,9 @@ if ( is_front_page() ) :
 							 ?>
 					 </div>
 				 </nav>
-				 <div class="searchbar col-lg-2  hidden-xs no-padding"><?php     dynamic_sidebar( 'right_header' ); ?>  </div>
+				 <?php if ($rightheader_active == true) : ?>
+				 <div class="searchbar col-xl-2 col-lg-2 col-md-2 hidden-xs no-padding"><?php dynamic_sidebar( 'right_header' ); ?>  </div>
+				 <?php endif; ?>
 			 </div>
 			 
   
