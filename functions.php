@@ -67,10 +67,27 @@ function lalutheme_register_required_plugins() {
 			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
 		),
 		array(
+			'name'               => 'Gremaza WPB Addons', // The plugin name.
+			'slug'               => 'gremaza-wpb-addons', // The plugin slug (typically the folder name).
+			'source'             => get_template_directory() . '/plugins/gremaza-wpb-addons.zip', // The plugin source.
+			'required'           => false, // If false, the plugin is only 'recommended' instead of required.
+			'version'            => '1.0.0 ', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
+			'external_url'       => '', // If set, overrides default API URL and points to an external URL.
+			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
+		),
+		array(
 			'name'      => 'Classic Editor',
 			'slug'      => 'classic-editor',
 			'required'  => false,
 		),
+		array(
+			'name'      => 'Customizer Export/Import',
+			'slug'      => 'customizer-export-import',
+			'required'  => false,
+		),
+		
 
 	); 
 	$config = array(
@@ -516,6 +533,16 @@ function lalathemesettings()
 	</div> 
 	</div>
 	
+	<div class="row">
+		<div class="col-lg-12"><h2>WhatsApp floating button</h2></div>
+ 	<div class="col-lg-12">
+		<code> [whatsapp]</code>
+	</div> 
+	<div class="col-lg-12">
+		<p><strong>Note:</strong> The WhatsApp button automatically appears as a floating button if enabled in Customizer. You can also use the shortcode to place it anywhere manually.</p>
+	</div>
+	</div>
+	
 	
 	
 </div>
@@ -572,6 +599,153 @@ function my_custom_fonts() {
 }
   </style>';
 }
+
+// WhatsApp Button Functions
+function gr_whatsapp_button() {
+    // Check if WhatsApp is enabled
+    if (!get_theme_mod('gr_whatsapp_enable_settings', false)) {
+        return '';
+    }
+
+    $phone = get_theme_mod('gr_whatsapp_number_settings', '');
+    $message = get_theme_mod('gr_whatsapp_message_settings', '');
+    $position = get_theme_mod('gr_whatsapp_position_settings', 'right');
+    $color = get_theme_mod('gr_whatsapp_color_settings', 'green');
+
+    if (empty($phone)) {
+        return '';
+    }
+
+    // Clean phone number
+    $clean_phone = preg_replace('/[^0-9+]/', '', $phone);
+    
+    // Build WhatsApp URL
+    $whatsapp_url = 'https://wa.me/' . $clean_phone;
+    if (!empty($message)) {
+        $whatsapp_url .= '?text=' . urlencode($message);
+    }
+
+    // Get icon based on color
+    $icon = gr_get_whatsapp_icon($color);
+    
+    // Position class
+    $position_class = $position === 'left' ? 'whatsapp-left' : 'whatsapp-right';
+
+    ob_start();
+    ?>
+    <div class="whatsapp-button-container <?php echo esc_attr($position_class); ?>">
+        <a href="<?php echo esc_url($whatsapp_url); ?>" target="_blank" class="whatsapp-button" rel="nofollow">
+            <?php echo $icon; ?>
+        </a>
+    </div>
+    <?php
+    return ob_get_clean();
+}
+
+function gr_get_whatsapp_icon($color) {
+    $icons = array(
+        'green' => '<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="24" cy="24" r="24" fill="#25D366"/>
+                      <path d="M35.9 12.1c-3.2-3.2-7.5-5-12.1-5-9.4 0-17.1 7.7-17.1 17.1 0 3 0.8 5.9 2.3 8.5L6.3 41.3l9-2.4c2.5 1.4 5.3 2.1 8.2 2.1h0.1c9.4 0 17.1-7.7 17.1-17.1 0-4.6-1.8-8.9-5-12.1h-0.7zm-12.1 26.3c-2.5 0-5-0.7-7.2-2l-0.5-0.3-5.2 1.4 1.4-5.1-0.3-0.5c-1.4-2.2-2.1-4.8-2.1-7.4 0-7.7 6.3-14 14-14 3.7 0 7.2 1.5 9.9 4.1 2.7 2.7 4.1 6.2 4.1 9.9 0 7.7-6.3 14-14 14v0.1zm7.7-10.5c-0.4-0.2-2.4-1.2-2.8-1.3s-0.6-0.2-0.9 0.2c-0.3 0.4-1.1 1.3-1.3 1.6-0.2 0.3-0.5 0.3-0.9 0.1-0.4-0.2-1.7-0.6-3.2-2-1.2-1.1-2-2.4-2.2-2.8s0-0.6 0.2-0.8c0.2-0.2 0.4-0.5 0.6-0.7s0.3-0.4 0.4-0.7c0.1-0.3 0.1-0.5-0.1-0.7-0.1-0.2-0.9-2.1-1.2-2.9-0.3-0.7-0.6-0.6-0.9-0.6h-0.7c-0.3 0-0.7 0.1-1.1 0.5s-1.4 1.4-1.4 3.4 1.4 3.9 1.6 4.2c0.2 0.3 3 4.6 7.3 6.4 1 0.4 1.8 0.7 2.4 0.9 1 0.3 2 0.3 2.7 0.2 0.8-0.1 2.4-1 2.7-1.9s0.3-1.8 0.2-1.9c-0.1-0.2-0.4-0.3-0.8-0.5z" fill="white"/>
+                    </svg>',
+        'black' => '<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="24" cy="24" r="24" fill="#000000"/>
+                      <path d="M35.9 12.1c-3.2-3.2-7.5-5-12.1-5-9.4 0-17.1 7.7-17.1 17.1 0 3 0.8 5.9 2.3 8.5L6.3 41.3l9-2.4c2.5 1.4 5.3 2.1 8.2 2.1h0.1c9.4 0 17.1-7.7 17.1-17.1 0-4.6-1.8-8.9-5-12.1h-0.7zm-12.1 26.3c-2.5 0-5-0.7-7.2-2l-0.5-0.3-5.2 1.4 1.4-5.1-0.3-0.5c-1.4-2.2-2.1-4.8-2.1-7.4 0-7.7 6.3-14 14-14 3.7 0 7.2 1.5 9.9 4.1 2.7 2.7 4.1 6.2 4.1 9.9 0 7.7-6.3 14-14 14v0.1zm7.7-10.5c-0.4-0.2-2.4-1.2-2.8-1.3s-0.6-0.2-0.9 0.2c-0.3 0.4-1.1 1.3-1.3 1.6-0.2 0.3-0.5 0.3-0.9 0.1-0.4-0.2-1.7-0.6-3.2-2-1.2-1.1-2-2.4-2.2-2.8s0-0.6 0.2-0.8c0.2-0.2 0.4-0.5 0.6-0.7s0.3-0.4 0.4-0.7c0.1-0.3 0.1-0.5-0.1-0.7-0.1-0.2-0.9-2.1-1.2-2.9-0.3-0.7-0.6-0.6-0.9-0.6h-0.7c-0.3 0-0.7 0.1-1.1 0.5s-1.4 1.4-1.4 3.4 1.4 3.9 1.6 4.2c0.2 0.3 3 4.6 7.3 6.4 1 0.4 1.8 0.7 2.4 0.9 1 0.3 2 0.3 2.7 0.2 0.8-0.1 2.4-1 2.7-1.9s0.3-1.8 0.2-1.9c-0.1-0.2-0.4-0.3-0.8-0.5z" fill="white"/>
+                    </svg>',
+        'white' => '<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="24" cy="24" r="24" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
+                      <path d="M35.9 12.1c-3.2-3.2-7.5-5-12.1-5-9.4 0-17.1 7.7-17.1 17.1 0 3 0.8 5.9 2.3 8.5L6.3 41.3l9-2.4c2.5 1.4 5.3 2.1 8.2 2.1h0.1c9.4 0 17.1-7.7 17.1-17.1 0-4.6-1.8-8.9-5-12.1h-0.7zm-12.1 26.3c-2.5 0-5-0.7-7.2-2l-0.5-0.3-5.2 1.4 1.4-5.1-0.3-0.5c-1.4-2.2-2.1-4.8-2.1-7.4 0-7.7 6.3-14 14-14 3.7 0 7.2 1.5 9.9 4.1 2.7 2.7 4.1 6.2 4.1 9.9 0 7.7-6.3 14-14 14v0.1zm7.7-10.5c-0.4-0.2-2.4-1.2-2.8-1.3s-0.6-0.2-0.9 0.2c-0.3 0.4-1.1 1.3-1.3 1.6-0.2 0.3-0.5 0.3-0.9 0.1-0.4-0.2-1.7-0.6-3.2-2-1.2-1.1-2-2.4-2.2-2.8s0-0.6 0.2-0.8c0.2-0.2 0.4-0.5 0.6-0.7s0.3-0.4 0.4-0.7c0.1-0.3 0.1-0.5-0.1-0.7-0.1-0.2-0.9-2.1-1.2-2.9-0.3-0.7-0.6-0.6-0.9-0.6h-0.7c-0.3 0-0.7 0.1-1.1 0.5s-1.4 1.4-1.4 3.4 1.4 3.9 1.6 4.2c0.2 0.3 3 4.6 7.3 6.4 1 0.4 1.8 0.7 2.4 0.9 1 0.3 2 0.3 2.7 0.2 0.8-0.1 2.4-1 2.7-1.9s0.3-1.8 0.2-1.9c-0.1-0.2-0.4-0.3-0.8-0.5z" fill="#333"/>
+                    </svg>'
+    );
+    
+    return isset($icons[$color]) ? $icons[$color] : $icons['green'];
+}
+
+// Add WhatsApp button to footer
+function gr_add_whatsapp_to_footer() {
+    echo gr_whatsapp_button();
+}
+add_action('wp_footer', 'gr_add_whatsapp_to_footer');
+
+// Add WhatsApp CSS
+function gr_whatsapp_styles() {
+    if (!get_theme_mod('gr_whatsapp_enable_settings', false)) {
+        return;
+    }
+    ?>
+    <style>
+    .whatsapp-button-container {
+        position: fixed;
+        bottom: 20px;
+        z-index: 1000;
+    }
+    
+    .whatsapp-button-container.whatsapp-right {
+        right: 20px;
+    }
+    
+    .whatsapp-button-container.whatsapp-left {
+        left: 20px;
+    }
+    
+    .whatsapp-button {
+        display: inline-block;
+        text-decoration: none;
+        border-radius: 50%;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        transition: all 0.3s ease;
+        animation: pulse 2s infinite;
+    }
+    
+    .whatsapp-button:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+        text-decoration: none;
+    }
+    
+    .whatsapp-button svg {
+        display: block;
+        width: 48px;
+        height: 48px;
+    }
+    
+    @keyframes pulse {
+        0% {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15), 0 0 0 0 rgba(37, 211, 102, 0.7);
+        }
+        70% {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15), 0 0 0 10px rgba(37, 211, 102, 0);
+        }
+        100% {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15), 0 0 0 0 rgba(37, 211, 102, 0);
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .whatsapp-button-container {
+            bottom: 15px;
+        }
+        
+        .whatsapp-button-container.whatsapp-right {
+            right: 15px;
+        }
+        
+        .whatsapp-button-container.whatsapp-left {
+            left: 15px;
+        }
+        
+        .whatsapp-button svg {
+            width: 42px;
+            height: 42px;
+        }
+    }
+    </style>
+    <?php
+}
+add_action('wp_head', 'gr_whatsapp_styles');
+
+// Add shortcode for WhatsApp button
+add_shortcode('whatsapp', 'gr_whatsapp_button');
 
 
 

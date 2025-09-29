@@ -1,0 +1,304 @@
+a:4:{s:8:"template";s:16:"LaluTheme-master";s:4:"mods";a:54:{i:0;b:0;s:18:"nav_menu_locations";a:2:{s:11:"header-menu";i:2;s:11:"footer-menu";i:3;}s:18:"custom_css_post_id";i:8;s:7:"gr_logo";s:73:"https://demo3.gremza.com/green/wp-content/uploads/2025/05/Group-183-1.svg";s:10:"gr_favicon";s:65:"https://demo3.gremza.com/green/wp-content/uploads/2025/05/fav.jpg";s:23:"gr_header_mode_settings";s:1:"3";s:22:"gr_logo_width_settings";s:3:"160";s:23:"gr_headerright_settings";s:2:"15";s:29:"gr_font_content_size_settings";s:2:"16";s:21:"gr_font_size_settings";s:4:"14px";s:29:"gr_header_background_settings";s:7:"#ffffff";s:18:"gr_toggle_settings";s:7:"#000000";s:21:"gr_menu_color_setting";s:7:"#364244";s:31:"gr_font_content_select_settings";s:7:"Raleway";s:23:"gr_font_select_settings";s:7:"Raleway";s:27:"gr_font_top_select_settings";s:7:"Raleway";s:25:"gr_font_top_size_settings";s:2:"14";s:22:"gr_menu_active_setting";s:7:"#4e6864";s:27:"gr_position_select_settings";s:5:"Right";s:21:"gr_h1_select_settings";s:7:"Raleway";s:19:"gr_h1_size_settings";s:2:"40";s:21:"gr_h2_select_settings";s:7:"Raleway";s:19:"gr_h2_size_settings";s:2:"30";s:19:"gr_h3_size_settings";s:2:"30";s:19:"gr_h4_size_settings";s:2:"18";s:27:"gr_body_background_settings";s:7:"#ffffff";s:21:"gr_body_color_setting";s:7:"#425e59";s:19:"gr_a_color_settings";s:7:"#1884a5";s:24:"gr_social_color_settings";s:7:"#efefef";s:21:"gr_top_color_settings";s:7:"#000000";s:21:"gr_footer_bg_settings";s:7:"#7f938f";s:22:"gr_footer_txt_settings";s:7:"#ffffff";s:24:"gr_subfooter_bg_settings";s:7:"#5c6d64";s:20:"gr_h1_color_settings";s:7:"#9dd3cb";s:20:"gr_h2_color_settings";s:7:"#000000";s:20:"gr_h3_color_settings";s:7:"#000000";s:25:"gr_menu_sub_color_setting";s:7:"#86aaa6";s:21:"gr_h3_select_settings";s:4:"Lato";s:21:"gr_h4_select_settings";s:5:"Kalam";s:23:"gr_font_weight_settings";s:6:"normal";s:21:"gr_social_fb_settings";s:44:"https://web.facebook.com/leaderimpactalbania";s:21:"gr_social_ig_settings";s:47:"https://www.instagram.com/leaderimpact_albania/";s:21:"gr_social_yt_settings";s:0:"";s:21:"gr_social_ln_settings";s:0:"";s:24:"gr_social_other_settings";s:54:"https://www.linkedin.com/company/leaderimpact-albania/";s:28:"gr_social_other_img_settings";s:59:"https://leaderimpact.al/wp-content/uploads/2025/04/asdf.png";s:16:"sidebars_widgets";a:2:{s:4:"time";i:1744268790;s:4:"data";a:13:{s:19:"wp_inactive_widgets";a:0:{}s:13:"right_sidebar";a:5:{i:0;s:7:"block-2";i:1;s:7:"block-3";i:2;s:7:"block-4";i:3;s:7:"block-5";i:4;s:7:"block-6";}s:9:"top_right";a:0:{}s:8:"top_left";a:0:{}s:12:"right_header";a:0:{}s:10:"footermenu";a:0:{}s:7:"footer1";a:1:{i:0;s:6:"text-3";}s:7:"footer2";a:0:{}s:7:"footer3";a:1:{i:0;s:10:"nav_menu-2";}s:7:"footer4";a:1:{i:0;s:6:"text-2";}s:7:"related";a:0:{}s:14:"left_subfooter";a:1:{i:0;s:6:"text-4";}s:15:"right_subfooter";a:0:{}}}s:31:"gr_font_content_weight_settings";s:6:"normal";s:21:"gr_h2_weight_settings";s:6:"normal";s:18:"gr_submenu_setting";s:7:"#ffffff";s:26:"gr_stick_checkbox_settings";b:0;s:24:"gr_top_checkbox_settings";b:0;s:19:"cip_preloader_image";s:69:"https://demo3.gremza.com/green/wp-content/uploads/2025/05/Group-3.svg";s:31:"gr_subfooter_text_size_settings";s:4:"12px";}s:7:"options";a:2:{s:9:"site_icon";s:2:"75";s:23:"nav_menus_created_posts";a:0:{}}s:6:"wp_css";s:5459:".rreth{
+	background:#efefef;
+ display:flex;
+	border-radius:50%;
+	height:80px;
+	width:80px;
+ margin:auto;
+	    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+border:solid 1px #ccc;
+
+} 
+.rreth h2{
+		font-weight:bold !important;
+	 
+}
+#logo {
+	margin-top:15px!important;
+}
+.headtit h1{
+	text-shadow:1px 1px 5px #333;
+}
+.headerat{
+	font-family: Montserrat!important; font-weight: 800;
+	text-transform: uppercase; 
+	text-align: center;
+	font-size:40px;
+	color:#9dd3cb!important;
+	margin:50px auto 0 auto;
+}
+.aligncenter{
+	display:flex;
+}
+#headergrad{
+background: #ffffff;
+height:70px!important;
+}
+.round img{
+	border-radius:20px;
+}
+.socialblock{
+	margin-top:10px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+.wid2{
+	text-align:center;
+	line-height:1.5em;
+	 margin-top:30px; 
+}
+.wid3{
+	margin-top:32px;
+	line-height:1.5em;
+	text-align:center;
+}
+.footer .socialblock{
+	    padding: 18px 0 0 0;
+}
+.no-padding{
+	padding:0!important;
+}
+.footer h2{
+	font-size:20px;
+	color:#efefef;
+	
+}
+
+.footer h2::after {
+	border-bottom: 2px solid #7ec8b1!important;
+}
+#header{
+	height:60px;
+}
+.navbar-toggle .icon-bar {
+ 
+    height: 2px!important;
+  
+    margin: 5px 0!important;
+}
+.navbar-toggle{
+	    margin-top: 0!important;
+    margin-bottom: 0!important;
+	     
+}
+.container{
+	margin:0 auto!important;
+}
+.cont{
+ background: #efefef;
+  padding: 80px 20px; 
+  text-align: center;
+
+} 
+.bardh, .bardh h1,.bardh h2, .bardh h3{
+	color:#fff!important;
+}
+.page .imp-ui-layers-menu-wrap .imp-icon {   
+    top: 4px!important;
+    right: 5px!important; 
+}
+#icona {
+	display:flex;
+	margin-top:10px; 
+	margin-bottom:-25px;
+	z-index:2;
+	
+	
+}
+img.icona{
+	width:50px;
+	border-radius:25px;
+	border:3px solid white; 
+}
+#icona a{
+	margin:auto;
+}
+.page  .imp-ui-element.imp-ui-layers-select {
+    padding: 0 20px 0 10px !important;
+    line-height: 24px !important;
+	height:24px!important; 
+	border:none;
+	box-shadow:none;
+}
+.imp-ui-element{
+	border-radius:0px;
+	box-shadow:none!important;
+}
+.page {
+	min-height:600px;
+}
+.but{
+	margin:auto!important;
+	
+}
+.textnice{
+	line-height:1.6em;
+	color:#fff;
+	text-align:center;
+}
+
+ .bubble {
+      width: 180px;
+      height: 180px;
+      color: #333 !important;
+ background: linear-gradient(135deg, #9dd39b, #b4ece3, #7ec8b9); /* Seafoam tones */
+	 	background-repeat:no-repeat;
+	background-size:cover;
+	color:white!important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+	  
+	 text-shadow:1px 1px #000;
+      padding: 20px;
+      animation: morphBlob 16s ease-in-out infinite, floatMove 6s ease-in-out infinite;
+      border-radius: 33% 67% 57% 43% / 33% 47% 53% 67%;
+      transition: all 1s ease;
+      box-shadow: 0 8px 30px rgba(0, 128, 255, 0.2);
+      float: left;
+      margin: 20px;
+
+    }
+
+.bubble:nth-child(1) { 
+	animation-delay: 0s, 0s;
+	background-image:url('https://demo3.gremza.com/green/wp-content/uploads/2025/07/dyqan.webp');
+
+ 
+}
+
+    .bubble:nth-child(2) { animation-delay: 4s, 2s; 
+				background-image:url('https://demo3.gremza.com/green/wp-content/uploads/2025/07/kafe.webp');
+
+}
+.bubble:nth-child(3) { animation-delay: 2s, 1s; 
+	background-image:url('https://demo3.gremza.com/green/wp-content/uploads/2025/07/rest.webp');
+}
+    .bubble:nth-child(4) { animation-delay: 1s, 3s; 
+				background-image:url('https://demo3.gremza.com/green/wp-content/uploads/2025/06/strefa-wellness-spa-optimized.jpg');
+}
+    .bubble:nth-child(5) { animation-delay: 3s, 4s; 
+				background-image:url('https://demo3.gremza.com/green/wp-content/uploads/2025/07/super.webp');
+}
+
+    @keyframes morphBlob {
+      0% {
+        border-radius: 33% 67% 57% 43% / 33% 47% 53% 67%;
+      }
+      25% {
+        border-radius: 45% 55% 65% 35% / 40% 60% 40% 60%;
+      }
+      50% {
+        border-radius: 55% 45% 35% 65% / 50% 30% 70% 50%;
+      }
+      75% {
+        border-radius: 60% 40% 50% 50% / 35% 65% 45% 55%;
+      }
+      100% {
+        border-radius: 33% 67% 57% 43% / 33% 47% 53% 67%;
+      }
+    }
+
+    @keyframes floatMove {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+.bubbody{
+	   margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+	.right_subfooter{
+		font-size:10px!important
+	}
+.right_subfooter a{font-weight:normal!important; color:#ccc;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+/***   MOBILE    **/
+/***   MOBILE    **/
+/***   MOBILE    **/
+/***   MOBILE    **/
+
+@media only screen and (max-width: 600px) {
+  H1 {
+   line-height:1em;
+		font-size:2em!important;
+  }
+	.bubble{
+		width:100%!important;
+		margin-left:0px; 
+ 
+
+	}
+	.bubbody{
+		display:flex;
+		flex-direction:column;
+		align-items:center;
+	}	
+	.bubbody .wpb_wrapper{
+	    display: flex;
+    flex-direction: column;
+}
+.footer  {
+	font-size:18px!important; 
+}
+	.cl-effect-20 {
+		margin-bottom:15px;
+	}
+	.vc_custom_1749045364023 h1{
+		margin-bottom:-50px!important
+	}
+	.navbar-toggle{
+	    margin-top: -60px!important;
+    margin-bottom: 0!important;
+	     
+}
+	#bs-example-navbar-collapse-1{
+		position:relative;
+		z-index:9999;
+		margin-top: -15px !important;
+	}	
+	h1{
+		font-size:1.5em!important;
+	}
+}
+
+/***   MOBILE    **/
+/***   MOBILE    **/
+@media only screen and (max-width: 1600px) {
+	#menu-kryesore a {
+		font-size:12px!important
+	}
+	
+}
+ 
+
+";}

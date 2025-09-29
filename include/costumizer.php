@@ -814,33 +814,101 @@ $wp_customize->add_control( 'gr_h4_size_settings', array(
     'label' => __( 'Social icons size in px ' ),
     'description' => __( 'Size is in pixel, there is no need to add px at the end. ex 30' ),
     ) );
+
+    // WhatsApp Settings Section
+    $wp_customize->add_section( 'gr_whatsapp' , array(
+        'title'             => __('WhatsApp Button', 'lalutheme'),
+        'priority'          => 13, 
+        'panel'             => 'gr_header',
+    ) );
+
+    // WhatsApp Enable/Disable
+    $wp_customize->add_setting( 'gr_whatsapp_enable_settings', array(
+        'default' => false,
+        'type' => 'theme_mod',
+        'transport' => 'refresh',
+    ));
+
+    $wp_customize->add_control( 'gr_whatsapp_enable_control', array(
+        'label' => __('Enable WhatsApp Button', 'lalutheme'),
+        'type'  => 'checkbox',
+        'section' => 'gr_whatsapp',
+        'settings' => 'gr_whatsapp_enable_settings',
+        'priority' => 1,
+    ));
+
+    // WhatsApp Phone Number
+    $wp_customize->add_setting( 'gr_whatsapp_number_settings' , array(
+        'type'          => 'theme_mod', 
+        'transport'     => 'refresh',
+        'default' => '',
+    ) );     
+
+    $wp_customize->add_control( 'gr_whatsapp_number_settings', array(
+        'type' => 'text',
+        'section' => 'gr_whatsapp',
+        'label' => __( 'WhatsApp Phone Number' ),
+        'settings' => 'gr_whatsapp_number_settings',
+        'description' => __( 'Enter phone number with country code (e.g., +1234567890)' ),
+        'default'=>'',
+        'priority' => 2,
+    ));
+
+    // WhatsApp Position
+    $wp_customize->add_setting( 'gr_whatsapp_position_settings' , array(
+        'type'          => 'theme_mod', 
+        'transport'     => 'refresh',
+        'default' => 'right',
+    ) );
     
+    $wp_customize->add_control( 'gr_whatsapp_position_control', array(
+        'label'      => __('WhatsApp Button Position', 'lalutheme'),
+        'section'    => 'gr_whatsapp',
+        'settings'   => 'gr_whatsapp_position_settings',
+        'type'       => 'select',
+        'choices'    => array( 
+            'left' => __('Left', 'lalutheme'),
+            'right' => __('Right', 'lalutheme'),
+        ),
+        'priority' => 3,
+    ));
 
+    // WhatsApp Icon Color
+    $wp_customize->add_setting( 'gr_whatsapp_color_settings' , array(
+        'type'          => 'theme_mod', 
+        'transport'     => 'refresh',
+        'default' => 'green',
+    ) );
+    
+    $wp_customize->add_control( 'gr_whatsapp_color_control', array(
+        'label'      => __('WhatsApp Icon Color', 'lalutheme'),
+        'section'    => 'gr_whatsapp',
+        'settings'   => 'gr_whatsapp_color_settings',
+        'type'       => 'select',
+        'choices'    => array( 
+            'green' => __('Green', 'lalutheme'),
+            'black' => __('Black', 'lalutheme'),
+            'white' => __('White', 'lalutheme'),
+        ),
+        'priority' => 4,
+    ));
 
+    // WhatsApp Custom Message
+    $wp_customize->add_setting( 'gr_whatsapp_message_settings' , array(
+        'type'          => 'theme_mod', 
+        'transport'     => 'refresh',
+        'default' => '',
+    ) );     
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    $wp_customize->add_control( 'gr_whatsapp_message_settings', array(
+        'type' => 'textarea',
+        'section' => 'gr_whatsapp',
+        'label' => __( 'Default WhatsApp Message' ),
+        'settings' => 'gr_whatsapp_message_settings',
+        'description' => __( 'Optional: Pre-filled message when WhatsApp opens' ),
+        'default'=>'',
+        'priority' => 5,
+    ));
 
         }
         add_action( 'customize_register', 'gr_customize_register' );
