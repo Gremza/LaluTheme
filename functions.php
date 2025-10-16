@@ -297,15 +297,16 @@ function gu_scripts_with_jquery()
 add_action( 'wp_enqueue_scripts', 'gu_scripts_with_jquery' );
   
 function gr_enqueue_styles() {
-        
-    wp_enqueue_style( 'bootstrap',   get_template_directory_uri() . '/css/bootstrap.css',array(), '20130608' );
-    wp_enqueue_style(  'bootstrapxxl',  get_template_directory_uri() . '/css/bootstrapxxl.css' ,array(), '20130608' );
-    wp_enqueue_style( 'desktop',   get_template_directory_uri() . '/css/desktop.css',array(), '20130608' );
-    wp_enqueue_style(  'menu',  get_template_directory_uri() . '/css/menu.css' ,array(), '20130608');
-    wp_enqueue_style( 'mobile',   get_template_directory_uri() . '/css/mobile.css',array(), '20130608' );
-    wp_enqueue_style( 'tablet',   get_template_directory_uri() . '/css/tablet.css' ,array(), '20130608');
-    wp_enqueue_style( 'woocommerce',   get_template_directory_uri() . '/css/woocommerce.css' ,array(), '20130608');
-    
+    $theme_version = wp_get_theme()->get('Version');
+
+    wp_enqueue_style( 'bootstrap',   get_template_directory_uri() . '/css/bootstrap.css',array(), $theme_version );
+    wp_enqueue_style(  'bootstrapxxl',  get_template_directory_uri() . '/css/bootstrapxxl.css' ,array(), $theme_version );
+    wp_enqueue_style( 'desktop',   get_template_directory_uri() . '/css/desktop.css',array(), $theme_version );
+    wp_enqueue_style(  'menu',  get_template_directory_uri() . '/css/menu.css' ,array(), $theme_version);
+    wp_enqueue_style( 'mobile',   get_template_directory_uri() . '/css/mobile.css',array(), $theme_version );
+    wp_enqueue_style( 'tablet',   get_template_directory_uri() . '/css/tablet.css' ,array(), $theme_version);
+    wp_enqueue_style( 'woocommerce',   get_template_directory_uri() . '/css/woocommerce.css' ,array(), $theme_version);
+
 }
 add_action( 'wp_enqueue_scripts', 'gr_enqueue_styles' );   
 function new_submenu_class($menu) {    
@@ -747,6 +748,139 @@ add_action('wp_head', 'gr_whatsapp_styles');
 // Add shortcode for WhatsApp button
 add_shortcode('whatsapp', 'gr_whatsapp_button');
 
+
+// Schema.org Structured Data for Google Sitelinks
+function gr_add_schema_navigation() {
+    // Only add on front page
+    if (!is_front_page()) {
+        return;
+    }
+
+    // Get primary navigation menu
+    $menu_name = 'header-menu';
+    $locations = get_nav_menu_locations();
+
+    if (!isset($locations[$menu_name])) {
+        return;
+    }
+
+    $menu = wp_get_nav_menu_object($locations[$menu_name]);
+    if (!$menu) {
+        return;
+    }
+
+    $menu_items = wp_get_nav_menu_items($menu->term_id, array('order' => 'ASC'));
+
+    if (!$menu_items) {
+        return;
+    }
+
+    // Build navigation schema
+    $navigation_schema = array(
+        '@context' => 'https://schema.org',
+        '@type' => 'SiteNavigationElement',
+        'name' => get_bloginfo('name'),
+        'url' => home_url('/'),
+        'hasPart' => array()
+    );
+
+    // Add only top-level menu items (max 8 for sitelinks)
+    $count = 0;
+    foreach ($menu_items as $item) {
+        if ($item->menu_item_parent == 0 && $count < 8) {
+            $navigation_schema['hasPart'][] = array(
+                '@type' => 'SiteNavigationElement',
+                'name' => $item->title,
+                'url' => $item->url,
+                'description' => !empty($item->description) ? $item->description : $item->title
+            );
+            $count++;
+        }
+    }
+
+    // Output JSON-LD
+    if (!empty($navigation_schema['hasPart'])) {
+        echo '<script type="application/ld+json">' . "\n";
+        echo wp_json_encode($navigation_schema, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+        echo "\n" . '</script>' . "\n";
+    }
+}
+add_action('wp_head', 'gr_add_schema_navigation', 1);
+
+// Add Organization Schema
+function gr_add_organization_schema() {
+    // Only add on front page
+    if (!is_front_page()) {
+        return;
+    }
+
+    $organization_schema = array(
+        '@context' => 'https://schema.org',
+        '@type' => 'Organization',
+        'name' => get_bloginfo('name'),
+        'url' => home_url('/'),
+        'logo' => get_theme_mod('gr_logo'),
+        'description' => get_bloginfo('description')
+    );
+
+    // Add social media links if available
+    $social_links = array();
+
+    // You can add social media URLs from customizer settings
+    // Example: if you have social media URLs in theme customizer
+    if (get_theme_mod('gr_facebook_url')) {
+        $social_links[] = get_theme_mod('gr_facebook_url');
+    }
+    if (get_theme_mod('gr_twitter_url')) {
+        $social_links[] = get_theme_mod('gr_twitter_url');
+    }
+    if (get_theme_mod('gr_instagram_url')) {
+        $social_links[] = get_theme_mod('gr_instagram_url');
+    }
+    if (get_theme_mod('gr_linkedin_url')) {
+        $social_links[] = get_theme_mod('gr_linkedin_url');
+    }
+
+    if (!empty($social_links)) {
+        $organization_schema['sameAs'] = $social_links;
+    }
+
+    // Output JSON-LD
+    echo '<script type="application/ld+json">' . "\n";
+    echo wp_json_encode($organization_schema, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+    echo "\n" . '</script>' . "\n";
+}
+add_action('wp_head', 'gr_add_organization_schema', 2);
+
+// Add WebSite Schema with SearchAction
+function gr_add_website_schema() {
+    // Only add on front page
+    if (!is_front_page()) {
+        return;
+    }
+
+    $website_schema = array(
+        '@context' => 'https://schema.org',
+        '@type' => 'WebSite',
+        'name' => get_bloginfo('name'),
+        'url' => home_url('/'),
+        'description' => get_bloginfo('description'),
+        'potentialAction' => array(
+            '@type' => 'SearchAction',
+            'target' => array(
+                '@type' => 'EntryPoint',
+                'urlTemplate' => home_url('/?s={search_term_string}')
+            ),
+            'query-input' => 'required name=search_term_string'
+        )
+    );
+
+    // Output JSON-LD
+    echo '<script type="application/ld+json">' . "\n";
+    echo wp_json_encode($website_schema, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+    echo "\n" . '</script>' . "\n";
+}
+add_action('wp_head', 'gr_add_website_schema', 3);
 
 
 
